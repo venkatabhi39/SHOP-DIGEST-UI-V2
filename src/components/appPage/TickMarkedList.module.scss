@@ -1,0 +1,9 @@
+.list__container {
+  ul {
+    @apply list-inside;
+  }
+
+  li {
+    @apply flex items-start;
+  }
+}

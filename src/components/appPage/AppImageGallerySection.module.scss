@@ -1,0 +1,72 @@
+.arrowBtn {
+  @apply absolute flex justify-center items-center cursor-pointer h-auto w-auto rounded-full shadow before:hidden focus:outline-none z-50;
+
+  &:global(.slick-prev) {
+    @apply left-4 #{!important};
+  }
+
+  &:global(.slick-next) {
+    @apply right-12 #{!important};
+  }
+}
+
+.closeBtn {
+  @apply p-2 absolute top-1 right-1 z-50 shadow-md bg-white #{!important};
+}
+
+.modalContainer > div > div {
+  @apply overflow-hidden;
+}
+
+.container :global {
+  .image-gallery-thumbnails-wrapper {
+    @apply mt-4;
+  }
+
+  .image-gallery-thumbnails-container {
+    @apply space-x-4;
+  }
+
+  .image-gallery-thumbnail {
+    @apply rounded overflow-hidden hover:border-none hover:ring-4 hover:ring-primary-300;
+
+    &.active {
+      @apply border-none ring-4 ring-primary-400;
+    }
+  }
+
+  .image-gallery-swipe {
+    .image-gallery-slide {
+      @apply rounded-md border-none overflow-hidden md:w-[60%] pr-8 cursor-default;
+    }
+
+    .image-gallery-image {
+      @apply max-w-full aspect-video;
+    }
+  }
+
+  .image-gallery-thumbnail-image {
+    @apply aspect-video;
+  }
+}
+
+.modalContainer :global {
+  .image-gallery-swipe {
+    //   @apply max-w-[90%] mx-auto;
+
+    .image-gallery-slide {
+      @apply w-auto pr-0;
+    }
+  }
+
+  .image-gallery-slide-wrapper button {
+    @apply p-0;
+
+    &:first-child {
+      @apply pl-2;
+    }
+    &:not(:first-child) {
+      @apply pr-2;
+    }
+  }
+}

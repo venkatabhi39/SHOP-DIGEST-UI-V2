@@ -1,0 +1,51 @@
+@import '@/styles/appPage';
+
+.pageContainer {
+  @apply pb-0 #{!important};
+  @include pageContainerStyles;
+}
+//
+//.appIcon {
+//  @apply rounded-md h-full w-auto shadow;
+//}
+//
+//.ratingStarContainer {
+//  @apply flex flex-row items-center justify-center gap-1;
+//
+//  img {
+//    @apply w-4 h-4;
+//  }
+//}
+//
+//.subTitle {
+//  @apply flex flex-row flex-wrap items-center justify-start divide-x-2 divide-slate-400;
+//
+//  > * {
+//    &:not(:first-child) {
+//      @apply px-1;
+//    }
+//
+//    &:first-child {
+//      @apply pr-1;
+//    }
+//  }
+//}
+//
+//.ul {
+//  @apply ml-4;
+//
+//  li {
+//    @apply relative flex items-center;
+//
+//    &:before {
+//      @apply bg-no-repeat inline-block absolute rotate-90;
+//
+//      background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3e%3cpath class='st1' d='M100 93.3V35.5L50 6.7 0 35.6v57.7l50-28.9z' fill='%23FF492C'/%3e%3c/svg%3e");
+//      content: " ";
+//      height: 9px;
+//      left: 2px;
+//      margin-left: -18px;
+//      width: 9px;
+//    }
+//  }
+//}

@@ -1,0 +1,12 @@
+.cardContainer {
+  @apply p-2 lg:p-4 overflow-hidden text-start rounded-xl basis-36 md:basis-44 snap-start shrink-0 grow-0;
+
+  &:hover,
+  &:focus {
+    @apply bg-sdGray shadow shadow-sdGray-border;
+  }
+
+  &:hover .title {
+    @apply text-primary underline font-medium;
+  }
+}

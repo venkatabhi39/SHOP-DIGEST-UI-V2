@@ -1,0 +1,6 @@
+/posts/:path*  /:path*  301
+/author/:path*  /authors/:path*  301
+/category/:path*  /categories/:path*  301
+/tag/:path*  /tags/:path*  301
+/app/:path*  /404.html 301
+/partners/:path*  https://apps.shopify.com/partners/:path*  301

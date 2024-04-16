@@ -1,0 +1,7 @@
+.postsCard {
+  @apply h-full flex items-center justify-start flex-col text-left gap-3 relative;
+
+  > * {
+    @apply w-full;
+  }
+}

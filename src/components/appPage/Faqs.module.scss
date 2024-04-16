@@ -1,0 +1,11 @@
+.content {
+  @apply px-0 #{!important};
+}
+
+.title {
+  @apply bg-white text-inherit px-0 #{!important};
+
+  h4 {
+    @apply text-[1.125rem] lg:text-[1.125rem] 2xl:text-[1.25rem] leading-[1.4] font-medium #{!important};
+  }
+}

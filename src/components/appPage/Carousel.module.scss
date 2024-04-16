@@ -1,0 +1,21 @@
+.arrowBtn {
+  @apply absolute flex z-30 justify-center items-center cursor-pointer h-auto w-auto rounded-full shadow before:hidden focus:outline-none max-md:hidden;
+
+  &__prev {
+    @apply left-4;
+  }
+
+  &__next {
+    @apply right-4;
+  }
+}
+
+.carouselContainer {
+  @apply overflow-y-hidden overflow-x-auto flex flex-row scroll-p-0 snap-x snap-mandatory overscroll-x-contain flex-grow py-2;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    display: none;
+    height: 0;
+  }
+}

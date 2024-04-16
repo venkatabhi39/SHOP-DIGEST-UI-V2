@@ -1,0 +1,4 @@
+.li::before {
+  @apply inline-block mr-4 w-4 text-end;
+  content: counter(list-item);
+}

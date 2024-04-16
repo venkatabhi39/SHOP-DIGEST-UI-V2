@@ -1,0 +1,42 @@
+@import '@/styles/appPage';
+
+.pageContainer {
+  @apply pb-0 #{!important};
+  @include pageContainerStyles;
+}
+
+.paginator {
+  @apply w-full;
+
+  ul {
+    @apply w-full;
+    @apply mt-0 #{!important};
+  }
+
+  li {
+    @apply border-t-0 border-b-0;
+
+    button {
+      @apply border-y-0 py-3;
+    }
+
+    &:first-child {
+      @apply mr-auto;
+    }
+
+    &:last-child {
+      @apply ml-auto #{!important};
+    }
+
+    &:first-child,
+    &:last-child {
+      button {
+        @apply border-none rounded-none;
+      }
+    }
+
+    &:not(:first-child):not(:last-child):not([aria-current='page']) {
+      @apply hidden sm:list-item;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.tableContainer {
+  @apply border dark:border-gray-700 max-w-full overflow-auto;
+
+  th, td {
+    &:not(:last-child) {
+      @apply border-r dark:border-gray-700;
+    }
+  }
+}

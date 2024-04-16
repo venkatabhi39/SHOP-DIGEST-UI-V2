@@ -1,0 +1,13 @@
+.tableContainer {
+  @apply md:max-w-[65%];
+
+  tr > * {
+    &:first-child {
+      @apply w-1/4 md:w-[40%];
+    }
+
+    &:last-child {
+      @apply w-3/4 md:w-[60%];
+    }
+  }
+}

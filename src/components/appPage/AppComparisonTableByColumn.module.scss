@@ -1,0 +1,9 @@
+.table {
+  th {
+    @apply whitespace-nowrap;
+  }
+
+  tbody td {
+    @apply max-w-[250px] whitespace-normal;
+  }
+}

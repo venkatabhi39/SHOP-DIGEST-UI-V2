@@ -1,0 +1,9 @@
+.scrollContainer {
+  @apply flex flex-row mt-0 w-full text-sm font-medium lg:mr-6 overflow-auto whitespace-nowrap space-x-4;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    display: none;
+    height: 0;
+  }
+}

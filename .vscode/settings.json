@@ -1,0 +1,25 @@
+{
+  "eslint.format.enable": true,
+  "editor.formatOnSave": true,
+  "prettier.printWidth": 100,
+  "editor.tabSize": 2,
+  "prettier.useTabs": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "emmet.includeLanguages": {
+    "postcss": "css"
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#2A0E8B",
+    "titleBar.activeBackground": "#3B13C3",
+    "titleBar.activeForeground": "#FBFAFF"
+  }
+}

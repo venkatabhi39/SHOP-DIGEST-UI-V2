@@ -1,0 +1,2 @@
+/_next/image/*    # Adjust the path to match the plugin's route
+  Cache-Control: public, max-age=31536000, immutable

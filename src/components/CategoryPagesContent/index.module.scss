@@ -1,0 +1,84 @@
+.dontMissOutPost {
+  @apply h-full flex flex-col-reverse lg:flex-row items-center justify-end lg:items-start gap-4 max-w-full w-full
+  relative after:absolute after:right-[-1rem] after:top-0 after:content-[''] after:h-full after:border-r
+  after:border-r-gray-300 last:after:hidden max-sm:after:hidden;
+
+  &__container {
+    @apply mt-8 mb-7;
+
+    :global {
+      .section {
+        @apply pt-4 pb-6;
+      }
+    }
+  }
+
+  &__divider {
+    @apply w-full h-[1px] border-t border-t-gray-300;
+  }
+}
+
+.postsRow__container {
+  @apply grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.hRuler,
+.vRuler {
+  @apply hidden;
+}
+
+.hRuler {
+  @apply w-full border-t border-t-gray-200 mt-5 mb-6 max-md:block;
+}
+
+.hRuler:nth-child(9) {
+  @apply lg:block lg:col-span-3;
+}
+
+.hRuler {
+  &:nth-child(15),
+  &:nth-child(27) {
+    @apply lg:block lg:col-span-full;
+  }
+
+  &:nth-child(6n + 3) {
+    @apply md:max-lg:block md:max-lg:col-span-full;
+  }
+}
+
+.vRuler {
+  @apply h-full w-[1px] mx-auto border-r border-r-gray-200;
+}
+
+.vRuler:nth-child(2) {
+  @apply lg:block lg:row-span-3;
+}
+
+.vRuler {
+  &:nth-child(5),
+  &:nth-child(11),
+  &:nth-child(17),
+  &:nth-child(20),
+  &:nth-child(23),
+  &:nth-child(29),
+  &:nth-child(32),
+  &:nth-child(35) {
+    @apply lg:block;
+  }
+
+  &:nth-child(6n + 5) {
+    @apply md:max-lg:block;
+  }
+}
+
+.hasBottomBorder {
+  &::before {
+    @apply content-[''] left-0 -bottom-6 w-full border-b border-b-gray-300;
+  }
+}
+
+.hasRightBorder {
+  &::after {
+    @apply content-[''] right-6 top-0 h-full border-r border-r-gray-300;
+  }
+}

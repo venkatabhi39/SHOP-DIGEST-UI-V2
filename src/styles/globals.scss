@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  //font-family: Georgia, Times, Times New Roman, serif;
+  //font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  opacity: 1 !important;
+  @apply text-[#212121];
+}
+
+.section {
+  @apply mx-auto max-md:px-6;
+
+  @media only screen and (max-width: 767px) {
+    max-width: 100%;
+  }
+
+  @media only screen and (min-width: 1400px) {
+    max-width: 1288px;
+  }
+
+  @media only screen and (min-width: 1150px) and (max-width: 1399px) {
+    max-width: 1074px;
+  }
+
+  @media only screen and (min-width: 900px) and (max-width: 1149px) {
+    max-width: 1074px;
+    width: 100%;
+    padding-inline: 1rem;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 899px) {
+    max-width: unset;
+    padding-inline: 1rem;
+    width: 100%;
+  }
+}
+
+h1 {
+  @apply text-[1.7rem] lg:text-[2rem] 2xl:text-[2.2rem] leading-[1.4];
+}
+
+h2 {
+  @apply text-[1.6rem] lg:text-[1.6rem] 2xl:text-[1.8rem] leading-[1.4];
+}
+
+h3 {
+  @apply text-[1.5rem] lg:text-[1.5rem] 2xl:text-[1.7rem] leading-[1.4];
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+blockquote {
+  letter-spacing: 0.2px;
+}
+
+.subduedText {
+  @apply text-gray-500 dark:text-gray-400;
+}
+
+.reactIcon {
+  @apply inline align-middle mr-2;
+}

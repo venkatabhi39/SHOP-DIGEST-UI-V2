@@ -1,0 +1,25 @@
+{
+  "globals": {
+    "JSX": true
+  },
+  "extends": ["next/core-web-vitals", "next", "airbnb", "prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/jsx-props-no-spreading": [0],
+    "import/extensions": "off",
+    "no-underscore-dangle": "off",
+    "react/prop-types": [0],
+    "react/no-danger": "off",
+    "react/function-component-definition": "off",
+    "react/require-default-props": "off",
+    "no-nested-ternary": "off",
+    "react/no-array-index-key": "off",
+    "import/order": "off",
+    "@next/next/no-html-link-for-pages": "off",
+    "import/prefer-default-export": "off",
+    "no-unused-vars": "off"
+  },
+  "plugins": ["prettier"]
+}

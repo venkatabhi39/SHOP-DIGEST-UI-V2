@@ -1,0 +1,13 @@
+.postsCard {
+  &__container {
+    @apply mt-5 grid items-start gap-8 gap-y-14 sm:grid-cols-2 xl:grid-cols-3;
+  }
+
+  &__image {
+    @apply w-full aspect-video flex items-start justify-center;
+
+    img {
+      @apply w-full h-full object-cover;
+    }
+  }
+}

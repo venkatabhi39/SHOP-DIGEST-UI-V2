@@ -1,0 +1,28 @@
+.container {
+  @apply border-b-0;
+
+  &__withTransparentBg .title {
+    @apply bg-transparent;
+  }
+}
+
+.title {
+  @apply rounded-none #{!important};
+
+  &:hover {
+    @apply bg-gray-50;
+  }
+
+  h6 {
+    @apply text-sm font-medium;
+  }
+
+  svg {
+    @apply w-5 h-5;
+  }
+}
+
+.content,
+.title {
+  @apply py-2;
+}

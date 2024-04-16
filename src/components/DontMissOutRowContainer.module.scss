@@ -1,0 +1,29 @@
+.sectionContainer {
+  @apply py-12 flex flex-col gap-0 items-center justify-center;
+
+  .postsCard {
+    @apply after:inline-block after:absolute after:right-[-1rem] after:h-full relative before:inline-block before:absolute before:top-[-1rem] before:left-0;
+
+    &:not(:first-child) {
+      @apply max-sm:before:border-t max-sm:before:border-t-gray-200 max-sm:before:content-[''] max-sm:before:w-full;
+    }
+
+    &:first-child {
+      $mobileRightBorderSelector: 'after:sm:max-md';
+      @apply #{$mobileRightBorderSelector}:border-r #{$mobileRightBorderSelector}:border-r-gray-200 #{$mobileRightBorderSelector}:content-[''];
+    }
+
+    &:not(:last-child) {
+      $tabletRightBorderSelector: 'after:md';
+      @apply #{$tabletRightBorderSelector}:border-r #{$tabletRightBorderSelector}:border-r-gray-200 #{$tabletRightBorderSelector}:content-[''];
+    }
+  }
+}
+
+.title {
+  @apply my-0 text-[1.4rem];
+}
+
+.container {
+  @apply bg-gray-100 my-5;
+}
