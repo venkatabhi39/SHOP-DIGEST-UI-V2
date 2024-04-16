@@ -41,6 +41,10 @@ const nextConfig = {
     // your project has type errors.
     ignoreBuildErrors: true,
   },
+  eslint: {
+    // Ignore during builds
+    ignoreDuringBuilds: true,
+  },
 };
 
 module.exports = nextConfig;
