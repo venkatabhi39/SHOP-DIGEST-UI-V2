@@ -73,7 +73,7 @@ export const SecondaryHeader: React.FC<ISecondaryHeaderProps> = () => {
         isTopNavHidden ? '-translate-y-full' : 'translate-y-0'
       }`}
     >
-      <Navbar className="bg-gray-50 px-4 lg:px-8 py-3 mx-auto max-w-[85rem] ">
+      <Navbar className="bg-gray-50 px-4 lg:px-8 py-2 mx-auto max-w-[85rem] ">
         {/* <Dropdown label="Features" items={FEATURES} /> */}
         {/* <Divider type="dark" /> */}
         <SecondaryHeaderLinks />

@@ -50,7 +50,7 @@ const HeroForm: React.FC = () => {
               <div className="flex pb-2 sm:pb-0 sm:flex-[1_0_0%] w-full xl:max-w-40">
                 <select
                   id="referring-domain"
-                  className="placeholder-gray-900 font-medium bg-white border-none focus:border-white focus:ring-0 w-full lg:min-w-40  text-gray-900 text-base rounded-lg  block  py-2 lg:py-1 px-4 lg:px-4 pl-2 lg:pl-6 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                  className="placeholder-gray-900 font-medium bg-white border-none focus:border-white focus:ring-0 w-full lg:min-w-40  text-gray-900 text-sm rounded-lg  block  py-2 lg:py-1 px-4 lg:px-4 pl-2 lg:pl-6 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 >
                   <option value="" selected disabled>
                     Platform
@@ -61,23 +61,23 @@ const HeroForm: React.FC = () => {
                   <option>Google.com</option>
                 </select>
               </div>
-              <Divider className="hidden lg:inline border-gray-100 h-9 mt-1" />
+              <Divider className="hidden lg:inline !self-center border-gray-100 h-[30px] mt-1" />
               <div className="flex">
                 <div className="flex pb-0 sm:flex-[1_0_0%]">
                   <input
                     type="text"
                     id="hs-hero-name-1"
-                    className="placeholder-gray-900 font-medium py-1 pl-2 px-4 block w-full border-transparent rounded-lg text-base focus:border-white focus:ring-0  dark:bg-slate-900 dark:border-transparent dark:text-gray-400 dark:focus:ring-gray-600"
+                    className="placeholder-gray-900 font-medium py-1 pl-2 px-4 block w-full border-transparent rounded-lg text-sm focus:border-white focus:ring-0  dark:bg-slate-900 dark:border-transparent dark:text-gray-400 dark:focus:ring-gray-600"
                     placeholder="Category"
                   />
                 </div>
 
                 <div className="flex justify-end pt-0 sm:pt-0 sm:ps-3  border-gray-300 sm:border-t-0  sm:flex-[1_0_0%] dark:border-gray-700">
-                  <Divider className="hidden lg:inline border-gray-100 h-9 mt-1" />
+                  <Divider className="hidden lg:inline border-gray-100 !self-center h-[30px] mt-1" />
                   <div className="flex items-center">
                     <HiOutlineAdjustmentsHorizontal />
                     <button
-                      onClick={() => setOpenModal(true)}
+                      // onClick={() => setOpenModal(true)}
                       className="text-gray-800  dark:text-white hover:bg-transparent focus:ring-0 font-semibold rounded-lg text-sm px-4 py-1 lg:px-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
                     >
                       Filters

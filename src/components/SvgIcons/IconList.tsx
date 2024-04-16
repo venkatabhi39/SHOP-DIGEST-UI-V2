@@ -96,18 +96,12 @@ export const CalendarIcon = () => (
 );
 
 export const SearchIcon: React.FC<IconProps> = ({ classProp }) => (
-  <svg
-    width={20}
-    className={classProp}
-    color="#fff"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="currentColor"
-    viewBox="0 0 20 20"
-  >
+  <svg width={20} className={classProp} aria-hidden="true" fill="none" viewBox="0 0 24 24">
     <path
-      fillRule="evenodd"
-      d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-      clipRule="evenodd"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeWidth="2"
+      d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
     />
   </svg>
 );

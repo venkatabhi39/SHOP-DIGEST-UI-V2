@@ -54,20 +54,33 @@ const GuestComp: React.FC<GuestCompProps> = ({ data }) => (
 export const HeroFilter = () => (
   <section className="border border-b-0 border-x-0 border-t-0 border-gray-200 overflow-hidden">
     <div
-      className="hidden lg:block bg-[url('../assets/red-lines-bg.svg')] absolute w-full h-[465px]"
+      className="hidden lg:block bg-[url('../assets/red-lines-bg.svg')] absolute w-full h-[438px]"
       style={{
         backgroundRepeat: 'no-repeat',
-        backgroundPositionY: '-152px',
+        backgroundPositionY: '20%',
         top: '-2px',
         backgroundSize: 'cover',
         opacity: '0.5',
+        zIndex: '-1',
+      }}
+    />
+    <div
+      className="hidden lg:block bg-[url('../assets/red-lines-bg.svg')] absolute w-full h-[438px]"
+      style={{
+        backgroundRepeat: 'no-repeat',
+        backgroundPositionY: '46%',
+        top: '-2px',
+        backgroundSize: 'cover',
+        opacity: '0.5',
+        zIndex: '-1',
+        transform: 'rotateX(180deg) rotateY(180deg)',
       }}
     />
     <div className="flex flex-col items-center justify-between p-4 lg:p-8 lg:pb-0">
       {/* Top Navigation Bar for Categories */}
 
-      <h2 className="text-center mb-0 md:mb-4 text-2xl lg:text-3xl font-semibold text-gray-700 md:text-3xl xl:text-4xl dark:text-white">
-        Find the best apps for<p className="pt-2">your Shopify store</p>
+      <h2 className="max-w-md text-center mb-0 md:mb-2 text-2xl lg:text-3xl font-semibold text-gray-900 md:text-3xl xl:text-4xl dark:text-white">
+        Find the best apps for your Shopify store
       </h2>
 
       <div className="bg-white mt-1 px-2 sm:px-4 py-2.5 rounded hidden md:block lg:block">

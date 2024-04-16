@@ -9,6 +9,7 @@ import { SiteLogo } from '../SiteLogo';
 import { Dropdown } from '../Dropdown';
 import { IoCaretDownSharp } from 'react-icons/io5';
 import { Divider } from '../Divider';
+import { ArrowDown } from '../SvgIcons/IconList';
 
 interface IMainNavigationProps {}
 
@@ -67,7 +68,7 @@ export const MainNavigation: React.FC<IMainNavigationProps> = () => {
             <NavbarBrand href="/">
               <SiteLogo />
             </NavbarBrand>
-            <Divider />
+            <Divider className="h-5 !self-center" />
             <Dropdown
               arrowIcon={false}
               label={
@@ -78,7 +79,7 @@ export const MainNavigation: React.FC<IMainNavigationProps> = () => {
                   <span className="inline xl:hidden mr-1">
                     <BsShop />
                   </span>
-                  <IoCaretDownSharp className="text-gray-500 text-sm" />
+                  <IoCaretDownSharp className="text-gray-500 text-xs" />
                 </>
               }
               items={PLATFORMS}

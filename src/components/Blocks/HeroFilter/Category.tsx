@@ -14,6 +14,7 @@ interface CategoryProps {
 
 export const Category: React.FC<CategoryProps> = ({ buttonProps }) => {
   const [highlightStyle, setHighlightStyle] = useState({});
+  const [activeIndex, setActiveIndex] = useState(0); // State to track active button
 
   const buttonsRef = useRef<(HTMLButtonElement | HTMLAnchorElement | null)[]>([]);
 
@@ -35,33 +36,26 @@ export const Category: React.FC<CategoryProps> = ({ buttonProps }) => {
     setHighlightForButton(0);
   }, []); // Empty dependency array means this effect runs once after initial render
 
-  const handleClick = (index: number, btn: any) => {
+  const handleClick = (index: number, btn: ButtonProp) => {
     btn.onClick(btn);
-    // First check if buttonsRef.current is not null
-    if (buttonsRef.current) {
-      // Then, check if the specific element at index exists and is not null
-      const element = buttonsRef.current[index];
-      if (element) {
-        setHighlightStyle({
-          left: `${element.offsetLeft}px`,
-          width: `${element.offsetWidth}px`,
-          opacity: 1,
-          height: '2.5px',
-        });
-      } else {
-        // Handle the case where the element at the given index does not exist
-        console.error(`Element at index ${index} does not exist.`);
-      }
+    setActiveIndex(index); // Update active button index
+    const element = buttonsRef.current[index];
+    if (element) {
+      setHighlightStyle({
+        left: `${element.offsetLeft}px`,
+        width: `${element.offsetWidth}px`,
+        opacity: 1,
+        height: '2px',
+      });
     } else {
-      // Handle the case where buttonsRef.current is null
-      console.error('buttonsRef.current is null');
+      console.error(`Element at index ${index} does not exist.`);
     }
   };
 
   return (
     <div className="hidden relative md:flex lg:flex">
       <div
-        className="absolute  -bottom-1 bg-blue-600  transition-all duration-300 ease-in-out"
+        className="absolute -bottom-1 bg-blue-600 transition-all duration-300 ease-in-out"
         style={highlightStyle}
       />
 
@@ -74,7 +68,9 @@ export const Category: React.FC<CategoryProps> = ({ buttonProps }) => {
           size="sm"
           pill
           color="light"
-          className="focus:text-blue-500  tracking-wider me-2 focus:ring-0 z-10 px-2 text-base font-semibold  border-none enabled:hover:bg-transparent hover:text-blue-500"
+          className={`me-2 focus:ring-0 z-10 px-1 text-base font-semibold border-none enabled:hover:bg-transparent hover:text-blue-500 ${
+            activeIndex === i ? 'text-blue-500' : ''
+          }`}
           key={i}
         >
           {btn.name}

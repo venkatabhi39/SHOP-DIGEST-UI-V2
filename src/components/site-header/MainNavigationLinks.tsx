@@ -34,7 +34,7 @@ export const HEADER_NAVIGATION_LINKS = FEATURES.map(item => ({
 }));
 
 export const MainNavigationLinks: React.FC<IMainNavigationLinksProps> = () => (
-  <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-4 lg:mt-1 xl:space-x-8">
+  <ul className="flex flex-col font-medium lg:flex-row lg:space-x-4 xl:space-x-8">
     {HEADER_NAVIGATION_LINKS.map(item => (
       <MainNavigationLink
         key={item.id}

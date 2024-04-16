@@ -7,7 +7,7 @@ interface ISiteLogoProps {
 
 export const SiteLogo: React.FC<ISiteLogoProps> = ({ type = 'light' }) => {
   const className = classNames(
-    'text-lg sm:text-2xl lg:text-3xl font-sans font-[700] whitespace-nowrap',
+    'text-2xl whitespace-nowrap',
     type === 'light' ? 'text-primary dark:text-white' : 'text-sdGray-text dark:text-sdGray-text',
   );
 
