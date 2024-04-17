@@ -65,7 +65,7 @@ export default function Home({ posts, topApps, totalPages }: Props) {
       <HeroForm />
 
       {/* <div className="border border-t-0 border-x-0 sticky top-40 z-50" /> */}
-      <main>
+      <main className="bg-white">
         <CategoryPagesContent topApps={topApps} totalPages={totalPages} posts={posts} />
       </main>
     </>

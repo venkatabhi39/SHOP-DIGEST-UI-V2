@@ -32,7 +32,7 @@ export const PopularLinks = () => (
       const ComponentName = pl.component as keyof typeof componentMap;
       const ComponentToRender = componentMap[ComponentName];
       return (
-        <Button size="xs" color="light" pill className="border-gray-200" key={i}>
+        <Button size="xs" color="light" pill className="shadow border-gray-200" key={i}>
           {React.createElement(ComponentToRender)}
           <span className="ms-1">{pl.name}</span>
         </Button>

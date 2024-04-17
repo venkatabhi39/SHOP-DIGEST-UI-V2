@@ -69,7 +69,7 @@ export const SecondaryHeader: React.FC<ISecondaryHeaderProps> = () => {
 
   return (
     <div
-      className={`bg-gray-50 border transition-transform duration-600 relative z-50 ${
+      className={`bg-gray-50 border transition-transform duration-600 relative z-[99] ${
         isTopNavHidden ? '-translate-y-full' : 'translate-y-0'
       }`}
     >
@@ -77,7 +77,7 @@ export const SecondaryHeader: React.FC<ISecondaryHeaderProps> = () => {
         {/* <Dropdown label="Features" items={FEATURES} /> */}
         {/* <Divider type="dark" /> */}
         <SecondaryHeaderLinks />
-        <Divider type="dark" className="hidden lg:inline ml-auto" />
+        {/* <Divider type="dark" className="hidden lg:inline ml-auto" /> */}
         <div className="hidden lg:inline-flex">
           <SecondaryHeaderPayLinks />
         </div>

@@ -23,7 +23,7 @@ const handleBtnClick = (data: any) => {
 };
 
 const buttons: ButtonProps[] = [
-  { name: 'Dashboard', onClick: handleBtnClick },
+  { name: 'Apps', onClick: handleBtnClick },
   { name: 'Agencies', onClick: handleBtnClick },
   { name: 'Themes', onClick: handleBtnClick },
   { name: 'Services', onClick: handleBtnClick },
@@ -54,17 +54,24 @@ const GuestComp: React.FC<GuestCompProps> = ({ data }) => (
 export const HeroFilter = () => (
   <section className="border border-b-0 border-x-0 border-t-0 border-gray-200 overflow-hidden">
     <div
-      className="hidden lg:block bg-[url('../assets/red-lines-bg.svg')] absolute w-full h-[438px]"
+      className="lg:block absolute w-full h-[100%] top-0"
+      style={{
+        background:
+          'radial-gradient(at 50% 40%, rgb(255, 255, 255), transparent 80%) 0% 0% repeat scroll, radial-gradient(at 50% -47%, rgb(172, 224, 249), transparent 80%) 0% 0% repeat scroll, radial-gradient(at 0% 0%, rgb(232, 225, 255) 0px, transparent 32%) 0% 0% repeat scroll, radial-gradient(at 100% 98%, rgb(255, 241, 235), transparent) 0% 0% repeat scroll, radial-gradient(at 0px 97%, rgb(227, 235, 255), white) 0% 0% repeat scroll rgba(0, 0, 0, 0)',
+        zIndex: '-1',
+      }}
+    />
+    <div
+      className="hidden lg:bg-[right_top_22%] xl:bg-[right_top_40%] lg:block bg-[url('../assets/red-lines-bg.svg')] absolute w-full h-[438px]"
       style={{
         backgroundRepeat: 'no-repeat',
-        backgroundPositionY: '20%',
         top: '-2px',
         backgroundSize: 'cover',
         opacity: '0.5',
         zIndex: '-1',
       }}
     />
-    <div
+    {/* <div
       className="hidden lg:block bg-[url('../assets/red-lines-bg.svg')] absolute w-full h-[438px]"
       style={{
         backgroundRepeat: 'no-repeat',
@@ -75,15 +82,19 @@ export const HeroFilter = () => (
         zIndex: '-1',
         transform: 'rotateX(180deg) rotateY(180deg)',
       }}
-    />
+    /> */}
     <div className="flex flex-col items-center justify-between p-4 lg:p-8 lg:pb-0">
       {/* Top Navigation Bar for Categories */}
 
-      <h2 className="max-w-md text-center mb-0 md:mb-2 text-2xl lg:text-3xl font-semibold text-gray-900 md:text-3xl xl:text-4xl dark:text-white">
+      {/* <h2 className="max-w-xs text-center mb-0 md:mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+        Find the best apps for your Shopify store
+      </h2> */}
+
+      <h2 className="text-gradient max-w-xs text-center mb-0 md:mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
         Find the best apps for your Shopify store
       </h2>
 
-      <div className="bg-white mt-1 px-2 sm:px-4 py-2.5 rounded hidden md:block lg:block">
+      <div className=" mt-1 px-2 sm:px-4 py-2.5 rounded hidden md:block lg:block">
         <div className="flex flex-wrap gap-2">
           <Category buttonProps={buttons} />
         </div>

@@ -10,7 +10,7 @@ import { ArrowRightIcon, SearchIcon } from '../SvgIcons/IconList';
 interface IMainNavigationActionsProps {}
 
 export const MainNavigationActions: React.FC<IMainNavigationActionsProps> = () => (
-  <div className="flex items-center gap-3">
+  <div className="flex items-left gap-3 flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row">
     {/* <IconButton
       description="Open notification"
       icon={<FaBell />}
@@ -22,11 +22,11 @@ export const MainNavigationActions: React.FC<IMainNavigationActionsProps> = () =
         Add post
       </Button>
     </a> */}
-    <SearchIcon classProp="text-gray-700 hover:text-black dark:text-white" />
+    {/* <SearchIcon classProp="text-gray-700 hover:text-black dark:text-white" /> */}
     <a href="/">
       <Button
         size="md"
-        className="bg-transparent hover:!bg-transparent text-gray-700 hover:text-black focus:ring-0"
+        className="ml-[-5px] lg:ml:0 text-left lg:text-center bg-transparent hover:!bg-transparent text-gray-700 hover:text-black focus:ring-0"
       >
         Login
       </Button>

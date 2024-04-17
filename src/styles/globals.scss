@@ -34,9 +34,9 @@ body {
     max-width: 1288px;
   }
 
-  @media only screen and (min-width: 1150px) and (max-width: 1399px) {
-    max-width: 1074px;
-  }
+  // @media only screen and (min-width: 1150px) and (max-width: 1399px) {
+  //   max-width: 1074px;
+  // }
 
   @media only screen and (min-width: 900px) and (max-width: 1149px) {
     max-width: 1074px;
@@ -78,4 +78,26 @@ blockquote {
 
 .reactIcon {
   @apply inline align-middle mr-2;
+}
+
+.text-15 {
+  @apply text-[0.9375rem];
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #f9000f 20%, #f428c1 50%, #c246ff 70%, #12c2e9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 2s ease-in-out infinite alternate;
+}
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
