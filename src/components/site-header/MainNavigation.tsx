@@ -53,7 +53,10 @@ export const MainNavigation: React.FC<IMainNavigationProps> = () => {
       //   boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
       // }}
     >
-      <Navbar className=" relative max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8">
+      <Navbar
+        id="primaryNav"
+        className=" relative max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8"
+      >
         <div className="w-full flex flex-wrap justify-between items-center mx-auto">
           <div className="flex items-center">
             <NavbarBrand href="/">
