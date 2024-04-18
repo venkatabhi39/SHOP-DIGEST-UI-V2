@@ -53,14 +53,14 @@ const GuestComp: React.FC<GuestCompProps> = ({ data }) => (
 
 export const HeroFilter = () => (
   <section className="border border-b-0 border-x-0 border-t-0 border-gray-200 overflow-hidden">
-    <div
+    {/* <div
       className="lg:block absolute w-full h-[100%] top-0"
       style={{
         background:
           'radial-gradient(at 50% 40%, rgb(255, 255, 255), transparent 80%) 0% 0% repeat scroll, radial-gradient(at 50% -47%, rgb(172, 224, 249), transparent 80%) 0% 0% repeat scroll, radial-gradient(at 0% 0%, rgb(232, 225, 255) 0px, transparent 32%) 0% 0% repeat scroll, radial-gradient(at 100% 98%, rgb(255, 241, 235), transparent) 0% 0% repeat scroll, radial-gradient(at 0px 97%, rgb(227, 235, 255), white) 0% 0% repeat scroll rgba(0, 0, 0, 0)',
         zIndex: '-1',
       }}
-    />
+    /> */}
     <div
       className="hidden lg:bg-[right_top_22%] xl:bg-[right_top_40%] lg:block bg-[url('../assets/red-lines-bg.svg')] absolute w-full h-[438px]"
       style={{
@@ -90,11 +90,11 @@ export const HeroFilter = () => (
         Find the best apps for your Shopify store
       </h2> */}
 
-      <h2 className="text-gradient max-w-xs text-center mb-0 md:mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
-        Find the best apps for your Shopify store
+      <h2 className="max-w-sm text-center mb-0 md:mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+        Find the best <span className="text-gradient">Shopify apps</span> for your Shopify store
       </h2>
 
-      <div className=" mt-1 px-2 sm:px-4 py-2.5 rounded hidden md:block lg:block">
+      <div className=" mt-1 px-2 sm:px-4 py-1 rounded hidden md:block lg:block">
         <div className="flex flex-wrap gap-2">
           <Category buttonProps={buttons} />
         </div>

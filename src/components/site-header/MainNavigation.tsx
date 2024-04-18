@@ -48,10 +48,10 @@ export const MainNavigation: React.FC<IMainNavigationProps> = () => {
 
   return (
     <div
-      className="bg-white"
-      style={{
-        boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
-      }}
+      className="bg-white border border-t-0"
+      // style={{
+      //   boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+      // }}
     >
       <Navbar className=" relative max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8">
         <div className="w-full flex flex-wrap justify-between items-center mx-auto">
