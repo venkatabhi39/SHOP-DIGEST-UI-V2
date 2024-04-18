@@ -84,7 +84,8 @@ blockquote {
   @apply text-[0.9375rem];
 }
 
-#primaryNav > .container {
+#primaryNav > .container,
+#secondaryNav > .container {
   max-width: 100%;
 }
 
