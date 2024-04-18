@@ -26,7 +26,7 @@ const componentMap = {
 };
 
 export const PopularLinks = () => (
-  <div className="flex flex-wrap gap-2 items-center justify-center mb-7 mx-4">
+  <div className="flex flex-wrap gap-2 items-center justify-center mb-0 pb-7 mx-4 border border-x-0 border-t-0 border-b-1">
     <span className="font-semibold text-sm me-2">Popular now:</span>
     {popularLinks.map((pl, i) => {
       const ComponentName = pl.component as keyof typeof componentMap;

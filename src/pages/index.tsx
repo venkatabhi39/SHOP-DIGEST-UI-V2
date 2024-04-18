@@ -10,6 +10,7 @@ import { updateLatestPageGenerated } from '@/services/lastTimePageRegenerated.se
 import { SiteHeader } from '@/components/site-header';
 import { HeroFilter } from '@/components/Blocks/HeroFilter/HeroFilter';
 import HeroForm from '@/components/Blocks/HeroFilter/HeroForm';
+import { PopularLinks } from '@/components/Blocks/HeroFilter/PopularLinks';
 
 import { SecondaryHeader } from '@/components/site-header/SecondaryHeader';
 
@@ -63,7 +64,7 @@ export default function Home({ posts, topApps, totalPages }: Props) {
 
       <HeroFilter />
       <HeroForm />
-
+      <PopularLinks />
       {/* <div className="border border-t-0 border-x-0 sticky top-40 z-50" /> */}
       <main className="bg-white">
         <CategoryPagesContent topApps={topApps} totalPages={totalPages} posts={posts} />

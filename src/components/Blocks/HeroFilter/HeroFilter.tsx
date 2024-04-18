@@ -27,7 +27,7 @@ const buttons: ButtonProps[] = [
   { name: 'Agencies', onClick: handleBtnClick },
   { name: 'Themes', onClick: handleBtnClick },
   { name: 'Services', onClick: handleBtnClick },
-  { name: 'Agencies', onClick: handleBtnClick },
+  { name: 'Jobs', onClick: handleBtnClick },
 ];
 
 interface GuestOption {
@@ -83,14 +83,14 @@ export const HeroFilter = () => (
         transform: 'rotateX(180deg) rotateY(180deg)',
       }}
     /> */}
-    <div className="flex flex-col items-center justify-between p-4 lg:p-8 lg:pb-0">
+    <div className="flex flex-col items-center justify-between pb-0 p-4 lg:p-8 lg:pb-0">
       {/* Top Navigation Bar for Categories */}
 
       {/* <h2 className="max-w-xs text-center mb-0 md:mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
         Find the best apps for your Shopify store
       </h2> */}
 
-      <h2 className="max-w-sm text-center mb-0 md:mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+      <h2 className="max-w-xs md:max-w-sm text-center mb-0 md:mb-2 text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
         Find the best <span className="text-gradient">Shopify apps</span> for your Shopify store
       </h2>
 

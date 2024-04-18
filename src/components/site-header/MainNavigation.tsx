@@ -18,9 +18,9 @@ export const PLATFORMS = [
     id: '1',
     label: (
       <a href="/" className="flex items-center p-0 rounded-lg">
-        <div className="p-0.5 mr-4 bg-white rounded-lg shadow dark:bg-gray-700">
+        {/* <div className="p-0.5 mr-4 bg-white rounded-lg shadow dark:bg-gray-700">
           <ShopifyIcon />
-        </div>
+        </div> */}
         <div>
           <div className="font-medium text-sm text-left">Shopify</div>
         </div>
@@ -31,9 +31,9 @@ export const PLATFORMS = [
     id: '2',
     label: (
       <a href="/" className="flex items-center p-0 rounded-lg">
-        <div className="p-0.5 mr-4 bg-white rounded-lg shadow dark:bg-gray-700">
+        {/* <div className="p-0.5 mr-4 bg-white rounded-lg shadow dark:bg-gray-700">
           <WordpressIcon />
-        </div>
+        </div> */}
         <div>
           <div className="font-medium text-sm text-left mb-1">Wordpress</div>
           <Badge color="success">Coming Soon</Badge>
@@ -48,7 +48,7 @@ export const MainNavigation: React.FC<IMainNavigationProps> = () => {
 
   return (
     <div
-      className="bg-white border border-t-0"
+      className="bg-white  border-t-0"
       // style={{
       //   boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
       // }}
@@ -65,12 +65,13 @@ export const MainNavigation: React.FC<IMainNavigationProps> = () => {
             <Divider className="h-5 !self-center" />
             <Dropdown
               arrowIcon={false}
+              className="z-50"
               label={
                 <>
-                  <span className="hidden font-sans text-gray-600 font-montserrat font-semibold me-1 text-md md:hidden xl:inline-block">
+                  <span className="font-sans text-gray-600 font-montserrat font-semibold me-1 text-md hidden md:inline-block">
                     Shopify
                   </span>
-                  <span className="inline xl:hidden mr-1">
+                  <span className="inline md:hidden mr-1">
                     <BsShop />
                   </span>
                   <IoCaretDownSharp className="text-gray-500 text-xs" />
