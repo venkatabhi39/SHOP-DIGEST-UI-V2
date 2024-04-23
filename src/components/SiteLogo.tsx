@@ -11,5 +11,10 @@ export const SiteLogo: React.FC<ISiteLogoProps> = ({ type = 'light' }) => {
     type === 'light' ? 'text-primary dark:text-white' : 'text-sdGray-text dark:text-sdGray-text',
   );
 
-  return <b className={className}>ShopDigest</b>;
+  return (
+    <>
+      <b className={`${className} hidden sm:inline-block`}>ShopDigest</b>{' '}
+      <b className={`${className} inline-block sm:hidden`}>SD</b>
+    </>
+  );
 };

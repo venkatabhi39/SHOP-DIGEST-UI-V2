@@ -48,10 +48,14 @@ const HeroForm: React.FC = ({ isStickyState }) => {
           </div> */}
 
           <form>
-            <div className="md:h-[58px] bg-white mx-auto max-w-2xl sm:flex items-center sm:space-x-3 p-2  border rounded-lg sm:rounded-full shadow-md  dark:bg-slate-900 dark:border-gray-700 dark:shadow-gray-900/[.2] justify-start">
+            <div
+              className={`${
+                isStickyState ? 'md:h-[46px]' : 'md:h-[58px]'
+              } bg-white mx-auto max-w-2xl sm:flex items-center sm:space-x-3 p-2  border rounded-lg sm:rounded-full shadow-md  dark:bg-slate-900 dark:border-gray-700 dark:shadow-gray-900/[.2] justify-start`}
+            >
               {isStickyState && (
                 <>
-                  <div className="flex items-center pb-2 sm:pb-0 sm:flex-[1_0_0%] w-full xl:max-w-28 md:border-none border border-r-0 border-l-0 border-t-0">
+                  <div className="flex items-center pb-2 sm:pb-0 sm:flex-[1_0_0%] w-full xl:max-w-28 sm:border-none border border-r-0 border-l-0 border-t-0">
                     <select
                       id="referring-domain"
                       className="placeholder-gray-900 font-medium bg-transparent  border-none focus:border-white focus:ring-0 w-full lg:min-w-28  text-gray-900 text-sm rounded-lg  block  py-2 lg:py-1 px-2 lg:px-2 pl-2 lg:pl-6 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
@@ -65,7 +69,11 @@ const HeroForm: React.FC = ({ isStickyState }) => {
                       <option>Agencies</option>
                     </select>
                   </div>
-                  <Divider className="hidden lg:inline !self-center border-gray-100 h-[30px] mt-1" />
+                  <Divider
+                    className={`hidden sm:inline !self-center border-gray-100 ${
+                      isStickyState ? 'h-[24px]' : 'h-[30px]'
+                    }`}
+                  />{' '}
                 </>
               )}
 
@@ -83,9 +91,13 @@ const HeroForm: React.FC = ({ isStickyState }) => {
                   <option>Google.com</option>
                 </select>
               </div>
-              <Divider className="hidden lg:inline !self-center border-gray-100 h-[30px] mt-1" />
+              <Divider
+                className={`hidden sm:inline !self-center border-gray-100 ${
+                  isStickyState ? 'h-[24px]' : 'h-[30px]'
+                }`}
+              />
 
-              <div className="flex items-center lg:pb-0 sm:flex-[1_0_0%] border md:border-0 border-r-0 border-l-0 py-2.5 lg:py-0">
+              <div className="flex items-center lg:pb-0 sm:flex-[1_0_0%] border sm:border-0 border-r-0 border-l-0 py-2.5 lg:py-0">
                 <input
                   type="text"
                   id="hs-hero-name-1"
@@ -95,7 +107,11 @@ const HeroForm: React.FC = ({ isStickyState }) => {
               </div>
 
               <div className="flex items-center justify-start lg:justify-end py-2 lg:py-0 px-2 lg:px-0 lg:pt-0 sm:ps-3  border-gray-300 sm:border-t-0  sm:flex-[1_0_0%] dark:border-gray-700 !ml-auto">
-                <Divider className="hidden lg:inline border-gray-100 !self-center h-[30px] mt-1" />
+                <Divider
+                  className={`hidden sm:inline !self-center border-gray-100 ${
+                    isStickyState ? 'h-[24px]' : 'h-[30px]'
+                  }`}
+                />{' '}
                 <div className="flex items-center">
                   <HiOutlineAdjustmentsHorizontal />
                   <button
@@ -110,7 +126,7 @@ const HeroForm: React.FC = ({ isStickyState }) => {
               <div className="flex items-center pt-2 sm:pt-0 sm:block sm:flex-[0_0_auto] !ml-auto">
                 {isStickyState ? (
                   <a
-                    className="w-full transition-all py-2 px-2 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent bg-primary text-white hover:bg-primary-800 disabled:opacity-50 disabled:pointer-events-none"
+                    className="w-full transition-all py-1 px-1 mt-[1px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent bg-primary text-white hover:bg-primary-800 disabled:opacity-50 disabled:pointer-events-none"
                     href="#"
                   >
                     <IoSearch size={22} />

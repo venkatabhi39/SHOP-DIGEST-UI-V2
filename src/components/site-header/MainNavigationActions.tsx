@@ -33,7 +33,7 @@ export const MainNavigationActions: React.FC<IMainNavigationActionsProps> = () =
     </a>
     <Button
       size="md"
-      className="font-semibold bg-transparent rounded-none bg-primary hover:!bg-primary-800 focus:ring-0"
+      className="font-semibold bg-transparent  bg-primary hover:!bg-primary-800 focus:ring-0"
     >
       Add post <ArrowRightIcon classProp="ml-1 h-5 w-5" />
     </Button>

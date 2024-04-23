@@ -68,12 +68,12 @@ export const MainNavigation: React.FC<IMainNavigationProps> = () => {
               className="z-50"
               label={
                 <>
-                  <span className="font-sans text-gray-600 font-montserrat font-semibold me-1 text-md hidden md:inline-block">
+                  <span className="font-sans text-gray-600 font-montserrat font-semibold me-1 text-md md:inline-block">
                     Shopify
                   </span>
-                  <span className="inline md:hidden mr-1">
+                  {/* <span className="inline md:hidden mr-1">
                     <BsShop />
-                  </span>
+                  </span> */}
                   <IoCaretDownSharp className="text-gray-500 text-xs" />
                 </>
               }

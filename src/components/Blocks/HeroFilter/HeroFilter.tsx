@@ -90,7 +90,7 @@ export const HeroFilter = () => (
         Find the best apps for your Shopify store
       </h2> */}
 
-      <h2 className="max-w-xs md:max-w-sm text-center mb-0 md:mb-2 text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+      <h2 className="max-w-xs md:max-w-[400px] text-center mb-0 md:mb-2 text-2xl md:text-[2rem] md:leading-10 font-bold tracking-tight text-gray-900 dark:text-white">
         Find the best <span className="text-gradient">Shopify apps</span> for your Shopify store
       </h2>
 
