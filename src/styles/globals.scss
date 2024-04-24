@@ -72,9 +72,17 @@ blockquote {
   letter-spacing: 0.2px;
 }
 
-// p {
-//   @apply text-gray-500;
-// }
+.sectionHeader {
+  p {
+    @apply text-lg font-normal text-gray-500 lg:text-base sm:px-16 xl:px-10;
+  }
+}
+
+.sectionHeaderLeft {
+  p {
+    @apply text-lg font-normal text-gray-500 lg:text-base;
+  }
+}
 
 .subduedText {
   @apply text-gray-500 dark:text-gray-400;

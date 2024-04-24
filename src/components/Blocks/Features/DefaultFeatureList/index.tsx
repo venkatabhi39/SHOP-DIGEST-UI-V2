@@ -1,5 +1,6 @@
 // App.tsx
 import React from 'react';
+
 import ServicesSection from './DefaultFeatureListSection';
 
 interface ServiceItem {
@@ -55,7 +56,7 @@ const servicesData: ServiceItem[] = [
 ];
 
 const DFeaturesList: React.FC = () => (
-  <div className="App">
+  <div className="">
     <ServicesSection
       title="Designed for business teams like yours"
       description="Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth."

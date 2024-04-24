@@ -1,4 +1,5 @@
 import React from 'react';
+import { Heading } from '@/components/Heading';
 import FeatureItem from '@/components/Features/FeatureItem';
 
 interface ListWithContentProps {
@@ -22,8 +23,11 @@ const ListWithContent: React.FC<ListWithContentProps> = ({
   <section className="bg-white dark:bg-gray-900">
     <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
       <div className="grid max-w-screen-xl  pb-8  lg:gap-8 xl:gap-0 lg:py-8 lg:grid-cols-12">
-        <div className="mr-auto lg:col-span-7">
-          <h2 className="mb-4">{title}</h2>
+        <div className="mr-auto lg:col-span-7 sectionHeaderLeft">
+          <Heading as="h2" className="mb-4">
+            {title}
+          </Heading>
+
           {description.map((desc, index) => (
             <p key={index} className="mb-4">
               {desc}

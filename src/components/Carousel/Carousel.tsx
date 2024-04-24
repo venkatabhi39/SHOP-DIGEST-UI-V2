@@ -23,12 +23,18 @@ export const TestimonialsCarousel: React.FC<TestimonialsCarouselProps> = ({
     groupedTestimonials.push(testimonials.slice(i, i + itemsPerSlide));
   }
 
+  const trX = (num: number) => num * 100;
+
   return (
     <div className="relative">
       <div className="overflow-hidden">
         <div
           className="flex transition-transform"
-          style={{ transform: `translateX(-${(activeSlide * 200) / groupedTestimonials.length}%)` }}
+          style={{
+            transform: `translateX(-${
+              (activeSlide * trX(itemsPerSlide)) / groupedTestimonials.length
+            }%)`,
+          }}
         >
           {groupedTestimonials.map((group, index) => (
             <div className="flex min-w-full justify-center" key={index}>
@@ -45,12 +51,12 @@ export const TestimonialsCarousel: React.FC<TestimonialsCarouselProps> = ({
           ))}
         </div>
       </div>
-      <div className="absolute -bottom-12 left-0 right-0 flex justify-center p-4">
+      <div className="absolute -bottom-14 left-0 right-0 flex justify-center p-2">
         {groupedTestimonials.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 bg-gray-300 rounded-full mx-2 ${
-              activeSlide === index ? 'bg-blue-500' : ''
+            className={`w-3 h-3 bg-gray-300 rounded-full mx-1 ${
+              activeSlide === index ? '!bg-blue-500' : ''
             }`}
             onClick={() => goToSlide(index)}
             aria-label={`Slide ${index}`}
