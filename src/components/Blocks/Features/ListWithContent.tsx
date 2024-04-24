@@ -20,20 +20,18 @@ const ListWithContent: React.FC<ListWithContentProps> = ({
   actions,
 }) => (
   <section className="bg-white dark:bg-gray-900">
-    <div className="py-8 px-4 mx-auto max-w-[85rem] sm:py-16 lg:px-6">
+    <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
       <div className="grid max-w-screen-xl  pt-20 pb-8  lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-28">
         <div className="mr-auto lg:col-span-7">
-          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-            {title}
-          </h2>
+          <h2 className="mb-4">{title}</h2>
           {description.map((desc, index) => (
-            <p key={index} className="text-gray-600 mb-4">
+            <p key={index} className="mb-4">
               {desc}
             </p>
           ))}
         </div>
         <div className="lg:mt-0 lg:col-span-5 lg:block lg:pl-12">
-          <ul role="list" className="sm:!pt-0 lg:mt-0 pt-2 my-7 space-y-5 dark:border-gray-700">
+          <ul role="list" className="sm:!pt-0 lg:mt-0 pt-2 my-7 space-y-5 ">
             {features.map((feature, index) => (
               <FeatureItem key={index} {...feature} />
             ))}

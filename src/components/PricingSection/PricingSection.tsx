@@ -1,4 +1,5 @@
 import React from 'react';
+import { Heading } from '@/components/Heading';
 
 type PricingPlan = {
   title: string;
@@ -13,18 +14,19 @@ type PricingPlan = {
 
 const PricingSection: React.FC<{ plans: PricingPlan[] }> = ({ plans }) => (
   <section className="bg-white dark:bg-gray-900">
-    <div className="py-8 px-4 mx-auto max-w-[85rem] lg:py-16 lg:px-6">
+    <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
       <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+        <Heading as="h2" className="mb-4">
           Designed for business teams like yours
-        </h2>
-        <p className="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">
+        </Heading>
+
+        <p className="mb-5">
           Here at Flowbite we focus on markets where technology, innovation, and capital can unlock
           long-term value and drive economic growth.
         </p>
       </div>
       <div className="flex justify-center mb-8 items-center">
-        <span className="text-sm text-gray-600 mr-2 font-medium">Billed</span>
+        <span className="mr-2">Billed</span>
 
         <nav className="flex overflow-x-auto items-center p-1 space-x-1 rtl:space-x-reverse text-sm text-gray-600 bg-gray-500/5 rounded-full dark:bg-gray-500/20 border">
           <button
@@ -68,22 +70,15 @@ const PricingSection: React.FC<{ plans: PricingPlan[] }> = ({ plans }) => (
                   </span>
                 )}
               </div>
-              <h3 className="mb-4 text-2xl font-semibold">{plan.title}</h3>
-              <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                {plan.description}
-              </p>
+              <h3 className="mb-4 ">{plan.title}</h3>
+              <p className="">{plan.description}</p>
               <div className="flex justify-center items-baseline my-4">
                 <span className="mr-2 text-5xl font-extrabold">${plan.price}</span>
                 <span className="text-gray-500 dark:text-gray-400">/month</span>
               </div>
-              <p className="mt-4 mb-1 text-gray-500 text-light dark:text-gray-400">
-                $19 USD per month, paid annually
-              </p>
+              <p className="mt-4 mb-1 ">$19 USD per month, paid annually</p>
               <div>
-                <a
-                  href="#"
-                  className="inline-flex justify-center items-center font-medium text-sdBlue hover:text-blue-800 dark:text-primary-500 dark:hover:text-primary-700"
-                >
+                <a href="#" className="inline-flex justify-center items-center">
                   Go to annual plan
                   <svg
                     className="ml-2 w-5 h-5"

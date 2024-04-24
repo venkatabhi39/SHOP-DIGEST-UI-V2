@@ -72,6 +72,10 @@ blockquote {
   letter-spacing: 0.2px;
 }
 
+// p {
+//   @apply text-gray-500;
+// }
+
 .subduedText {
   @apply text-gray-500 dark:text-gray-400;
 }

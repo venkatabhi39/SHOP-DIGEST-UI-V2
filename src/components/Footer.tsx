@@ -4,6 +4,8 @@ import { StyledAnchor, StyledAnchorProps } from '@/components/StyledLink';
 import { PropsWithClassName } from '@/types/common.types';
 import { FooterTopAppsList } from '@/services/appPages.service';
 import TopAppsHomePageFooter from './TopAppsHomePageFooter';
+import PricingPlan from '@/components/Blocks/PricingPlan/PricingPlan';
+import ListWithContent from '@/components/Blocks/Features';
 
 const FooterLink: FC<StyledAnchorProps> = props => <StyledAnchor {...props} className="text-md" />;
 
@@ -13,10 +15,12 @@ export default function Footer({
 }: PropsWithClassName<{ footerTopApps?: FooterTopAppsList }>) {
   return (
     <footer className={classNames('mt-8', className)}>
-      {footerTopApps && <TopAppsHomePageFooter topApps={footerTopApps} />}
+      {/* {footerTopApps && <TopAppsHomePageFooter topApps={footerTopApps} />} */}
       <div className={classNames('border-t-300')}>
         <div className="py-8 section">
-          <div className="flex flex-row items-center justify-between gap-8 max-md:flex-col">
+          <PricingPlan />
+          <ListWithContent />
+          {/* <div className="flex flex-row items-center justify-between gap-8 max-md:flex-col">
             <div className="flex flex-row gap-4 items-center">
               <span className="text-md">&copy; Shop Digest</span>
             </div>
@@ -27,7 +31,7 @@ export default function Footer({
               <FooterLink href="/page/terms">Privacy</FooterLink>
               <FooterLink href="/page/privacy">Terms</FooterLink>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

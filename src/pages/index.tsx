@@ -14,10 +14,6 @@ import { PopularLinks } from '@/components/Blocks/HeroFilter/PopularLinks';
 
 import { SecondaryHeader } from '@/components/site-header/SecondaryHeader';
 
-import PricingPlan from '@/components/Blocks/PricingPlan/PricingPlan';
-
-import ListWithContent from '@/components/Blocks/Features';
-
 export type Props = {
   posts: CategoryPagePostList;
   totalPages: number;
@@ -71,8 +67,6 @@ export default function Home({ posts, topApps, totalPages }: Props) {
       <PopularLinks />
       {/* <div className="border border-t-0 border-x-0 sticky top-40 z-50" /> */}
       <main className="bg-white">
-        <PricingPlan />
-        <ListWithContent />
         <CategoryPagesContent topApps={topApps} totalPages={totalPages} posts={posts} />
       </main>
     </>
