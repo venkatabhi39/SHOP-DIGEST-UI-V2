@@ -5,7 +5,9 @@ import { PropsWithClassName } from '@/types/common.types';
 import { FooterTopAppsList } from '@/services/appPages.service';
 import TopAppsHomePageFooter from './TopAppsHomePageFooter';
 import PricingPlan from '@/components/Blocks/PricingPlan/PricingPlan';
-import ListWithContent from '@/components/Blocks/Features';
+import ListWithContent from '@/components/Blocks/Features/ListWithContent/index';
+import TestimonalCarousel from '@/components/Blocks/TestimonalCarousel';
+import DefaultFeatureList from '@/components/Blocks/Features/DefaultFeatureList';
 
 const FooterLink: FC<StyledAnchorProps> = props => <StyledAnchor {...props} className="text-md" />;
 
@@ -20,6 +22,8 @@ export default function Footer({
         <div className="py-8 section">
           <PricingPlan />
           <ListWithContent />
+          <TestimonalCarousel />
+          <DefaultFeatureList />
           {/* <div className="flex flex-row items-center justify-between gap-8 max-md:flex-col">
             <div className="flex flex-row gap-4 items-center">
               <span className="text-md">&copy; Shop Digest</span>
