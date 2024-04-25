@@ -59,8 +59,12 @@ h2 {
   @apply text-[1.6rem] lg:text-[1.6rem] 2xl:text-[1.8rem] leading-[1.4];
 }
 
+// h3 {
+//   @apply text-[1.5rem] lg:text-[1.5rem] 2xl:text-[1.7rem] leading-[1.4];
+// }
+
 h3 {
-  @apply text-[1.5rem] lg:text-[1.5rem] 2xl:text-[1.7rem] leading-[1.4];
+  @apply mb-2 text-xl font-bold dark:text-white;
 }
 
 h1,
@@ -72,15 +76,28 @@ blockquote {
   letter-spacing: 0.2px;
 }
 
-.sectionHeader {
-  p {
-    @apply text-lg font-normal text-gray-500 lg:text-base sm:px-16 xl:px-10;
-  }
+p {
+  @apply font-light text-gray-500 sm:text-base;
+}
+ul {
+  @apply text-gray-900;
 }
 
-.sectionHeaderLeft {
+.sDbtn {
+  @apply px-4 py-3 text-sm font-medium text-center;
+}
+
+.sectionHeader {
   p {
     @apply text-lg font-normal text-gray-500 lg:text-base;
+  }
+}
+.sdLink {
+  @apply font-medium text-sdBlue hover:text-sdBlue-dark;
+}
+.card {
+  h3 {
+    @apply mb-2 text-xl font-bold dark:text-white;
   }
 }
 

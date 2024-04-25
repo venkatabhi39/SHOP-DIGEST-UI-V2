@@ -37,11 +37,11 @@ export const TestimonialsCarousel: React.FC<TestimonialsCarouselProps> = ({
           }}
         >
           {groupedTestimonials.map((group, index) => (
-            <div className="flex min-w-full justify-center" key={index}>
+            <div className="grid gap-3 lg:grid-cols-3 min-w-full justify-center" key={index}>
               {' '}
               {/* Each group takes the full width */}
               {group.map((testimonial, idx) => (
-                <div key={idx} style={{ width: `calc(${100 / itemsPerSlide}% - 1rem)` }}>
+                <div key={idx}>
                   {' '}
                   {/* Adjust width based on itemsPerSlide and subtract the total gap */}
                   <TestimonialCard {...testimonial} />

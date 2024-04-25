@@ -10,8 +10,8 @@ interface ServicesSectionProps {
 }
 const ServicesSection: React.FC<ServicesSectionProps> = ({ title, description, services }) => (
   <section className="bg-white dark:bg-gray-900">
-    <div className="py-8 px-4 max-w-screen-xl sm:py-16 lg:px-0">
-      <div className="max-w-screen-md mb-8 lg:mb-16 sectionHeaderLeft">
+    <div className="py-8 sm:py-16 w-full mx-auto">
+      <div className="mb-8 max-w-screen-md lg:mb-16 sectionHeader">
         <Heading as="h2" className="mb-4">
           {title}
         </Heading>

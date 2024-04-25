@@ -21,9 +21,9 @@ const ListWithContent: React.FC<ListWithContentProps> = ({
   actions,
 }) => (
   <section className="bg-white dark:bg-gray-900">
-    <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-      <div className="grid max-w-screen-xl  pb-8  lg:gap-8 xl:gap-0 lg:py-8 lg:grid-cols-12">
-        <div className="mr-auto lg:col-span-7 sectionHeaderLeft">
+    <div className="py-8 px-4 mx-auto max-w-5xl xl:max-w-7xl sm:py-16 lg:px-6">
+      <div className="grid  pb-8  lg:gap-8 xl:gap-0 lg:py-8 lg:grid-cols-12">
+        <div className="mr-auto lg:col-span-7 sectionHeader">
           <Heading as="h2" className="mb-4">
             {title}
           </Heading>
@@ -45,7 +45,7 @@ const ListWithContent: React.FC<ListWithContentProps> = ({
               <a
                 key={index}
                 href={action.url}
-                className={`inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center rounded-lg focus:ring-4 ${
+                className={`sDbtn inline-flex items-center justify-center rounded-lg focus:ring-4 ${
                   action.primary
                     ? 'text-white bg-sdBlue hover:bg-blue-800 focus:ring-blue-300 dark:focus:ring-blue-900'
                     : 'text-gray-900 border border-gray-300 hover:bg-gray-100 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800'

@@ -79,10 +79,10 @@ const testimonialsData = [
 ];
 
 const Carousel = () => (
-  <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-0 lg:py-14 mx-auto">
+  <div className="py-10 lg:py-14 mx-auto">
     <div className="mx-auto max-w-screen-md text-center sectionHeader">
       <Heading as="h2" className="mb-4">
-        Testimonials
+        You're in a good company.
       </Heading>
 
       <p className="mb-8">

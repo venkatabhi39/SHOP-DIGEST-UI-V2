@@ -15,6 +15,7 @@ module.exports = {
       colors: {
         sdBlue: {
           DEFAULT: '#0972d3',
+          dark: '#1d4ed8',
         },
         sdGray: {
           light: '#f9fafb',

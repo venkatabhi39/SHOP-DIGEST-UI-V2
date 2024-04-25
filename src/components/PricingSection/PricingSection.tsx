@@ -14,7 +14,7 @@ type PricingPlan = {
 
 const PricingSection: React.FC<{ plans: PricingPlan[] }> = ({ plans }) => (
   <section className="bg-white dark:bg-gray-900">
-    <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+    <div className="py-8 px-4 mx-auto max-w-5xl xl:max-w-7xl lg:py-16 lg:px-6">
       <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12 sectionHeader">
         <Heading as="h2" className="mb-4">
           Designed for business teams like yours
@@ -73,12 +73,12 @@ const PricingSection: React.FC<{ plans: PricingPlan[] }> = ({ plans }) => (
               <h3 className="mb-4 ">{plan.title}</h3>
               <p className="">{plan.description}</p>
               <div className="flex justify-center items-baseline my-4">
-                <span className="mr-2 text-5xl font-extrabold">${plan.price}</span>
+                <span className="mr-2 text-4xl font-extrabold">${plan.price}</span>
                 <span className="text-gray-500 dark:text-gray-400">/month</span>
               </div>
               <p className="mt-4 mb-1 ">$19 USD per month, paid annually</p>
               <div>
-                <a href="#" className="inline-flex justify-center items-center">
+                <a href="#" className="sdLink inline-flex justify-center items-center">
                   Go to annual plan
                   <svg
                     className="ml-2 w-5 h-5"

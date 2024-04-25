@@ -19,7 +19,7 @@ export default function Footer({
     <footer className={classNames('mt-8', className)}>
       {/* {footerTopApps && <TopAppsHomePageFooter topApps={footerTopApps} />} */}
       <div className={classNames('border-t-300')}>
-        <div className="py-8 section">
+        <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
           <PricingPlan />
           <ListWithContent />
           <TestimonalCarousel />
