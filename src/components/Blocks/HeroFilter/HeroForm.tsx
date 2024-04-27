@@ -5,11 +5,13 @@ import { Divider } from '../../Divider';
 import { HiOutlineAdjustmentsHorizontal } from 'react-icons/hi2';
 import { PopularLinks } from './PopularLinks';
 import { IoSearch } from 'react-icons/io5';
+import { IconButton } from '../../buttons/IconButton';
 
 const HeroForm: React.FC = ({ isStickyState }) => {
   const [openModal, setOpenModal] = useState(false);
 
   const [isSticky, setIsSticky] = useState(false);
+  const [isHidden, setIsHidden] = React.useState<boolean>(true);
   // const headerRef = useRef<HTMLDivElement>(null); // Create a ref for the header element
 
   // useEffect(() => {
@@ -35,10 +37,38 @@ const HeroForm: React.FC = ({ isStickyState }) => {
       // ref={headerRef}
       className={`w-full top-14 z-10  ${isSticky ? 'shadow-md bg-white' : 'shadow-none'}`}
     >
+      <IconButton
+        description="Open search"
+        data-collapse-toggle="mobile-menu-2"
+        className={`absolute top-[10px] right-44 ml-1 ring-gray-100 lg:hidden hover:bg-white hover:text-sdGray-text focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ${
+          isStickyState ? 'block' : 'hidden'
+        }`}
+        aria-controls="mobile-menu-search"
+        aria-expanded="false"
+        icon={
+          <svg
+            className="w-6 h-6 text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeWidth="2"
+              d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+            />
+          </svg>
+        }
+        onClick={() => setIsHidden(!isHidden)}
+      />
       <div
         className={`max-w-full lg:max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 ${
-          isStickyState ? 'pt-0 pb-4' : 'py-5'
-        }`}
+          isStickyState && isHidden ? 'max-lg:hidden' : 'block'
+        } ${isStickyState ? 'pt-0 pb-4' : 'py-5'}`}
       >
         <div className="relative mx-auto max-w-4xl grid space-y-5 sm:space-y-10">
           {/* <div className="text-center">

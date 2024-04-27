@@ -35,6 +35,7 @@ export function SiteHeader() {
 
       <MainNavigation />
       {/* <SearchAndBookSection /> */}
+
       {isSticky && (
         <div className="bg-white border border-t-0 border-x-0 shadow-md">
           <HeroForm isStickyState={isSticky} />
