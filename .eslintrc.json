@@ -19,7 +19,17 @@
     "import/order": "off",
     "@next/next/no-html-link-for-pages": "off",
     "import/prefer-default-export": "off",
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true,
+        "optionalDependencies": false,
+        "peerDependencies": false,
+        "packageDir": ["./", "./packages/"],
+        "allowModules": ["tailwind-merge"] // Whitelist 'tailwind-merge'
+      }
+    ]
   },
   "plugins": ["prettier"]
 }

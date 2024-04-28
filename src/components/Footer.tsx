@@ -8,6 +8,7 @@ import PricingPlan from '@/components/Blocks/PricingPlan/PricingPlan';
 import ListWithContent from '@/components/Blocks/Features/ListWithContent/index';
 import TestimonalCarousel from '@/components/Blocks/TestimonalCarousel';
 import DefaultFeatureList from '@/components/Blocks/Features/DefaultFeatureList';
+import ThreeColumnsFeatureList from '@/components/Blocks/Features/ThreeColumnFeatures';
 
 const FooterLink: FC<StyledAnchorProps> = props => <StyledAnchor {...props} className="text-md" />;
 
@@ -24,6 +25,7 @@ export default function Footer({
           <ListWithContent />
           <TestimonalCarousel />
           <DefaultFeatureList />
+          <ThreeColumnsFeatureList />
           {/* <div className="flex flex-row items-center justify-between gap-8 max-md:flex-col">
             <div className="flex flex-row gap-4 items-center">
               <span className="text-md">&copy; Shop Digest</span>

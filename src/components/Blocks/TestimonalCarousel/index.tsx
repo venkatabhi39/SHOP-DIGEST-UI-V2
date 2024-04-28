@@ -1,5 +1,6 @@
 import React from 'react';
 import { Heading } from '@/components/Heading';
+import { SectionHeader } from '@/components/section/SectionHeader';
 import { TestimonialsCarousel } from '@/components/Carousel/Carousel';
 
 const testimonialsData = [
@@ -81,14 +82,17 @@ const testimonialsData = [
 const Carousel = () => (
   <div className="py-10 lg:py-14 mx-auto">
     <div className="mx-auto max-w-screen-md text-center sectionHeader">
-      <Heading as="h2" className="mb-4">
+      {/* <Heading as="h2" className="mb-4">
         You're in a good company.
       </Heading>
 
       <p className="mb-8">
         Explore the whole collection of open-source web components and elements built with the
         utility classes from Tailwind
-      </p>
+      </p> */}
+            <SectionHeader 
+            title="You're in a good company."
+            description="Explore the whole collection of open-source web components and elements built with the utility classes from Tailwind"/>
     </div>
     <TestimonialsCarousel testimonials={testimonialsData} itemsPerSlide={3} />
   </div>

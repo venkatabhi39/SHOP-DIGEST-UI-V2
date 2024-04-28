@@ -50,6 +50,7 @@
     "slick-carousel": "^1.8.1",
     "ssh2": "^1.13.0",
     "swr": "^2.1.2",
+    "tailwind-merge": "^2.3.0",
     "tunnel-ssh": "^5.0.5",
     "typescript": "5.0.2"
   },
