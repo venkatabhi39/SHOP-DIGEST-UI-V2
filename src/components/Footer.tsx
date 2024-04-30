@@ -9,6 +9,9 @@ import ListWithContent from '@/components/Blocks/Features/ListWithContent/index'
 import TestimonalCarousel from '@/components/Blocks/TestimonalCarousel';
 import DefaultFeatureList from '@/components/Blocks/Features/DefaultFeatureList';
 import ThreeColumnsFeatureList from '@/components/Blocks/Features/ThreeColumnFeatures';
+import NewsletterSubscription from '@/components/Blocks/NewLetterSubscription'
+import TabsComponent from '@/components/Tabs/TabsWithUnderline'
+import FooterSection from '@/components/Blocks/FooterSections/FooterVariant'
 
 const FooterLink: FC<StyledAnchorProps> = props => <StyledAnchor {...props} className="text-md" />;
 
@@ -26,6 +29,7 @@ export default function Footer({
           <TestimonalCarousel />
           <DefaultFeatureList />
           <ThreeColumnsFeatureList />
+
           {/* <div className="flex flex-row items-center justify-between gap-8 max-md:flex-col">
             <div className="flex flex-row gap-4 items-center">
               <span className="text-md">&copy; Shop Digest</span>
@@ -38,6 +42,11 @@ export default function Footer({
               <FooterLink href="/page/privacy">Terms</FooterLink>
             </div>
           </div> */}
+        </div>
+        <NewsletterSubscription/>
+        <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <TabsComponent/>
+        <FooterSection/>
         </div>
       </div>
     </footer>
