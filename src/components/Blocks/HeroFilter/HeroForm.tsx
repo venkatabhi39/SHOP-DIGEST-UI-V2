@@ -40,7 +40,7 @@ const HeroForm: React.FC = ({ isStickyState }) => {
       <IconButton
         description="Open search"
         data-collapse-toggle="mobile-menu-2"
-        className={`absolute top-[10px] right-44 ml-1 ring-gray-100 lg:hidden hover:bg-white hover:text-sdGray-text focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ${
+        className={`absolute top-[10px] right-36 ml-1 ring-gray-100 lg:hidden hover:bg-white hover:text-sdGray-text focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ${
           isStickyState ? 'block' : 'hidden'
         }`}
         aria-controls="mobile-menu-search"

@@ -60,6 +60,7 @@ export const MainNavigation: React.FC<IMainNavigationProps> = () => {
       >
         <div className="w-full flex flex-wrap justify-between items-center mx-auto">
           <div className="flex items-center">
+            <NavbarToggle onClick={() => setIsHidden(!isHidden)} />
             <NavbarBrand href="/">
               <SiteLogo />
             </NavbarBrand>
@@ -82,7 +83,13 @@ export const MainNavigation: React.FC<IMainNavigationProps> = () => {
             />
           </div>
           <div className="flex items-center ml-auto lg:hidden">
-            <a href="/" className="mr-0.5">
+            <Button
+              size="xs"
+              className="font-medium bg-transparent rounded-md ml-2 mr-2 bg-primary hover:!bg-primary-800 focus:ring-0"
+            >
+              Add post
+            </Button>
+            <a href="/" className="mr-0.5 login">
               <svg
                 className="w-6 h-6 text-gray-800 dark:text-white"
                 aria-hidden="true"
@@ -101,14 +108,7 @@ export const MainNavigation: React.FC<IMainNavigationProps> = () => {
                 />
               </svg>
             </a>
-            <Button
-              size="xs"
-              className="font-medium bg-transparent rounded-md ml-2 mr-2 bg-primary hover:!bg-primary-800 focus:ring-0"
-            >
-              Add post
-            </Button>
           </div>
-          <NavbarToggle onClick={() => setIsHidden(!isHidden)} />
 
           <NavbarCollapse className={isHidden ? 'max-lg:hidden' : 'block'}>
             <MainNavigationLinks />

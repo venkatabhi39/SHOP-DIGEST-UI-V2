@@ -9,10 +9,10 @@ const TabLinks = () => {
                     {/* Repeated blocks for each column */}
                     {['Company', 'Help center', 'Legal', 'Company', 'Download'].map((title, index) => (
                         <div key={index}>
-                            <ul className="text-gray-500 dark:text-gray-400">
+                            <ul className="text-gray-700 dark:text-gray-400">
                                 {['About', 'Careers', 'Brand Center', 'Blog'].map((item, idx) => (
                                     <li key={idx} className="mb-4">
-                                        <a href="#" className="hover:underline">{item}</a>
+                                        <a href="#" className="hover:underline ">{item}</a>
                                     </li>
                                 ))}
                             </ul>

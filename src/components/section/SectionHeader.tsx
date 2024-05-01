@@ -15,7 +15,7 @@ export const SectionHeader: React.FC<ISectionHeaderProps> = ({
   isFirstSection = false,
   className,
 }) => (
-  <div className={twMerge('mx-auto max-w-screen-sm text-center mb-8 lg:mb-16', className)}>
+  <div className={twMerge('mx-auto max-w-screen-sm text-left sm:text-center mb-8 lg:mb-16', className)}>
     <Heading as={isFirstSection ? 'h1' : 'h2'} className='mb-3'>{title}</Heading>
     <p className="">{description}</p>
   </div>
