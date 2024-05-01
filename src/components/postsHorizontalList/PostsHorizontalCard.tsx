@@ -25,7 +25,7 @@ export const PostsHorizontalCard: React.FC<IPostsHorizontalCardProps> = ({ post 
     />
     <div className="flex-grow basis-1/3">
       <Image
-        className="aspect-video w-full"
+        className="aspect-video w-full rounded-lg"
         alt={post.title.rendered}
         width={300}
         height={300}

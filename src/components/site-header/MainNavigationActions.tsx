@@ -26,7 +26,7 @@ export const MainNavigationActions: React.FC<IMainNavigationActionsProps> = () =
     <a href="/">
       <Button
         size="md"
-        className="ml-[-5px] lg:ml:0 text-left lg:text-center bg-transparent hover:!bg-transparent text-gray-700 hover:text-black focus:ring-0"
+        className="border-gray-400  ml-[-5px] lg:ml:0 text-left lg:text-center bg-transparent hover:!bg-red-50 text-gray-700 hover:text-black focus:ring-0"
       >
         Login
       </Button>

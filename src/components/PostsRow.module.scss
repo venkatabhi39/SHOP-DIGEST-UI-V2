@@ -4,7 +4,7 @@
   }
 
   &__image {
-    @apply w-full aspect-video flex items-start justify-center;
+    @apply w-full aspect-video flex items-start justify-center rounded-lg;
 
     img {
       @apply w-full h-full object-cover;
