@@ -21,7 +21,7 @@ const ListWithContent: React.FC<ListWithContentProps> = ({
   actions,
 }) => (
   <section className="bg-white dark:bg-gray-900">
-    <div className="py-8 px-4 mx-auto max-w-5xl xl:max-w-7xl sm:py-16 lg:px-6">
+    <div className="py-8 px-4 mx-auto max-w-5xl lg:max-w-[90%] sm:py-16 lg:px-6">
       <div className="grid  pb-8  lg:gap-8 xl:gap-0 lg:py-8 lg:grid-cols-12">
         <div className="mr-auto lg:col-span-7 sectionHeader">
           <Heading as="h2" className="mb-4">
@@ -34,7 +34,7 @@ const ListWithContent: React.FC<ListWithContentProps> = ({
             </p>
           ))}
         </div>
-        <div className="lg:mt-0 lg:col-span-5 lg:block lg:pl-12">
+        <div className="lg:mt-0 lg:col-span-5 lg:block lg:pl-12 m-0 lg:ml-auto">
           <ul role="list" className="sm:!pt-0 lg:mt-0 pt-2 my-7 space-y-5 ">
             {features.map((feature, index) => (
               <FeatureItem key={index} {...feature} />

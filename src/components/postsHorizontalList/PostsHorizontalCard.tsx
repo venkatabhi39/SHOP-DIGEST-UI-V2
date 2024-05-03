@@ -11,7 +11,7 @@ interface IPostsHorizontalCardProps {
 }
 
 export const PostsHorizontalCard: React.FC<IPostsHorizontalCardProps> = ({ post }) => (
-  <article className="gap-10 flex items-start justify-between bg-white dark:bg-gray-800 dark:border-gray-700">
+  <article className="gap-10 flex flex-col lg:flex-row items-start justify-between bg-white dark:bg-gray-800 dark:border-gray-700">
     <div className="flex-grow basis-1/3">
       <StyledAnchorWithoutUnderline href={`/${post.slug}`}>
         <Heading as="h3" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />

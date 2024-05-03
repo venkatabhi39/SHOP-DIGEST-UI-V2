@@ -1,6 +1,6 @@
 .postsCard {
   &__container {
-    @apply mt-5 grid items-start gap-8 gap-y-14 sm:grid-cols-2 xl:grid-cols-3;
+    @apply mt-5 grid items-start gap-8 gap-y-14 sm:grid-cols-2 xl:grid-cols-3 px-0;
   }
 
   &__image {

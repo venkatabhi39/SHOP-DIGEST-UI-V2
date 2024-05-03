@@ -25,8 +25,11 @@ const PricingSection: React.FC<{ plans: PricingPlan[] }> = ({ plans }) => (
           long-term value and drive economic growth.
         </p>
       </div> */}
-      <SectionHeader title='Designed for business teams like yours' description='   Here at Flowbite we focus on markets where technology, innovation, and capital can unlock
-          long-term value and drive economic growth.'/>
+      <SectionHeader
+        title="Designed for business teams like yours"
+        description="   Here at Flowbite we focus on markets where technology, innovation, and capital can unlock
+          long-term value and drive economic growth."
+      />
       <div className="flex justify-center mb-8 items-center">
         <span className="mr-2">Billed</span>
 
@@ -57,11 +60,11 @@ const PricingSection: React.FC<{ plans: PricingPlan[] }> = ({ plans }) => (
           <li className="!mt-0">Secured payment through stripe</li>
         </ul>
       </div>
-      <div className="lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
+      <div className="max-w-full lg:max-w-[85%] m-auto lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-5 lg:space-y-0">
         {plans.map(plan => (
           <div key={plan.title} className="mb-8">
             <div
-              className={`p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-200 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white ${
+              className={`p-3 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-200 shadow dark:border-gray-600 xl:p-4 dark:bg-gray-800 dark:text-white ${
                 plan.isHighlighted ? 'border-sdBlue' : ''
               }`}
             >
@@ -72,15 +75,20 @@ const PricingSection: React.FC<{ plans: PricingPlan[] }> = ({ plans }) => (
                   </span>
                 )}
               </div>
-              <h3 className="mb-4 ">{plan.title}</h3>
-              <p className="">{plan.description}</p>
+              <h3 className="mb-4 text-xl">{plan.title}</h3>
+              <p className="text-base lg:text-sm xl:text-base">{plan.description}</p>
               <div className="flex justify-center items-baseline my-4">
-                <span className="mr-2 text-4xl font-extrabold">${plan.price}</span>
+                <span className="mr-2 text-3xl font-extrabold">${plan.price}</span>
                 <span className="text-gray-500 dark:text-gray-400">/month</span>
               </div>
-              <p className="mt-4 mb-1 ">$19 USD per month, paid annually</p>
+              <p className="mt-4 mb-1 text-base lg:text-sm xl:text-base">
+                $19 USD per month, paid annually
+              </p>
               <div>
-                <a href="#" className="sdLink inline-flex justify-center items-center">
+                <a
+                  href="#"
+                  className="sdLink inline-flex justify-center items-center  text-base lg:text-sm xl:text-base"
+                >
                   Go to annual plan
                   <svg
                     className="ml-2 w-5 h-5"
@@ -99,7 +107,7 @@ const PricingSection: React.FC<{ plans: PricingPlan[] }> = ({ plans }) => (
               <div>
                 <a
                   href="#"
-                  className={`block w-full text-white my-8 ${
+                  className={`block w-full text-white my-6 ${
                     plan.isHighlighted ? 'bg-sdBlue' : 'bg-black'
                   } ${
                     plan.isHighlighted ? 'hover:bg-blue-800' : 'hover:bg-gray-500'
@@ -123,7 +131,7 @@ const PricingSection: React.FC<{ plans: PricingPlan[] }> = ({ plans }) => (
                         clipRule="evenodd"
                       />
                     </svg>
-                    <span>{feature}</span>
+                    <span className="text-base lg:text-sm xl:text-base">{feature}</span>
                   </li>
                 ))}
               </ul>

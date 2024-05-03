@@ -5,9 +5,9 @@ interface ISectionProps {}
 
 export const Section: React.FC<PropsWithChildren<ISectionProps>> = ({ children }) => (
   <section className="bg-white dark:bg-gray-900">
-    <div className="flex flex-wrap justify-between">
-      <div className="py-16 container max-w-[60rem]">{children}</div>
-      <div className="py-16 w-full lg:w-1/4 px-0 lg:pl-5 flex flex-col justify-start lg:justify-start mt-4 lg:mt-0">
+    <div className="flex flex-wrap lg:flex-nowrap justify-between">
+      <div className="py-16">{children}</div>
+      <div className="py-16 min-w-full lg:min-w-[25%] w-full lg:w-1/4 px-0 lg:pl-8 flex flex-col justify-start lg:justify-start mt-4 lg:mt-0">
         <div className="mb-6 lg:mb-0 border rounded-md">
           <h3 className="rounded-tl-md rounded-tr-md text-lg font-semiboldmb-2 bg-black p-2 text-white text-center flex justify-center items-center">
             <span className="me-2 text-base">Join the community</span>

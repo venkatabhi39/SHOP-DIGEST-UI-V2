@@ -9,9 +9,10 @@ import ListWithContent from '@/components/Blocks/Features/ListWithContent/index'
 import TestimonalCarousel from '@/components/Blocks/TestimonalCarousel';
 import DefaultFeatureList from '@/components/Blocks/Features/DefaultFeatureList';
 import ThreeColumnsFeatureList from '@/components/Blocks/Features/ThreeColumnFeatures';
-import NewsletterSubscription from '@/components/Blocks/NewLetterSubscription'
-import TabsComponent from '@/components/Tabs/TabsWithUnderline'
-import FooterSection from '@/components/Blocks/FooterSections/FooterVariant'
+import NewsletterSubscription from '@/components/Blocks/NewLetterSubscription';
+import TabsComponent from '@/components/Tabs/TabsWithUnderline';
+import FooterSection from '@/components/Blocks/FooterSections/FooterVariant';
+import { Accordion, Button } from 'flowbite-react';
 
 const FooterLink: FC<StyledAnchorProps> = props => <StyledAnchor {...props} className="text-md" />;
 
@@ -20,10 +21,10 @@ export default function Footer({
   footerTopApps,
 }: PropsWithClassName<{ footerTopApps?: FooterTopAppsList }>) {
   return (
-    <footer className={classNames('mt-8', className)}>
+    <footer className={classNames('', className)}>
       {/* {footerTopApps && <TopAppsHomePageFooter topApps={footerTopApps} />} */}
       <div className={classNames('border-t-300')}>
-        <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div className="max-w-[85rem] px-4 pb-10 sm:px-6 lg:px-8 lg:pb-14 mx-auto">
           <PricingPlan />
           <ListWithContent />
           <TestimonalCarousel />
@@ -43,10 +44,10 @@ export default function Footer({
             </div>
           </div> */}
         </div>
-        <NewsletterSubscription/>
+        <NewsletterSubscription />
         <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-        <TabsComponent/>
-        <FooterSection/>
+          <TabsComponent />
+          <FooterSection />
         </div>
       </div>
     </footer>
