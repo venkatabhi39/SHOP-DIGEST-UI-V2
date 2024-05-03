@@ -91,9 +91,9 @@ export const HeroFilter = () => (
       </h2> */}
 
       <h2 className="max-w-xs md:max-w-[400px] text-center mb-0 md:mb-2 text-2xl md:text-[2rem] md:leading-10 font-bold tracking-tight text-gray-900 dark:text-white">
-        Find the best <span className="text-gradient">Shopify apps</span> for your Shopify store
+        Find the best <span className="text-primary">Shopify apps</span> for your Shopify store
       </h2>
-
+      {/* text-gradient */}
       <div className=" mt-1 px-2 sm:px-4 py-1 rounded hidden md:block lg:block">
         <div className="flex flex-wrap gap-2">
           <Category buttonProps={buttons} />

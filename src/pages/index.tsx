@@ -61,10 +61,16 @@ export default function Home({ posts, topApps, totalPages }: Props) {
       </Head>
       <SecondaryHeader />
       <SiteHeader />
-
-      <HeroFilter />
-      <HeroForm />
-      <PopularLinks />
+      <div
+        style={{
+          background:
+            'linear-gradient(to top, rgb(255 255 255) 0, hsla(0, 0%, 100%, 0) 100%), linear-gradient(to right, rgb(247 185 85 / 8%) 0, rgb(255 0 128 / 8%) 100%)',
+        }}
+      >
+        <HeroFilter />
+        <HeroForm />
+        <PopularLinks />
+      </div>
       {/* <div className="border border-t-0 border-x-0 sticky top-40 z-50" /> */}
       <main className="bg-white">
         <CategoryPagesContent topApps={topApps} totalPages={totalPages} posts={posts} />
