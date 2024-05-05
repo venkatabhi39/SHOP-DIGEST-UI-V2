@@ -1,0 +1,31 @@
+.sectionContainer {
+  @apply flex flex-row flex-wrap items-stretch justify-center gap-0;
+
+  & > *:not(:last-child) {
+    @apply border-r;
+  }
+
+  @screen sm {
+    :first-child {
+      @apply rounded-l;
+    }
+
+    :last-child {
+      @apply rounded-r #{!important};
+    }
+  }
+}
+
+.dropdownContainer {
+  & > button {
+    @apply text-inherit bg-transparent w-full focus:outline-none focus:shadow-none border-none font-medium text-sm px-4 py-2 #{!important};
+
+    & > span {
+      @apply p-0 w-full #{!important};
+
+      & > svg {
+        @apply text-primary;
+      }
+    }
+  }
+}

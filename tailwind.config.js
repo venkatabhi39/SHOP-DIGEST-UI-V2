@@ -40,7 +40,7 @@ module.exports = {
           950: '#052e15',
         },
         primary: {
-          DEFAULT: '#FF5A5F',
+          DEFAULT: '#FF5A5F',//#A020F0
           50: '#fff0f0',
           100: '#ffdddd',
           200: '#ffc1c1',

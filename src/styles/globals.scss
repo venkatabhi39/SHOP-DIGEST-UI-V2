@@ -117,7 +117,12 @@ ul {
 #secondaryNav > .container {
   max-width: 100%;
 }
-
+.card-plain {
+  @apply border-0;
+}
+.card-plain > div {
+  @apply p-0 gap-0;
+}
 .text-gradient {
   background: linear-gradient(to right, #f9000f 20%, #f428c1 50%, #c246ff 70%, #12c2e9 100%);
   -webkit-background-clip: text;
