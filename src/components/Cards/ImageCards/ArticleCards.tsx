@@ -23,14 +23,16 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
         <Link href="#" className="">
           <img className="rounded-lg shadow-none mb-5" src={imageSrc} alt={title} />
         </Link>
-        <h5 className="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
-          <Link href="#" className="">
-            {title}
-          </Link>
-        </h5>
-        <p className="mb-4 text-gray-500 dark:text-gray-400">{description}</p>
-        <div className="text-gray-400 dark:text-gray-400 text-sm">
-          <span>{date}</span> - <span>{readTime} min read</span>
+        <div>
+          <h5 className="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+            <Link href="#" className="">
+              {title}
+            </Link>
+          </h5>
+          <p className="mb-4 text-gray-500 dark:text-gray-400">{description}</p>
+          <div className="text-gray-400 dark:text-gray-400 text-sm">
+            <span>{date}</span> - <span>{readTime} min read</span>
+          </div>
         </div>
       </Card>
     </div>

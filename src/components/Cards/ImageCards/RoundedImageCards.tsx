@@ -44,7 +44,7 @@ const roundedCards = [
 
 const RoundedImageCards: React.FC = () => {
   return (
-    <div className="grid grid-cols-1 gap-5 py-4 sm:grid-cols-2 lg:grid-cols-8 sm:py-6 xl:grid-cols-8 xl:py-7 2xl:py-12">
+    <div className="grid grid-cols-2 gap-5 py-4 sm:grid-cols-4 lg:grid-cols-8 sm:py-6 xl:grid-cols-8 xl:py-7 2xl:py-12">
       {roundedCards.map((card, index) => (
         <RoundedCard key={index} {...card} />
       ))}
