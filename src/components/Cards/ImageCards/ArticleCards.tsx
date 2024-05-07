@@ -19,7 +19,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
   readTime,
 }) => {
   return (
-    <div className="max-w-full md:max-w-64 xl:max-w-72">
+    <div className="max-w-full md:max-w-64 xl:max-w-[17rem]">
       <Card className="shadow-none card-plain">
         <Link href="#" className="">
           <img className="rounded-lg shadow-none mb-5 w-full" src={imageSrc} alt={title} />

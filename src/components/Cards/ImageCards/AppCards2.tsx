@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Rating } from 'flowbite-react';
 import Link, { LinkProps } from 'next/link';
+import { Heading } from '@/components/Heading';
 interface AppListEntry {
   rank: number;
   title: string;
@@ -23,7 +24,7 @@ const AppListItem: React.FC<AppListEntry> = ({
   imageSrc,
 }) => {
   return (
-    <Card className="flex mb-4 shadow-none card-plain hover:bg-gray-100 p-4">
+    <Card className="flex mb-0 shadow-none card-plain hover:bg-gray-100 p-4">
       {/* <div className="text-center w-10">{rank}</div> */}
       <div className="flex flex-row">
         <img
@@ -32,9 +33,12 @@ const AppListItem: React.FC<AppListEntry> = ({
           alt={title}
         />
         <div className="flex flex-col justify-center">
-          <h5 className="text-md font-medium leading-tight text-gray-900 dark:text-white">
+          <Heading as="h5" className="mb-0">
             {title}
-          </h5>
+          </Heading>
+          {/* <h5 className="text-md font-medium leading-tight text-gray-900 dark:text-white">
+            {title}
+          </h5> */}
           <div className="text-yellow-500 flex mt-1 mb-0.5">
             <Rating>
               <Rating.Star className="text-yellow-400 w-4 h-4 mr-2" />
@@ -51,7 +55,7 @@ const AppListItem: React.FC<AppListEntry> = ({
 
 const AppList: React.FC<AppListProps> = ({ apps }) => {
   return (
-    <div className="grid grid-cols-1 gap-5 py-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 sm:py-6 xl:grid-cols-3 xl:py-7 2xl:py-12">
+    <div className="grid gap-y-0 grid-cols-1 gap-5 py-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 sm:py-6 xl:grid-cols-3 xl:py-7 2xl:py-12">
       {apps.map((app, index) => (
         <Link href="#" className="">
           <AppListItem key={index} {...app} />
