@@ -23,7 +23,7 @@ module.exports = {
           light: '#f9fafb',
           DEFAULT: '#f6f7f8',
           dark: '#f3f4f6',
-          border: '#ddd',
+          border: '#111827',
         },
         secondary: {
           50: '#f0fdf4',

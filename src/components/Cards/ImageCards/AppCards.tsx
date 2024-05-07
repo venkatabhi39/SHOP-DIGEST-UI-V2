@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Card, Rating } from 'flowbite-react';
+import Link, { LinkProps } from 'next/link';
 //import { StarIcon } from "@heroicons/react/solid";
 
 interface AppCardProps {
@@ -11,8 +12,8 @@ interface AppCardProps {
 
 const AppCard: React.FC<AppCardProps> = ({ name, rating, imageSrc }) => {
   return (
-    <div className="w-28">
-      <Card className="shadow-none card-plain">
+    <div className="w-full">
+      <Card className="shadow-none card-plain hover:bg-gray-100 px-4 py-2">
         <img className="rounded-3xl shadow-md mb-3" src={imageSrc} alt={name} />
         <h5 className="text-sm font-medium tracking-tight text-gray-700 dark:text-white">{name}</h5>
         <div className="mt-1 mb-2 flex items-center">
@@ -74,9 +75,11 @@ const apps = [
 
 const AppCards: React.FC = () => {
   return (
-    <div className="grid grid-cols-2 gap-5 py-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 sm:py-6 xl:grid-cols-8 xl:py-7 2xl:py-12">
+    <div className="grid grid-cols-2 gap-2 py-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 sm:py-6 xl:grid-cols-8 xl:py-7 2xl:py-12">
       {apps.map((app, index) => (
-        <AppCard key={index} {...app} />
+        <Link href="#" className="">
+          <AppCard key={index} {...app} />
+        </Link>
       ))}
     </div>
   );
