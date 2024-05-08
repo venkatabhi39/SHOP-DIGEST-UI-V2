@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Link, { LinkProps } from 'next/link';
 import { Card } from 'flowbite-react';
 import Carousel from 'react-multi-carousel';
@@ -108,21 +108,25 @@ const articles = [
 
 const responsive = {
   superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 3000 },
-    items: 1,
+    // the number of items you want to see on the screen
+    breakpoint: { max: 4000, min: 1024 },
+    items: 4,
+    partialVisibilityGutter: 60, // this is needed to adjust the responsiveness
   },
   desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 4,
+    breakpoint: { max: 1024, min: 768 },
+    items: 3,
+    partialVisibilityGutter: 50,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
+    breakpoint: { max: 768, min: 464 },
     items: 2,
+    partialVisibilityGutter: 30,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: 1,
+    partialVisibilityGutter: 10,
   },
 };
 
@@ -213,6 +217,24 @@ export const CustomRightArrow = ({ onClick, ...rest }) => {
 const ArticleCards: React.FC = () => {
   const carouselRef = useRef();
   const [currentIndex, setCurrentIndex] = useState(0);
+  // State to manage the autoplay feature based on screen width
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Update the state based on the window width
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Call the function to set the initial state
+    handleResize();
+
+    // Add event listener for subsequent updates
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const next = () => {
     carouselRef.current.next();
@@ -227,21 +249,29 @@ const ArticleCards: React.FC = () => {
   };
   return (
     <div className="relative">
-      <div class="flex justify-center items-center mt-4 h-5">
+      <div className="flex justify-between items-center mb-4">
+        <h3 className="font-bold">Articles</h3>
+        <a href="#" className="text-blue-500 hover:underline font-semibold text-sm mr-3">
+          See More
+        </a>
+      </div>
+      <div className="flex justify-center items-center mt-4 h-5" style={{ display: 'none' }}>
         {currentIndex > 0 && <CustomLeftArrow onClick={previous} />}
         {currentIndex === articles.length / 2 ? null : <CustomRightArrow onClick={next} />}
       </div>
 
       <Carousel
-        swipeable={false}
-        draggable={false}
+        swipeable={isMobile}
+        draggable={isMobile}
+        showDots={isMobile}
         responsive={responsive}
-        removeArrowOnDeviceType={['tablet', 'mobile', 'desktop']}
+        ssr // Server-side rendering for SEO benefits
+        infinite={isMobile}
         ref={carouselRef}
-        ssr={true}
-        autoPlay={true}
-        showDots={true}
         afterChange={(previousSlide, { currentSlide }) => handleSlideChange(currentSlide)}
+        autoPlay={isMobile} // Use state to control autoplay
+        removeArrowOnDeviceType={['desktop', 'superLargeDesktop']}
+        deviceType={isMobile ? 'mobile' : 'desktop'}
         dotListClass="sd-custom-dot-list-style"
         containerClass="sd-carousel-container"
       >

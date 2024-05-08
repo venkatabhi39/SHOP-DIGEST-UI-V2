@@ -24,16 +24,16 @@ const AppListItem: React.FC<AppListEntry> = ({
   imageSrc,
 }) => {
   return (
-    <Card className="flex mb-0 shadow-none card-plain hover:bg-gray-100 p-4">
-      {/* <div className="text-center w-10">{rank}</div> */}
-      <div className="flex flex-row">
+    <Card className="flex mb-0 shadow-none card-plain hover:bg-gray-100 px-0 py-4">
+      <div className="flex flex-row items-center">
+        <div className="text-center w-10 text-md mr-2">{rank}</div>
         <img
           src={imageSrc}
           className="mr-4 w-20 h-20 max-w-full align-middle rounded-lg"
           alt={title}
         />
         <div className="flex flex-col justify-center">
-          <Heading as="h5" className="mb-0">
+          <Heading as="h5" className="mb-0 font-medium">
             {title}
           </Heading>
           {/* <h5 className="text-md font-medium leading-tight text-gray-900 dark:text-white">
@@ -41,7 +41,7 @@ const AppListItem: React.FC<AppListEntry> = ({
           </h5> */}
           <div className="text-yellow-500 flex mt-1 mb-0.5">
             <Rating>
-              <Rating.Star className="text-yellow-400 w-4 h-4 mr-2" />
+              <Rating.Star className="text-yellow-400 w-4 h-4 mr-1.5" />
             </Rating>
             <span className="text-sm mr-2">{rating} </span>
             <span className="text-green-500 text-sm">{price}</span>
