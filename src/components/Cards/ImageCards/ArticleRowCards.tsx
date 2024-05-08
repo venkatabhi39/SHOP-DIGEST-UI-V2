@@ -16,9 +16,13 @@ interface RelatedArticlesProps {
 
 const ArticleCard: React.FC<Article> = ({ title, description, imageSrc, readTime, href, date }) => {
   return (
-    <article className="flex mb-8">
+    <article className="flex mb-8 flex-col md:flex-row">
       <a href={href} className="shrink-0">
-        <img src={imageSrc} className="mr-5 w-44 max-w-full align-middle rounded-lg" alt={title} />
+        <img
+          src={imageSrc}
+          className="mb-4 w-full mr-5 md:w-44 max-w-full align-middle rounded-lg"
+          alt={title}
+        />
       </a>
       <div className="flex flex-col justify-center">
         <h2 className="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
