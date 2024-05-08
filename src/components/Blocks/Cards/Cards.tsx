@@ -11,6 +11,7 @@ import ArticleRowCards from '@/components/Cards/ImageCards/ArticleRowCards';
 import BannerCard from '@/components/Cards/ImageCards/BannerCard';
 import AppCards2 from '@/components/Cards/ImageCards/AppCards2';
 import BannerCardCarousel from '@/components/Cards/ImageCards/BannerCardCarousel';
+import AppLogoCards from '@/components/Cards/ImageCards/AppLogoCards';
 
 const Cards: React.FC = () => {
   return (
@@ -129,6 +130,16 @@ const Cards: React.FC = () => {
 
           <div className="p-4 sm:p-6 xl:p-9 2xl:p-15">
             <BannerCardCarousel />
+          </div>
+        </div>
+
+        <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
+          <div className="border-b border-stroke px-4 py-4 dark:border-strokedark sm:px-6 xl:px-9">
+            <h2 className="mb-0 text-2xl font-bold text-gray-900 dark:text-white">Cards Heading</h2>
+          </div>
+
+          <div className="p-4 sm:p-6 xl:p-9 2xl:p-15">
+            <AppLogoCards />
           </div>
         </div>
       </div>
