@@ -27,7 +27,7 @@ export const MainNavigationLink: React.FC<IMainNavigationLinkProps> = ({ label, 
     ) : (
       <NavbarLink
         href="#"
-        className="text-gray-700 hover:!text-primary text-15  dark:text-gray-400 dark:hover:text-gray-500 !py-2 !pr-4 !pl-3 lg:!py-0 lg:!pr-0 lg:!pl-0 md:!px-1"
+        className="text-gray-700 border-none hover:bg-transparent hover:!text-primary text-15  dark:text-gray-400 dark:hover:text-gray-500 !py-2 !pr-4 !pl-3 lg:!py-0 lg:!pr-0 lg:!pl-0 md:!px-1"
         // className="transition-colors block border-0 py-2 md:py-2 px-0 lg:p-0 font-montserrat text-sm font-medium text-white"
         aria-current="page"
       >
