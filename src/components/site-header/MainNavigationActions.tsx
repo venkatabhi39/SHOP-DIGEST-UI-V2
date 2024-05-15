@@ -23,19 +23,19 @@ export const MainNavigationActions: React.FC<IMainNavigationActionsProps> = () =
       </Button>
     </a> */}
     {/* <SearchIcon classProp="text-gray-700 hover:text-black dark:text-white" /> */}
-    <a href="/">
-      <Button
-        size="md"
-        pill
-        className="border-primary-700  ml-[-5px] lg:ml:0 text-left lg:text-center bg-transparent hover:!bg-primary-50 text-primary-700 hover:text-black focus:ring-0"
-      >
-        Login
-      </Button>
-    </a>
+
     <Button
-      size="md"
+      size="sm"
       pill
-      className="font-semibold bg-transparent  bg-primary hover:!bg-primary-900 focus:ring-0"
+      className="border-primary-700 font-semibold md:ml-[-5px] lg:ml:0 text-left lg:text-center bg-transparent hover:!bg-primary-50 text-primary-700 hover:text-black focus:ring-0 px-3"
+    >
+      Login
+    </Button>
+
+    <Button
+      size="sm"
+      pill
+      className="font-semibold bg-transparent  bg-primary hover:!bg-primary-900 focus:ring-0 px-3"
     >
       Add post <ArrowRightIcon classProp="ml-1 h-5 w-5" />
     </Button>
