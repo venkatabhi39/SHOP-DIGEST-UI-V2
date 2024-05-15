@@ -45,7 +45,7 @@ const ListWithContent: React.FC<ListWithContentProps> = ({
               <a
                 key={index}
                 href={action.url}
-                className={`sDbtn inline-flex items-center justify-center rounded-lg focus:ring-4 ${
+                className={`sDbtn inline-flex items-center justify-center rounded-full focus:ring-4 ${
                   action.primary
                     ? 'text-white bg-primary hover:bg-primary-900 focus:ring-primary-300 dark:focus:ring-primary-900'
                     : 'text-gray-900 border border-gray-300 hover:bg-gray-100 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800'
