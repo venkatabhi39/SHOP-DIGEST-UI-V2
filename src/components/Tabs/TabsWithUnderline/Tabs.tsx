@@ -29,7 +29,7 @@ const Tabs: React.FC<TabsProps> = ({ tabs }) => {
               <button
                 className={`inline-block py-4 mr-6 rounded-t-lg ${
                   activeTab === tab.id
-                    ? 'border-b-2 border-blue-500 text-blue-600'
+                    ? 'border-b-2 border-primary-500 text-primary-600'
                     : 'hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300'
                 }`}
                 onClick={() => setActiveTab(tab.id)}
@@ -55,7 +55,7 @@ const Tabs: React.FC<TabsProps> = ({ tabs }) => {
                 url="#"
                 targetAtt="_blank"
                 label="See More"
-                className="text-sdBlue font-medium hover:!text-blue-800 mr-0"
+                className="text-primary font-medium hover:!text-primary-900 mr-0"
                 svg={LineDownRight}
                 iconPlacement="right"
               />

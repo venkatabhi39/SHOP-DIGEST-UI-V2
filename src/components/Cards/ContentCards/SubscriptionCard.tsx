@@ -85,18 +85,18 @@ const NewsletterSignUp: React.FC<NewsletterSignUpProps> = ({
           <Button
             color="blue"
             onClick={handleSubscribe}
-            className="bg-blue-700 hover:bg-blue-800 rounded-none -ml-0 rounded-tr-xl rounded-br-xl px-4 py-2.5 text-base font-medium"
+            className="bg-primary-700 hover:bg-primary-800 rounded-none -ml-0 rounded-tr-xl rounded-br-xl px-4 py-2.5 text-base font-medium"
           >
             {buttonText}
           </Button>
         </div>
         <div className="text-sm text-gray-500 text-center">
           By subscribing, you agree with ConvertKit's{' '}
-          <a href={termsUrl} className="text-blue-600 hover:underline">
+          <a href={termsUrl} className="text-primary-600 hover:underline">
             Terms of Service
           </a>{' '}
           and{' '}
-          <a href={privacyUrl} className="text-blue-600 hover:underline">
+          <a href={privacyUrl} className="text-primary-600 hover:underline">
             Privacy Policy
           </a>
           .

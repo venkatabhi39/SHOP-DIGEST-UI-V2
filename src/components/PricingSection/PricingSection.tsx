@@ -65,17 +65,21 @@ const PricingSection: React.FC<{ plans: PricingPlan[] }> = ({ plans }) => (
           <div key={plan.title} className="mb-8">
             <div
               className={`p-3 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-200 shadow dark:border-gray-600 xl:p-4 dark:bg-gray-800 dark:text-white ${
-                plan.isHighlighted ? 'border-sdBlue' : ''
+                plan.isHighlighted ? 'border-primary' : ''
               }`}
             >
               <div className="mb-2">
                 {plan.type && (
-                  <span className="py-1 px-3 text-sm text-sdBlue bg-blue-100 font-medium rounded dark:bg-primary-200 dark:text-primary-800">
+                  <span className="py-1 px-3 text-sm text-primary bg-primary-100 font-medium rounded dark:bg-primary-200 dark:text-primary-800">
                     {plan.type}
                   </span>
                 )}
               </div>
-              <h3 className="mb-4 text-xl">{plan.title}</h3>
+
+              <Heading as="h3" className="mb-4">
+                {plan.title}
+              </Heading>
+              {/* <h3 className="mb-4 text-xl">{plan.title}</h3> */}
               <p className="text-base lg:text-sm xl:text-base">{plan.description}</p>
               <div className="flex justify-center items-baseline my-4">
                 <span className="mr-2 text-3xl font-extrabold">${plan.price}</span>
@@ -87,7 +91,7 @@ const PricingSection: React.FC<{ plans: PricingPlan[] }> = ({ plans }) => (
               <div>
                 <a
                   href="#"
-                  className="sdLink inline-flex justify-center items-center  text-base lg:text-sm xl:text-base"
+                  className="sdLink text-primary inline-flex justify-center items-center  text-base lg:text-sm xl:text-base"
                 >
                   Go to annual plan
                   <svg
@@ -108,9 +112,9 @@ const PricingSection: React.FC<{ plans: PricingPlan[] }> = ({ plans }) => (
                 <a
                   href="#"
                   className={`block w-full text-white my-6 ${
-                    plan.isHighlighted ? 'bg-sdBlue' : 'bg-black'
+                    plan.isHighlighted ? 'bg-primary' : 'bg-black'
                   } ${
-                    plan.isHighlighted ? 'hover:bg-blue-800' : 'hover:bg-gray-500'
+                    plan.isHighlighted ? 'hover:bg-primary-900' : 'hover:bg-gray-500'
                   } focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white dark:focus:ring-primary-900`}
                 >
                   Get started

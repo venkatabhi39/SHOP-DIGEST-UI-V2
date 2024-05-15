@@ -55,7 +55,7 @@ export const Category: React.FC<CategoryProps> = ({ buttonProps }) => {
   return (
     <div className="hidden relative md:flex lg:flex">
       <div
-        className="absolute -bottom-1 bg-blue-600 transition-all duration-300 ease-in-out"
+        className="absolute -bottom-1 bg-primary-600 transition-all duration-300 ease-in-out"
         style={highlightStyle}
       />
 
@@ -68,8 +68,8 @@ export const Category: React.FC<CategoryProps> = ({ buttonProps }) => {
           size="sm"
           pill
           color="light"
-          className={`bg-transparent me-2 focus:ring-0 z-8 focus:z-8 px-1 text-base font-medium border-none enabled:hover:bg-transparent hover:text-blue-500 ${
-            activeIndex === i ? 'text-blue-500' : ''
+          className={`bg-transparent me-2 focus:ring-0 z-8 focus:z-8 px-1 text-base font-medium border-none enabled:hover:bg-transparent hover:text-primary-500 ${
+            activeIndex === i ? 'text-primary-500' : ''
           }`}
           key={i}
         >

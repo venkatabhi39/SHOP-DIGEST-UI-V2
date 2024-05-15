@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Heading } from '@/components/Heading';
 interface Article {
   title: string;
   description: string;
@@ -25,9 +25,12 @@ const ArticleCard: React.FC<Article> = ({ title, description, imageSrc, readTime
         />
       </a>
       <div className="flex flex-col justify-center">
-        <h2 className="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+        <Heading as="h3" className="mb-4">
           <a href={href}>{title}</a>
-        </h2>
+        </Heading>
+        {/* <h2 className="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+     
+        </h2> */}
         <p className="mb-2 text-gray-500 dark:text-gray-400">{description}</p>
         <div className="text-gray-400 dark:text-gray-400 text-sm">
           <span>{date}</span> - <span>{readTime} min read</span>

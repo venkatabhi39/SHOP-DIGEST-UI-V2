@@ -69,7 +69,7 @@ const BannerCardCarousel = () => {
     <>
       <div className="flex justify-between items-center mb-0 px-4">
         <h2 className="font-bold">Extensions</h2>
-        <a href="#" className="text-blue-500 hover:underline font-semibold">
+        <a href="#" className="text-primary-500 hover:underline font-semibold">
           See More
         </a>
       </div>

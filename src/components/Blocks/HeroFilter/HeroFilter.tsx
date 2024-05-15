@@ -69,6 +69,7 @@ export const HeroFilter = () => (
         backgroundSize: 'cover',
         opacity: '0.5',
         zIndex: '-1',
+        filter: 'hue-rotate(285deg)',
       }}
     />
     {/* <div

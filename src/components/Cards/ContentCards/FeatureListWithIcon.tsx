@@ -16,13 +16,11 @@ const FeatureListWithIcon: React.FC<FeatureItem> = ({
   title,
   description,
   boxClasses,
-  iconClasses
+  iconClasses,
 }) => (
   <div className={`card ${boxClasses}`}>
     <div
-      className={`flex justify-center items-center mb-4 w-10 h-10 rounded-full ${
-        iconClasses
-      } bg-blue-100 lg:h-12 lg:w-12 dark:bg-primary-900`}
+      className={`flex justify-center items-center mb-4 w-10 h-10 rounded-full ${iconClasses} bg-primary-50 lg:h-12 lg:w-12 dark:bg-primary-900`}
     >
       <svg
         className="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300"

@@ -156,14 +156,14 @@ const HeroForm: React.FC = ({ isStickyState }) => {
               <div className="flex items-center pt-2 sm:pt-0 sm:block sm:flex-[0_0_auto] !ml-auto">
                 {isStickyState ? (
                   <a
-                    className="w-full transition-all py-1 px-1 mt-[1px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent bg-primary text-white hover:bg-primary-800 disabled:opacity-50 disabled:pointer-events-none"
+                    className="w-full transition-all py-1 px-1 mt-[1px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent bg-primary text-white hover:bg-primary-900 disabled:opacity-50 disabled:pointer-events-none"
                     href="#"
                   >
                     <IoSearch size={22} />
                   </a>
                 ) : (
                   <a
-                    className="w-full py-3 px-5 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent bg-primary text-white hover:bg-primary-800 disabled:opacity-50 disabled:pointer-events-none"
+                    className="w-full py-3 px-5 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent bg-primary text-white hover:bg-primary-900 disabled:opacity-50 disabled:pointer-events-none"
                     href="#"
                   >
                     Search

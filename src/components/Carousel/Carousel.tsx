@@ -56,7 +56,7 @@ export const TestimonialsCarousel: React.FC<TestimonialsCarouselProps> = ({
           <button
             key={index}
             className={`w-3 h-3 bg-gray-300 rounded-full mx-1 ${
-              activeSlide === index ? '!bg-blue-500' : ''
+              activeSlide === index ? '!bg-primary-500' : ''
             }`}
             onClick={() => goToSlide(index)}
             aria-label={`Slide ${index}`}

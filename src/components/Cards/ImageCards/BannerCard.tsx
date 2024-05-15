@@ -15,7 +15,7 @@ const CustomCard = ({
     <div className="w-full mx-auto my-4">
       <div className="flex justify-between items-center mb-4">
         <h2 className="font-bold">Extensions</h2>
-        <a href={link} className="text-blue-500 hover:underline font-semibold">
+        <a href={link} className="text-primary-500 hover:underline font-semibold">
           See More
         </a>
       </div>

@@ -3,7 +3,7 @@ import { SiteLogo } from '@/components/SiteLogo';
 import SocailMediaLinks from '@/components/Blocks/SocailMediaLink';
 import { Dropdown } from 'flowbite-react';
 import { GlobeIcon, LineArrowDown } from '@/components/SvgIcons/IconList';
-
+import { Heading } from '@/components/Heading';
 interface FooterLinkProps {
   title: string;
   links: string[];
@@ -32,9 +32,12 @@ function IconCombo() {
 const FooterSection: React.FC<FooterLinkProps> = ({ title, links }) => {
   return (
     <div className="lg:mx-auto">
-      <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+      <Heading
+        as="h3"
+        className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+      >
         {title}
-      </h2>
+      </Heading>
       <ul className="text-gray-500 dark:text-gray-400">
         {links.map((link, index) => (
           <li key={index} className="mb-4">

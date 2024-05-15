@@ -251,7 +251,7 @@ const ArticleCards: React.FC = () => {
     <div className="relative">
       <div className="flex justify-between items-center mb-4">
         <h3 className="font-bold">Articles</h3>
-        <a href="#" className="text-blue-500 hover:underline font-semibold text-sm mr-3">
+        <a href="#" className="text-primary-500 hover:underline font-semibold text-sm mr-3">
           See More
         </a>
       </div>

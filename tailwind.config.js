@@ -18,6 +18,7 @@ module.exports = {
         sdBlue: {
           DEFAULT: '#0972d3',
           dark: '#1d4ed8',
+          800: '#1d4ed8'
         },
         sdGray: {
           light: '#f9fafb',
@@ -40,18 +41,18 @@ module.exports = {
           950: '#052e15',
         },
         primary: {
-          DEFAULT: '#FF5A5F',//#A020F0
-          50: '#fff0f0',
-          100: '#ffdddd',
-          200: '#ffc1c1',
-          300: '#ff9595',
-          400: '#ff5959',
-          500: '#ff2626',
-          600: '#fc0606',
-          700: '#e90000',
-          800: '#af0505',
-          900: '#900c0c',
-          950: '#500000',
+          DEFAULT: '#820ad1',//#primary
+          50: '#fbf3ff',
+          100: '#f4e4ff',
+          200: '#ecceff',
+          300: '#dda7ff',
+          400: '#c86fff',
+          500: '#b438ff',
+          600: '#a213ff',
+          700: '#8d04ec',
+          800: '#820ad1', //#primary
+          900: '#62099a', //#primary hover
+          950: '#430074',
         },
       },
     },

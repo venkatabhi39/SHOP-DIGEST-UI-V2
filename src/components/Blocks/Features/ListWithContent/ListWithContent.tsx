@@ -47,7 +47,7 @@ const ListWithContent: React.FC<ListWithContentProps> = ({
                 href={action.url}
                 className={`sDbtn inline-flex items-center justify-center rounded-lg focus:ring-4 ${
                   action.primary
-                    ? 'text-white bg-sdBlue hover:bg-blue-800 focus:ring-blue-300 dark:focus:ring-blue-900'
+                    ? 'text-white bg-primary hover:bg-primary-900 focus:ring-primary-300 dark:focus:ring-primary-900'
                     : 'text-gray-900 border border-gray-300 hover:bg-gray-100 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800'
                 }`}
               >

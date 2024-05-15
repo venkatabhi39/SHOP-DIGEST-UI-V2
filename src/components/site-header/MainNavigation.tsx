@@ -85,7 +85,7 @@ export const MainNavigation: React.FC<IMainNavigationProps> = () => {
           <div className="flex items-center ml-auto lg:hidden">
             <Button
               size="xs"
-              className="font-medium bg-transparent rounded-md ml-2 mr-2 bg-primary hover:!bg-primary-800 focus:ring-0"
+              className="font-medium bg-transparent rounded-md ml-2 mr-2 bg-primary hover:!bg-primary-900 focus:ring-0"
             >
               Add post
             </Button>

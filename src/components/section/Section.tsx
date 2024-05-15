@@ -20,7 +20,7 @@ export const Section: React.FC<PropsWithChildren<ISectionProps>> = ({ children }
             <p className="text-gray-700 mb-4">
               Connect, share, and engage with community and build relationships.
             </p>
-            <Button className="bg-primary rounded-md hover:!bg-primary-800">
+            <Button className="bg-primary rounded-md hover:!bg-primary-900">
               Subscribe for $1
             </Button>
           </div>
@@ -38,7 +38,7 @@ export const Section: React.FC<PropsWithChildren<ISectionProps>> = ({ children }
             <p className="text-gray-700 mb-4">
               Connect, share, and engage with community and build relationships.
             </p>
-            <Button className="bg-primary rounded-md hover:!bg-primary-800">
+            <Button className="bg-primary rounded-md hover:!bg-primary-900">
               Subscribe for $1
             </Button>
           </div>
