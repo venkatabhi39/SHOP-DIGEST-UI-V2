@@ -4,26 +4,28 @@ import { SecondaryHeader } from './SecondaryHeader';
 import NeedHelpSection from '../siteHeader/NeedHelpSection';
 import HeroForm from '@/components/Blocks/HeroFilter/HeroForm';
 
-export function SiteHeader() {
-  const [isSticky, setIsSticky] = useState(false);
+export function SiteHeader({ secondaryHeader }) {
+  const [isSticky, setIsSticky] = useState(secondaryHeader || false);
   const headerRef = useRef<HTMLDivElement>(null); // Create a ref for the header element
 
   useEffect(() => {
-    const handleScroll = () => {
-      // Ensure the headerRef.current is not null before accessing `offsetTop`
-      if (headerRef.current) {
-        const sticky = headerRef.current.offsetTop;
-        // console.log(window.scrollY, sticky - 301);
-        setIsSticky(sticky - 265 > 0);
-      }
-    };
+    if (!secondaryHeader) {
+      const handleScroll = () => {
+        // Ensure the headerRef.current is not null before accessing `offsetTop`
+        if (headerRef.current) {
+          const sticky = headerRef.current.offsetTop;
+          // console.log(window.scrollY, sticky - 301);
+          setIsSticky(sticky - 265 > 0);
+        }
+      };
 
-    window.addEventListener('scroll', handleScroll);
+      window.addEventListener('scroll', handleScroll);
 
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+      // Clean up the event listener when the component unmounts
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }
   }, []);
 
   return (

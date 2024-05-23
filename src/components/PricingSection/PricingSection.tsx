@@ -1,6 +1,7 @@
 import React from 'react';
 import { Heading } from '@/components/Heading';
 import { SectionHeader } from '@/components/section/SectionHeader';
+
 type PricingPlan = {
   title: string;
   type: string;
@@ -10,9 +11,29 @@ type PricingPlan = {
   supportDuration: number;
   updateDuration: number;
   isHighlighted: Boolean;
+  headerData: headerDataDetails;
 };
 
-const PricingSection: React.FC<{ plans: PricingPlan[] }> = ({ plans }) => (
+type headerDataDetails = {
+  title: string;
+  description: string;
+  planSwitch: PlanSwitch;
+  features: string[];
+};
+
+type PlanSwitch = {
+  title: string;
+  data: PlanType[];
+};
+
+type PlanType = {
+  type: string;
+};
+
+const PricingSection: React.FC<{ plans: PricingPlan[]; headerData: headerDataDetails }> = ({
+  plans,
+  headerData,
+}) => (
   <section className="bg-white dark:bg-gray-900">
     <div className="py-8 px-4 mx-auto max-w-5xl xl:max-w-7xl lg:py-16 lg:px-6">
       {/* <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12 sectionHeader">
@@ -26,40 +47,46 @@ const PricingSection: React.FC<{ plans: PricingPlan[] }> = ({ plans }) => (
         </p>
       </div> */}
       <SectionHeader
-        title="Designed for business teams like yours"
-        description="   Here at Flowbite we focus on markets where technology, innovation, and capital can unlock
-          long-term value and drive economic growth."
+        title={headerData.title}
+        description={headerData.description}
+        className="lg:mb-7"
       />
-      <div className="flex justify-center mb-8 items-center">
-        <span className="mr-2">Billed</span>
+      {headerData?.planSwitch && (
+        <div className="flex justify-center mb-8 items-center">
+          <span className="mr-2">{headerData?.planSwitch?.title}</span>
 
-        <nav className="flex overflow-x-auto items-center p-1 space-x-1 rtl:space-x-reverse text-sm text-gray-600 bg-gray-500/5 rounded-full dark:bg-gray-500/20 border">
-          <button
-            role="tab"
-            type="button"
-            className="flex whitespace-nowrap items-center h-8 px-3 font-medium rounded-full outline-none focus:ring-2 focus:ring-transparent focus:ring-inset text-black shadow bg-white dark:text-white dark:bg-yellow-600"
-            aria-selected=""
-          >
-            Yearly
-          </button>
-          <button
-            role="tab"
-            type="button"
-            className="flex whitespace-nowrap items-center h-8 px-3 font-medium rounded-full outline-none text-gray-400 focus:ring-2 focus:ring-transparent focus:ring-inset hover:text-gray-800 focus:text-black dark:text-gray-400 dark:hover:text-gray-300 dark:focus:text-gray-400"
-          >
-            Quartely
-          </button>
-        </nav>
-      </div>
-      <div className="flex justify-center mb-8 items-center">
-        <ul className="flex flex-wrap space-y-1 items-center list-disc justify-center text-gray-500 dark:text-white">
-          <li className="list-none mr-4">24-hour refund policy</li>
-
-          <li className="!mt-0 ml-2 pr-6">Cancel Anytime</li>
-
-          <li className="!mt-0">Secured payment through stripe</li>
-        </ul>
-      </div>
+          <nav className="flex overflow-x-auto items-center p-1 space-x-1 rtl:space-x-reverse text-sm text-gray-600 bg-gray-500/5 rounded-full dark:bg-gray-500/20 border">
+            {headerData?.planSwitch?.data?.map((item, index) => (
+              <button
+                role="tab"
+                type="button"
+                className={`flex whitespace-nowrap items-center h-8 px-3 font-medium rounded-full outline-none focus:ring-2 focus:ring-transparent focus:ring-inset dark:text-white dark:bg-yellow-600 ${
+                  index === 0 ? ' text-black shadow bg-white' : null
+                }`}
+                aria-selected=""
+              >
+                {item.type}
+              </button>
+              // <button
+              //   role="tab"
+              //   type="button"
+              //   className="flex whitespace-nowrap items-center h-8 px-3 font-medium rounded-full outline-none text-gray-400 focus:ring-2 focus:ring-transparent focus:ring-inset hover:text-gray-800 focus:text-black dark:text-gray-400 dark:hover:text-gray-300 dark:focus:text-gray-400"
+              // >
+              //   Quartely
+              // </button>
+            ))}
+          </nav>
+        </div>
+      )}
+      {headerData?.features && (
+        <div className="flex justify-center mb-8 items-center">
+          <ul className="flex flex-wrap space-y-1 items-center list-disc justify-center text-gray-500 dark:text-white">
+            {headerData?.features?.map((item, index) => (
+              <li className={`${index !== 0 ? '!mt-0 ml-2 pr-6' : 'list-none mr-4'}`}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      )}
       <div className="max-w-full lg:max-w-[85%] m-auto lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-5 lg:space-y-0">
         {plans.map(plan => (
           <div key={plan.title} className="mb-8">

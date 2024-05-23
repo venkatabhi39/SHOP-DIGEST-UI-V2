@@ -1,24 +1,12 @@
 import React from 'react';
 import PricingSection from '@/components/PricingSection';
-import { title } from 'process';
 // Adjust the path as necessary
 const headerDetails = {
   title: 'Designed for business teams like yours',
   description:
     'Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth',
-  planSwitch: {
-    title: 'Billed',
-    data: [
-      {
-        type: 'Yearly',
-      },
-      {
-        type: 'Quarterly',
-      },
-    ],
-  },
-  features: ['24-hour refund policy', 'Cancel Anytime', 'Secured payment through stripe'],
 };
+
 const pricingPlans = [
   {
     title: 'Starter',

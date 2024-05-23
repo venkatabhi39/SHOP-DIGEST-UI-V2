@@ -86,7 +86,7 @@ const experts: Expert[] = [
 
 const ExpertCardList: React.FC = () => {
   return (
-    <div className="grid grid-cols-1 gap-6 py-4 sm:grid-cols-2 lg:grid-cols-4 sm:py-6 xl:grid-cols-5 xl:py-7 2xl:py-12">
+    <div className="grid grid-cols-1 gap-6 py-4 sm:grid-cols-2 lg:grid-cols-4 sm:py-6 xl:grid-cols-5 xl:py-7 2xl:py-7">
       {experts.map((expert, index) => (
         <ExpertCard key={index} {...expert} />
       ))}
