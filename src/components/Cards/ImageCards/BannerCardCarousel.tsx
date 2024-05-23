@@ -24,7 +24,7 @@ const CustomCard = ({
           backgroundRepeat: 'no-repeat',
         }}
         horizontal
-        className="flex justify-between items-center min-h-60 rounded-2xl shadow-none"
+        className="flex justify-between items-center min-h-60 rounded-2xl shadow-none max-w-full lg:max-w-full"
       >
         <div className="bg-white bg-opacity-60 p-4 sm:bg-transparent sm:bg-opacity-100">
           <h3 className={`text-2xl font-semibold`} style={{ color: textColor || 'inherit' }}>
