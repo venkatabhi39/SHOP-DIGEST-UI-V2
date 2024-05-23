@@ -3708,7 +3708,7 @@ const PlainSections: React.FC = () => {
         <AppCards />
       </div>
 
-      <div className="border-gray-100 border mt-10 mb-10"></div>
+      <div className="border-gray-100 border mt-5 mb-10"></div>
 
       <div>
         <h3 className="mb-0 mt-0">You might also like</h3>
