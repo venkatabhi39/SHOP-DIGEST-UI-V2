@@ -13,6 +13,8 @@
     "deploy:dev": "pm2 deploy ecosystem.config.js staging"
   },
   "dependencies": {
+    "@headlessui/react": "^2.0.4",
+    "@heroicons/react": "^2.1.3",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@types/node": "18.15.5",
     "@types/react": "18.0.28",

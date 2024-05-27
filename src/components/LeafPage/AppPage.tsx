@@ -8,6 +8,7 @@ import SearchTags from './Sections/SearchTags';
 import ProsCons from './Sections/ProsCons';
 import Highlights from './Sections/Highlights';
 import PlainSections from './Sections/PlainSections';
+import Breadcrumb from '../Links/Breadcrumb/Breadcrumb';
 
 export interface PricingPlan {
   type: string; // You might want to refine this to specific color names if you have a limited set
@@ -18,6 +19,7 @@ export interface AppDetails {
   logoUrl: string;
   name: string;
   title: string;
+  description: string;
   rating: number;
   reviewsCount: string;
   pricing: PricingPlan[];
@@ -26,9 +28,12 @@ export interface AppDetails {
 
 const AppPage: React.FC = () => {
   const appDetails: AppDetails = {
-    logoUrl: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/playstation.png',
+    logoUrl:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-nS7Jma37tmWqTtuQEL6emOoR-fexuh3M4uy1OngUrg&s',
     name: 'Teemill',
     title: 'Teemill: Eco Print on Demand Shopify App by Teemill',
+    description:
+      'Shopify Inbox is a free messaging tool that lets you chat with customers as they shop. In fact, 70% of all Inbox conversations are with shoppers making a purchase',
     rating: 5.0,
     reviewsCount: '34.5k',
     pricing: [
@@ -44,6 +49,9 @@ const AppPage: React.FC = () => {
 
   return (
     <div className="">
+      <div className="mt-6">
+        <Breadcrumb />
+      </div>
       <ProductOverview appDetails={appDetails} />
       <div className="mt-8">
         <Heading as="h2" className="mt-2 text-gray-900 dark:text-white">
