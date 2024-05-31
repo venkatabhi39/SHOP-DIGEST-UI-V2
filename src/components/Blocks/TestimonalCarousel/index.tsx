@@ -90,9 +90,10 @@ const Carousel = () => (
         Explore the whole collection of open-source web components and elements built with the
         utility classes from Tailwind
       </p> */}
-            <SectionHeader 
-            title="You're in a good company."
-            description="Explore the whole collection of open-source web components and elements built with the utility classes from Tailwind"/>
+      <SectionHeader
+        title="Testimonals"
+        description="Explore the whole collection of open-source web components and elements built with the utility classes from Tailwind"
+      />
     </div>
     <TestimonialsCarousel testimonials={testimonialsData} itemsPerSlide={3} />
   </div>

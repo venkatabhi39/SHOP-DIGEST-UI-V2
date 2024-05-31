@@ -28,16 +28,18 @@ const ProductOverview: React.FC<ProductInfoProps> = ({ appDetails }) => {
     <div className="bg-white border-b pb-4">
       <div className="gap-12 lg:flex">
         <div className="min-w-0 flex-1 gap-8 sm:flex sm:items-start">
-          <div className="w-48">
+          <div className="w-72">
             <img
               src={appDetails.logoUrl}
               alt={`${appDetails.name} Logo`}
-              className="w-32  rounded-lg border"
+              className="w-full  rounded-lg border"
             />
-            <button className="text-blue-600 hover:text-blue-800">Open gallery</button>
+            <button className="text-blue-600 hover:text-blue-800 mt-3 text-center w-full font-medium">
+              Open gallery
+            </button>
           </div>
           <div>
-            <Heading as="h2" className="mb-2 text-2xl">
+            <Heading as="h2" className="mb-2 text-2xl font-semibold text-gray-900 dark:text-white">
               {appDetails.title}
             </Heading>
             <p className="mb-8">{appDetails.description}</p>
@@ -88,7 +90,7 @@ const ProductOverview: React.FC<ProductInfoProps> = ({ appDetails }) => {
               </div>
             </div> */}
             <div className="border-t mt-8">
-              <dl className="grid gap-8 mt-4 text-gray-900 sm:grid-cols-2 lg:gap-20 lg:mt-6 mb-5 lg:grid-cols-4 dark:text-white">
+              <dl className="grid gap-4 mt-4 text-gray-900 sm:grid-cols-2 lg:gap-10 lg:mt-6 mb-5 lg:grid-cols-4 dark:text-white">
                 <div className="flex flex-col">
                   <dt className="mb-2 text-xl md:text-xl font-semibold tracking-tight text-center">
                     <div className="flex justify-center">

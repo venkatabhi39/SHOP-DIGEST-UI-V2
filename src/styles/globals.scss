@@ -130,6 +130,23 @@ ul {
 .sd-carousel-container {
   padding-bottom: 60px;
 }
+.sd-carousel-container .react-multi-carousel-dot button {
+  background: #f9000f !important;
+}
+.carousel-container li {
+  display: flex;
+  align-items: center;
+  //background-color: #000;
+}
+.compare-tbl tr td {
+  @apply p-3.5 border-b;
+}
+/* Custom styles */
+
+.accordion-title-custom h2 {
+  @apply text-lg;
+}
+
 .text-gradient {
   background: linear-gradient(to right, #f9000f 20%, #f428c1 50%, #c246ff 70%, #12c2e9 100%);
   -webkit-background-clip: text;
