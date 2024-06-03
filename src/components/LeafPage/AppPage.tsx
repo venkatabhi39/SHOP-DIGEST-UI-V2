@@ -14,6 +14,17 @@ import ProductImageSlider from '@/components/Blocks/ProductImageSlider';
 import AppFeaturesList from '@/components/LeafPage/Sections/Features';
 import ProductInformation from '@/components/LeafPage/Sections/ProductInformation';
 import TestimonalCarousel from '@/components/Blocks/TestimonalCarousel';
+import ReviewAndRatings from '@/components/LeafPage/Sections/Reviews';
+import CustomerLogos from '@/components/LeafPage/Sections/CustomerLogos';
+import FaqSection from '@/components/LeafPage/Sections/FaqSection';
+import TrustedSection from '@/components/LeafPage/Sections/TrustedSection';
+import CtaCardSection from '@/components/LeafPage/Sections/CtaCardSection';
+import CustomTable from '@/components/Tables/CustomTable';
+import ComparisionCards from '@/components/LeafPage/Sections/ComparisionCards';
+import CardsList from '@/components/LeafPage/Sections/CardsList';
+import AppCards from '@/components/LeafPage/Sections/AppCardsList';
+import SimilarAppCards from '@/components/LeafPage/Sections/SimilarAppCards';
+import TechnicalDetails from '@/components/LeafPage/Sections/TechnicalDetails';
 
 export interface PricingPlan {
   type: string; // You might want to refine this to specific color names if you have a limited set
@@ -100,6 +111,54 @@ const AppPage: React.FC = () => {
 
       <div className="mt-8">
         <TestimonalCarousel />
+      </div>
+      <div className="border-gray-100 border mt-10"></div>
+      <div className="mt-8">
+        <ReviewAndRatings />
+      </div>
+
+      <div className="border-gray-100 border mt-10"></div>
+      <div className="mt-8">
+        <CustomerLogos />
+      </div>
+
+      <div className="border-gray-100 border mt-10"></div>
+      <div className="mt-8">
+        <FaqSection />
+      </div>
+      <div className="border-gray-100 border mt-10"></div>
+      <div className="mt-8">
+        <TrustedSection />
+      </div>
+      <div className="border-gray-100 border mt-10"></div>
+      <div className="mt-8">
+        <CtaCardSection />
+      </div>
+
+      <div className="border-gray-100 border mt-10"></div>
+      <div className="mt-8">
+        <CustomTable />
+      </div>
+
+      <div className="border-gray-100 border mt-10"></div>
+      <div className="mt-8">
+        <ComparisionCards />
+      </div>
+      <div className="border-gray-100 border mt-10"></div>
+      <div className="mt-8">
+        <CardsList />
+      </div>
+      <div className="border-gray-100 border mt-10"></div>
+      <div className="mt-8">
+        <AppCards />
+      </div>
+      <div className="border-gray-100 border mt-10"></div>
+      <div className="mt-8">
+        <SimilarAppCards />
+      </div>
+      <div className="border-gray-100 border mt-10"></div>
+      <div className="mt-8">
+        <TechnicalDetails />
       </div>
       <div className="border-gray-100 border mt-10"></div>
       {/* <div className="mt-8">
