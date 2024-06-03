@@ -147,6 +147,9 @@ ul {
   @apply text-lg;
 }
 
+.custom-table div div.drop-shadow-md {
+  display: none;
+}
 .text-gradient {
   background: linear-gradient(to right, #f9000f 20%, #f428c1 50%, #c246ff 70%, #12c2e9 100%);
   -webkit-background-clip: text;

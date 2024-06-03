@@ -30,7 +30,7 @@ const ProductTable: React.FC<ProductTableProps> = ({ products }) => {
   const paginatedProducts = filteredProducts.slice(startIndex, startIndex + itemsPerPage);
 
   return (
-    <div className="mx-auto my-6 shadow-lg border rounded-xl pt-4">
+    <div className="mx-auto my-6 shadow-lg border rounded-xl pt-4 custom-table">
       <div className="flex justify-between mb-4 px-4">
         <div className="pb-3 flex flex-wrap">
           <div className="hidden md:flex items-center text-sm font-medium text-gray-900 dark:text-white mr-4 mt-3">
