@@ -20,12 +20,12 @@ const CTASection: React.FC<CTASectionProps> = ({
   darkImageSrc,
 }) => (
   <section className="bg-white dark:bg-gray-900 border shadow-lg rounded-lg">
-    <div className="items-center py-10 px-10 mx-auto flex">
+    <div className="items-center py-10 px-10 mx-auto flex flex-col sm:flex-row">
       <div className="max-w-62">
         <img className="w-full rounded-full" src={lightImageSrc} alt="dashboard image" />
       </div>
 
-      <div className="mt-4 md:mt-0 pl-8">
+      <div className="mt-4 md:mt-0 pl-0 sm:pl-8">
         <Heading as="h2" className="mt-2 mb-3">
           {title}
         </Heading>

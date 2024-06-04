@@ -109,7 +109,7 @@ const ProductTable: React.FC<ProductTableProps> = ({ products }) => {
                 <Table.Cell className="p-4">
                   <Checkbox />
                 </Table.Cell>
-                <Table.Cell>
+                <Table.Cell className="sm:whitespace-nowrap">
                   <img src={product.img} className="h-8 w-8 mr-2 inline-block" />
                   {product.name}
                 </Table.Cell>
@@ -153,7 +153,7 @@ const ProductTable: React.FC<ProductTableProps> = ({ products }) => {
                     variant="button"
                     size="small"
                     icon={ArrowRightIcon}
-                    classProp="mt-0"
+                    classProp="mt-0 sm:whitespace-nowrap"
                   >
                     Read more
                   </AnchorLink>

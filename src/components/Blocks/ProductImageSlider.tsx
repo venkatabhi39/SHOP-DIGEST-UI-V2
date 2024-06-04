@@ -40,7 +40,7 @@ const ProductImageSlider: React.FC<HomePageProps> = ({
       <Heading as="h2" className="mt-2 text-center">
         Screenshots
       </Heading>
-      <div className="px-12 mt-6">
+      <div className="mx-0 sm:mx-0 lg:mx-12 mt-6">
         <CustomCarousel
           responsive={responsive}
           deviceType={deviceType}

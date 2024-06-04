@@ -138,16 +138,17 @@ const ComparisionTable = () => {
             </button>
           </div> */}
         </div>
-        <div className="mx-auto bg-white rounded-xl">
-          <table className="compare-tbl w-full text-start   flex flex-col lg:flex-row p-5 lg:p-0">
+        <div className="max-w-xs xs:max-w-xl sm:max-w-xl md:max-w-xl lg:max-w-4xl xl:max-w-none bg-white rounded-xl overflow-x-auto">
+          <table className="compare-tbl w-full text-start  flex flex-row p-5 lg:p-0">
             {pricingData.map((data, index) => (
               <tbody
                 key={index}
-                className={
-                  index === 0
-                    ? 'hidden lg:block '
-                    : 'border-2 lg:border-none mb-10 lg:mb-0 rounded-lg'
-                }
+                // className={
+                //   index === 0
+                //     ? 'lg:block '
+                //     : 'border-2 lg:border-none mb-10 lg:mb-0 rounded-lg'
+                // }
+                className={'border-2 lg:border-none mb-10 lg:mb-0 rounded-lg'}
               >
                 <tr>
                   {index === 0 ? (

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export function SimpleForm() {
   return (
-    <form className="flex max-w-md flex-col gap-4">
+    <form className="flex w-full xs:max-w-md flex-col gap-4">
       <div>
         <TextInput placeholder="Name" />
       </div>

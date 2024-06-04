@@ -18,7 +18,7 @@ interface ExpertCardProps {
 
 const ExpertCard: React.FC<ExpertCardProps> = ({ name, sessionPrice, description, imageSrc }) => {
   return (
-    <div className="max-w-sm relative">
+    <div className="w-full xs:max-w-sm relative">
       <Card className="shadow-none card-plain">
         <div className="relative">
           <img className="rounded-md shadow-none mb-3" src={imageSrc} alt={name} />
