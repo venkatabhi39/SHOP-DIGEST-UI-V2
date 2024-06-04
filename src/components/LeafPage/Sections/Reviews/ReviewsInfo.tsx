@@ -243,7 +243,7 @@ const ReviewsInfoTwo: React.FC<ListWithContentProps> = () => (
 );
 
 const ReviewsInfo: React.FC<ListWithContentProps> = () => (
-  <section className="grid grid-cols-2 gap-4">
+  <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
     <div>
       <ReviewsInfoOne />
     </div>

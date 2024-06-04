@@ -2,9 +2,11 @@ import { FC } from 'react';
 import CardWithButton from '@/components/Cards/CardWithButton';
 
 const CardsRow: FC<CardsRowProps> = ({ cards }) => (
-  <div className="flex justify-between space-x-4">
+  <div className="flex justify-between flex-col md:flex-row">
     {cards.map((card, index) => (
-      <CardWithButton key={index} {...card} />
+      <div className="mb-5">
+        <CardWithButton key={index} {...card} />
+      </div>
     ))}
   </div>
 );

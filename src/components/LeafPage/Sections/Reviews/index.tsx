@@ -17,7 +17,7 @@ const AppReviews: React.FC = () => {
   ).toFixed(1);
 
   return (
-    <div className="grid grid-cols-[35%_65%] grid-rows-[auto]">
+    <div className="grid grid-cols-1 md:grid-cols-[35%_65%] grid-rows-[auto]">
       <div className="border-r">
         <RatingComponent
           averageRating={parseFloat(averageRating)}

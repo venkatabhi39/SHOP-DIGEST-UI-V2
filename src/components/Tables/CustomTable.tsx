@@ -86,76 +86,83 @@ const ProductTable: React.FC<ProductTableProps> = ({ products }) => {
         </div>
         <TextInput placeholder="Search..." onChange={e => setSearchTerm(e.target.value)} />
       </div>
-      <Table hoverable={true} border={true}>
-        <Table.Head>
-          <Table.HeadCell className="p-4">
-            <Checkbox />
-          </Table.HeadCell>
-          <Table.HeadCell className="font-semibold text-sm">App</Table.HeadCell>
-          <Table.HeadCell className="font-semibold text-sm">Category</Table.HeadCell>
-          <Table.HeadCell className="font-semibold text-sm">Developer</Table.HeadCell>
-          <Table.HeadCell className="font-semibold text-sm">Price</Table.HeadCell>
-          <Table.HeadCell className="font-semibold text-sm">Free Plan</Table.HeadCell>
-          <Table.HeadCell className="font-semibold text-sm">Rating</Table.HeadCell>
-          <Table.HeadCell className="font-semibold text-sm">Read More</Table.HeadCell>
-        </Table.Head>
-        <Table.Body className="divide-y">
-          {paginatedProducts.map(product => (
-            <Table.Row key={product.id} className="bg-white dark:border-gray-700 dark:bg-gray-800">
-              <Table.Cell className="p-4">
-                <Checkbox />
-              </Table.Cell>
-              <Table.Cell>
-                <img src={product.img} className="h-8 w-8 mr-2 inline-block" />
-                {product.name}
-              </Table.Cell>
-              <Table.Cell>{product.category}</Table.Cell>
-              <Table.Cell className="font-semibold">{product.developer}</Table.Cell>
-              <Table.Cell className="font-semibold">{product.price}</Table.Cell>
-              <Table.Cell>
-                {product.availability ? (
-                  <span className="text-green-500 rounded-xl bg-green-100 px-4 py-1 text-xs font-semibold inline-flex items-center">
-                    <b className="w-2 h-2 bg-green-500 rounded-full inline-block  mr-1"></b>
-                    Available
-                  </span>
-                ) : (
-                  <span className="text-red-500 rounded-xl bg-red-100 px-4  py-1 text-xs font-semibold  inline-flex  items-center">
-                    <b className="w-2 h-2 bg-red-500  rounded-full  inline-block mr-1"></b>
-                    Unavailable
-                  </span>
-                )}
-              </Table.Cell>
-              <Table.Cell>
-                <div className="flex items-center">
-                  {/* {product.rating} <span className="ml-1">({product.reviewCount})</span> */}
-
-                  <div className="flex items-center">
-                    <span className="py-1 px-1.5 bg-green-500 flex rounded-md">
-                      <span className="text-sm font-medium text-white mr-1">{product.rating}</span>
-
-                      <Rating>
-                        <Rating.Star className="text-white w-4" />
-                      </Rating>
+      <div className="overflow-x-auto">
+        <Table hoverable={true} border={true}>
+          <Table.Head>
+            <Table.HeadCell className="p-4">
+              <Checkbox />
+            </Table.HeadCell>
+            <Table.HeadCell className="font-semibold text-sm">App</Table.HeadCell>
+            <Table.HeadCell className="font-semibold text-sm">Category</Table.HeadCell>
+            <Table.HeadCell className="font-semibold text-sm">Developer</Table.HeadCell>
+            <Table.HeadCell className="font-semibold text-sm">Price</Table.HeadCell>
+            <Table.HeadCell className="font-semibold text-sm">Free Plan</Table.HeadCell>
+            <Table.HeadCell className="font-semibold text-sm">Rating</Table.HeadCell>
+            <Table.HeadCell className="font-semibold text-sm">Read More</Table.HeadCell>
+          </Table.Head>
+          <Table.Body className="divide-y">
+            {paginatedProducts.map(product => (
+              <Table.Row
+                key={product.id}
+                className="bg-white dark:border-gray-700 dark:bg-gray-800"
+              >
+                <Table.Cell className="p-4">
+                  <Checkbox />
+                </Table.Cell>
+                <Table.Cell>
+                  <img src={product.img} className="h-8 w-8 mr-2 inline-block" />
+                  {product.name}
+                </Table.Cell>
+                <Table.Cell>{product.category}</Table.Cell>
+                <Table.Cell className="font-semibold">{product.developer}</Table.Cell>
+                <Table.Cell className="font-semibold">{product.price}</Table.Cell>
+                <Table.Cell>
+                  {product.availability ? (
+                    <span className="text-green-500 rounded-xl bg-green-100 px-4 py-1 text-xs font-semibold inline-flex items-center">
+                      <b className="w-2 h-2 bg-green-500 rounded-full inline-block  mr-1"></b>
+                      Available
                     </span>
-                    <span className="ml-2 text-sm font-medium">({product?.reviewCount})</span>
+                  ) : (
+                    <span className="text-red-500 rounded-xl bg-red-100 px-4  py-1 text-xs font-semibold  inline-flex  items-center">
+                      <b className="w-2 h-2 bg-red-500  rounded-full  inline-block mr-1"></b>
+                      Unavailable
+                    </span>
+                  )}
+                </Table.Cell>
+                <Table.Cell>
+                  <div className="flex items-center">
+                    {/* {product.rating} <span className="ml-1">({product.reviewCount})</span> */}
+
+                    <div className="flex items-center">
+                      <span className="py-1 px-1.5 bg-green-500 flex rounded-md">
+                        <span className="text-sm font-medium text-white mr-1">
+                          {product.rating}
+                        </span>
+
+                        <Rating>
+                          <Rating.Star className="text-white w-4" />
+                        </Rating>
+                      </span>
+                      <span className="ml-2 text-sm font-medium">({product?.reviewCount})</span>
+                    </div>
                   </div>
-                </div>
-              </Table.Cell>
-              <Table.Cell>
-                <AnchorLink
-                  href="#"
-                  variant="button"
-                  size="small"
-                  icon={ArrowRightIcon}
-                  classProp="mt-0"
-                >
-                  Read more
-                </AnchorLink>
-              </Table.Cell>
-            </Table.Row>
-          ))}
-        </Table.Body>
-      </Table>
+                </Table.Cell>
+                <Table.Cell>
+                  <AnchorLink
+                    href="#"
+                    variant="button"
+                    size="small"
+                    icon={ArrowRightIcon}
+                    classProp="mt-0"
+                  >
+                    Read more
+                  </AnchorLink>
+                </Table.Cell>
+              </Table.Row>
+            ))}
+          </Table.Body>
+        </Table>
+      </div>
       <div className="flex justify-between my-4 px-4">
         <div className="flex items-center space-x-3">
           <label for="rows" class="text-xs font-normal text-gray-500 dark:text-gray-400">
