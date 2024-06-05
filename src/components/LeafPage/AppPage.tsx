@@ -63,10 +63,17 @@ const AppPage: React.FC = () => {
     ],
   };
 
+  const breadcrumbItems = [
+    { name: 'Home', href: '#' },
+    { name: 'Apps', href: '#' },
+    { name: 'Shopify', href: '#' },
+    { name: 'Page', href: '#' },
+  ];
+
   return (
     <div className="">
-      <div className="mt-6">
-        <Breadcrumb />
+      <div className="mt-6 mb-6">
+        <Breadcrumb items={breadcrumbItems} />
       </div>
       <ProductOverview appDetails={appDetails} />
       <div className="mt-8">

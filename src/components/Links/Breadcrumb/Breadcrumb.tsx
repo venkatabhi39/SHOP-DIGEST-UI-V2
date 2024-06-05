@@ -18,7 +18,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
           <React.Fragment key={index}>
             <li>
               <Link href={item.href}>
-                <a className="block transition hover:text-gray-700">
+                <span className="block transition hover:text-gray-700">
                   {index === 0 ? (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
                   ) : (
                     item.name
                   )}
-                </a>
+                </span>
               </Link>
             </li>
             {index < items.length - 1 && (

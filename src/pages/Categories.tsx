@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next';
 import withFooterTopApps from '@/utils/withFooterTopApps';
 
 import SiteHeader from '@/components/siteHeader';
-import AppPage from '@/components/LeafPage/AppPage';
+import CategoryPage from '@/components/CategoryPage/Category';
 
 export const getStaticProps: GetStaticProps = withFooterTopApps();
 
@@ -11,12 +11,12 @@ export default function AppMainPage() {
   return (
     <>
       <Head>
-        <title>Shopify Apps | APP</title>
+        <title>Shopify Apps | Categories</title>
       </Head>
       <SiteHeader isSecondaryHeader={true} />
 
       <main className="bg-white max-w-[85rem] px-4 pb-10 sm:px-6 lg:px-8 lg:pb-14 mx-auto">
-        <AppPage />
+        <CategoryPage />
       </main>
     </>
   );
