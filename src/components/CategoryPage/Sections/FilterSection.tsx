@@ -13,7 +13,7 @@ const CustomDropdown = () => {
   const [category, setCategory] = useState<ItemValue | null>(null);
   return (
     <div className="flex justify-between items-center border-t border-b py-3.5">
-      <div className="flex w-4/5 justify-start gap-3 items-center">
+      <div className="flex w-4/5 justify-start gap-2 items-center">
         <Button
           size="sm"
           className="bg-gray-100 border border-gray-300 text-gray-800 rounded-full font-semibold"
