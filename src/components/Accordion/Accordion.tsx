@@ -11,7 +11,7 @@ export interface AccordionProps {
 
 export function AccordionComponent({ items }: AccordionProps) {
   return (
-    <Accordion>
+    <Accordion collapseAll>
       {items.map((item, index) => (
         <AccordionPanel key={index}>
           <AccordionTitle className="accordion-title-custom">{item.title}</AccordionTitle>

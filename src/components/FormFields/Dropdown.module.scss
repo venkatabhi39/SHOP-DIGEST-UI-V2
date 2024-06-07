@@ -1,0 +1,43 @@
+.sectionContainer {
+  @apply flex flex-row flex-wrap items-stretch justify-center gap-0;
+
+  & > *:not(:last-child) {
+    @apply border-r;
+  }
+
+  @screen sm {
+    :first-child {
+      @apply rounded-l;
+    }
+
+    :last-child {
+      @apply rounded-r #{!important};
+    }
+  }
+}
+
+.smDropdownContainer {
+  & > button {
+    @apply rounded-full text-inherit bg-transparent w-full focus:outline-none focus:shadow-none border-none font-medium text-sm px-2 py-2 #{!important};
+
+    & > span {
+      @apply p-0 w-full font-semibold #{!important};
+
+      & > svg {
+        @apply text-gray-700;
+      }
+    }
+  }
+}
+
+.dropdownActive {
+  & > button {
+    @apply bg-primary-800  #{!important};
+    & span {
+      @apply text-white #{!important};
+    }
+    & svg {
+      @apply text-white #{!important};
+    }
+  }
+}

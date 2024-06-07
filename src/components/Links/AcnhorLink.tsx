@@ -4,6 +4,8 @@ import { twMerge } from 'tailwind-merge';
 
 const variants = {
   default: 'text-primary hover:text-primary-800 font-medium hover:underline',
+  defaultIcon:
+    'text-primary hover:text-primary-800 font-medium hover:underline inline-flex  items-center',
   bordered:
     'text-sm border border-primary font-medium px-5 py-2.5 bg-primary inline-flex items-center justify-center rounded-full focus:ring-4 text-primary bg-transparent hover:bg-primary-100 focus:ring-blue-300 dark:focus:ring-blue-900',
   button:
@@ -39,18 +41,17 @@ const AnchorLink: React.FC<AnchorLinkProps> = ({
     if ((variant === 'button' || variant === 'bordered') && size === 'small') {
       classes = twMerge(classes, `py-2 px-4 text-sm ${variant === 'bordered' && 'py-[7px]'}`);
     }
+
     return twMerge(classes, classProp);
   }, [variant, size, classProp]);
 
-  const isInternalLink = href.startsWith('/');
+  const isInternalLink = href?.startsWith('/');
 
   const linkContent = (
     <>
       {children}
       {icon && (
-        <span
-          className={`ms-2 ${variant === 'categoryBox' ? 'bg-primary-100 rounded-full' : null}`}
-        >
+        <span className={`ms-2 ${variant === 'categoryBox' ? 'bg-primary-100 rounded-full' : ''}`}>
           {React.createElement(icon)}
         </span>
       )}
