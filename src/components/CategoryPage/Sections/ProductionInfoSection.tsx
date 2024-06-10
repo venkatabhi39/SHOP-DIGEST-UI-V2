@@ -93,7 +93,7 @@ const ProductionInfoSection: NextPage = () => {
       <Heading as="h3" className="p-4 text-gray-900 bg-gray-100 rounded-tl-xl rounded-tr-xl">
         Product Features
       </Heading>
-      <div className="flex">
+      <div className="flex flex-col lg:flex-row">
         <div className="w-full lg:w-9/12 p-6">
           <p className="mb-4">
             A-Grade/CR: iMacs are in 9/10 Cosmetic Condition and are 100% Fully Functional. iMacs

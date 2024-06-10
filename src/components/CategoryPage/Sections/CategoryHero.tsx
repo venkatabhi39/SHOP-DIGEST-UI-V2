@@ -93,7 +93,7 @@ const sampleItems = [
 
 const CategoryHero = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container">
       <Heading as="h1" className="my-2 font-bold">
         Python starter templates and themes Flowbite
       </Heading>

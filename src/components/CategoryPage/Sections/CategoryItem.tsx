@@ -266,9 +266,9 @@ const CategoryItem: React.FC<ProductInfoProps> = () => {
                   </div>
                 </div>
 
-                <div className="flex-grow basis-1/6">
-                  <div className="w-full flex flex-col gap-y-[105px] border-l pl-5">
-                    <div className="flex flex-row items-center justify-end">
+                <div className="flex-grow basis-1/3 lg:basis-1/6 w-full">
+                  <div className="w-full flex flex-col gap-y-3 lg:gap-y-[105px] lg:border-l lg:pl-5">
+                    <div className="flex flex-row items-center justify-center lg:justify-end">
                       <span className="py-1 px-1.5 bg-green-500 flex rounded-md">
                         <span className="text-sm font-medium text-white mr-1">5</span>
 

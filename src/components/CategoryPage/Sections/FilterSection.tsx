@@ -12,11 +12,11 @@ type ItemValue = string | number;
 const CustomDropdown = () => {
   const [category, setCategory] = useState<ItemValue | null>(null);
   return (
-    <div className="flex justify-between items-center border-t border-b py-3.5">
+    <div className="flex justify-between items-center border-t border-b py-3.5 overflow-x-auto">
       <div className="flex lg:w-11/12  justify-start gap-1 md:gap-2 items-center">
         <Button
           size="sm"
-          className="bg-gray-100 border border-gray-300 text-gray-800 rounded-full font-semibold"
+          className="bg-gray-100 whitespace-nowrap border border-gray-300 text-gray-800 rounded-full font-semibold"
         >
           <SettingsIcon classProp="mr-2 h-5 w-5" />
           All Filters
@@ -71,7 +71,7 @@ const CustomDropdown = () => {
           <GroupedButton options={['1st', '2nd', '3rd+']} />
         </div>
 
-        <div className="border border-gray-300 inline-flex rounded-full">
+        <div className="border border-gray-300 inline-flex rounded-full  whitespace-nowrap">
           <Dropdown
             //icon={<ImCalendar />}
             classes={classNames(styles.smDropdownContainer)}

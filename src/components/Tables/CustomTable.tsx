@@ -163,8 +163,8 @@ const ProductTable: React.FC<ProductTableProps> = ({ products }) => {
           </Table.Body>
         </Table>
       </div>
-      <div className="flex justify-between my-4 px-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col sm:flex-row text-center justify-center sm:justify-between my-4 px-4">
+        <div className="inline-flex justify-center sm:justify-start items-center space-x-3">
           <label for="rows" class="text-xs font-normal text-gray-500 dark:text-gray-400">
             Rows per page
           </label>
@@ -190,7 +190,7 @@ const ProductTable: React.FC<ProductTableProps> = ({ products }) => {
           variant="default"
           size="small"
           icon={LineArrowDown}
-          classProp="mt-0 flex items-center"
+          classProp="mt-0 flex items-center mx-auto"
         >
           Show more
         </AnchorLink>
