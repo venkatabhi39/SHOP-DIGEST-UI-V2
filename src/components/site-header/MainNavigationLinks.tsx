@@ -1,14 +1,15 @@
 import React from 'react';
 import { MainNavigationLink } from './MainNavigationLink';
+import FlyoutMenu from '@/components/Nav/FlyoutMenu';
 
 interface IMainNavigationLinksProps {}
 
 export const FEATURES = [
-  {
-    id: '1',
-    label: 'Apps',
-    hasMenu: ['Shopify', 'Wordpress'],
-  },
+  // {
+  //   id: '1',
+  //   label: 'Apps',
+  //   hasMenu: ['Shopify', 'Wordpress'],
+  // },
   {
     id: '2',
     label: 'Themes',
@@ -35,6 +36,9 @@ export const HEADER_NAVIGATION_LINKS = FEATURES.map(item => ({
 
 export const MainNavigationLinks: React.FC<IMainNavigationLinksProps> = () => (
   <ul className="flex flex-col font-medium lg:flex-row lg:space-x-4 xl:space-x-8">
+    <li>
+      <FlyoutMenu />
+    </li>
     {HEADER_NAVIGATION_LINKS.map(item => (
       <MainNavigationLink
         key={item.id}
