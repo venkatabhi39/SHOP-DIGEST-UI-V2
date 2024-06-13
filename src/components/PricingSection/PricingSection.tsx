@@ -91,7 +91,7 @@ const PricingSection: React.FC<{ plans: PricingPlan[]; headerData: headerDataDet
         {plans.map(plan => (
           <div key={plan.title} className="mb-8">
             <div
-              className={`p-3 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-200 shadow dark:border-gray-600 xl:p-4 dark:bg-gray-800 dark:text-white ${
+              className={`p-5 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-200 shadow dark:border-gray-600 xl:p-6 dark:bg-gray-800 dark:text-white ${
                 plan.isHighlighted ? 'border-primary' : ''
               }`}
             >
@@ -147,7 +147,7 @@ const PricingSection: React.FC<{ plans: PricingPlan[]; headerData: headerDataDet
                   Get started
                 </a>
               </div>
-              <ul role="list" className="mb-8 space-y-4 text-left">
+              <ul role="list" className="mb-0 space-y-3 text-left">
                 {plan.features.map(feature => (
                   <li key={feature} className="flex items-center space-x-3">
                     <svg
