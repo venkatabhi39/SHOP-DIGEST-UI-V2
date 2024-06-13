@@ -138,7 +138,7 @@ const PricingSection: React.FC<{ plans: PricingPlan[]; headerData: headerDataDet
               <div>
                 <a
                   href="#"
-                  className={`block w-full text-white my-6 ${
+                  className={`block w-full text-white my-5 ${
                     plan.isHighlighted ? 'bg-primary' : 'bg-black'
                   } ${
                     plan.isHighlighted ? 'hover:bg-primary-900' : 'hover:bg-gray-500'
