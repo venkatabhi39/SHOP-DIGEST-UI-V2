@@ -29,7 +29,7 @@ const CategoryPagesContent: FC<{
   }, [extraPosts]);
 
   return (
-    <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+    <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-10 lg:py-14 mx-auto">
       {postRows.map((postsForRow, i) =>
         i === 0 ? (
           <PostsSection sectionIndex={i} key={i} posts={postsForRow} topApps={topApps} />

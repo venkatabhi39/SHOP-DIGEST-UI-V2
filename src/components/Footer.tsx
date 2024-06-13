@@ -24,7 +24,7 @@ export default function Footer({
     <footer className={classNames('', className)}>
       {/* {footerTopApps && <TopAppsHomePageFooter topApps={footerTopApps} />} */}
       <div className={classNames('border-t-300')}>
-        <div className="max-w-[85rem] px-4 pb-10 sm:px-6 lg:px-8 lg:pb-14 mx-auto">
+        <div className="max-w-[85rem] px-4 pb-10 sm:px-6 lg:px-10 lg:pb-14 mx-auto">
           <PricingPlan />
           <ListWithContent />
           <TestimonalCarousel />
@@ -45,8 +45,9 @@ export default function Footer({
           </div> */}
         </div>
         <NewsletterSubscription />
-        <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-10 lg:py-10 mx-auto">
           <TabsComponent />
+          <div className="border-b mb-2"></div>
           <FooterSection />
         </div>
       </div>

@@ -12,7 +12,7 @@ const features: Feature[] = [
   {
     icon: (
       <svg
-        className="mb-2 w-10 h-10 text-primary-600 md:w-12 md:h-12 dark:text-primary-500"
+        className="mb-2 w-10 h-10 text-blue-600 md:w-12 md:h-12 dark:text-primary-500"
         fill="currentColor"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@ const features: Feature[] = [
   {
     icon: (
       <svg
-        className="mb-2 w-10 h-10 text-primary-600 md:w-12 md:h-12 dark:text-primary-500"
+        className="mb-2 w-10 h-10 text-blue-600 md:w-12 md:h-12 dark:text-primary-500"
         fill="currentColor"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +44,7 @@ const features: Feature[] = [
   {
     icon: (
       <svg
-        className="mb-2 w-10 h-10 text-primary-600 md:w-12 md:h-12 dark:text-primary-500"
+        className="mb-2 w-10 h-10 text-blue-600 md:w-12 md:h-12 dark:text-primary-500"
         fill="currentColor"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +62,7 @@ const features: Feature[] = [
   {
     icon: (
       <svg
-        className="mb-2 w-10 h-10 text-primary-600 md:w-12 md:h-12 dark:text-primary-500"
+        className="mb-2 w-10 h-10 text-blue-600 md:w-12 md:h-12 dark:text-primary-500"
         fill="currentColor"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +80,7 @@ const TrustedSection: React.FC = () => {
     <section className="bg-white dark:bg-gray-900">
       <div className="items-center py-8  mx-auto  lg:grid lg:grid-cols-4 lg:gap-16 xl:gap-24 lg:py-16">
         <div className="col-span-2 mb-8">
-          <p className="text-lg font-medium text-primary-600 dark:text-primary-500">
+          <p className="text-lg font-medium text-blue-600 dark:text-primary-500">
             Trusted Worldwide
           </p>
           <h2 className="mt-3 mb-4 text-3xl tracking-tight font-extrabold text-gray-900 md:text-4xl dark:text-white">
@@ -95,7 +95,7 @@ const TrustedSection: React.FC = () => {
               <AnchorLink
                 href={'#'}
                 variant="default"
-                className="text-primary-600 text-sm font-semibold inline-flex items-center hover:underline"
+                className="text-blue-600 text-sm font-semibold inline-flex items-center hover:underline"
                 icon={LineDownRight}
               >
                 Explore Legality Guide
@@ -105,7 +105,7 @@ const TrustedSection: React.FC = () => {
               <AnchorLink
                 href={'#'}
                 variant="default"
-                className="text-primary-600 text-sm font-semibold inline-flex items-center hover:underline"
+                className="text-blue-600 text-sm font-semibold inline-flex items-center hover:underline"
                 icon={LineDownRight}
               >
                 Visit the Trust Center

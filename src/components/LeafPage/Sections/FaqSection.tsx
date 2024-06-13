@@ -100,7 +100,7 @@ export default function ProductInformation() {
       <AnchorLink
         href={'#'}
         variant="default"
-        className="text-primary-600 mt-5 text-md font-semibold inline-flex items-center hover:underline"
+        classProp="mt-5 text-md font-semibold inline-flex items-center hover:underline"
         icon={LineArrowDown}
       >
         Show More

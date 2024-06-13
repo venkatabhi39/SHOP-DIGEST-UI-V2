@@ -56,7 +56,7 @@ export const MainNavigation: React.FC<IMainNavigationProps> = () => {
     >
       <Navbar
         id="primaryNav"
-        className=" relative max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8"
+        className=" relative max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-10"
       >
         <div className="w-full flex flex-wrap justify-between items-center mx-auto">
           <div className="flex items-center">

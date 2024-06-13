@@ -8,7 +8,7 @@ interface FeatureItemProps {
 }
 
 const FeatureItem: React.FC<FeatureItemProps> = ({ icon, title, description, titleClasess }) => (
-  <li className="flex space-x-3">
+  <li className="flex space-x-3 items-center">
     {icon}
     <div>
       <span className={titleClasess ? titleClasess : ''}>{title}</span>

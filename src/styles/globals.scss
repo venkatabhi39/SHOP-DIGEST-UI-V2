@@ -64,7 +64,7 @@ h2 {
 // }
 
 h3 {
-  @apply mb-2 text-xl font-bold dark:text-white;
+  @apply mb-2 text-xl font-bold text-gray-900 dark:text-white;
 }
 
 h1,
@@ -77,7 +77,7 @@ blockquote {
 }
 
 p {
-  @apply font-normal text-gray-500 sm:text-base;
+  @apply font-normal text-gray-600 text-base;
 }
 ul {
   @apply text-gray-900;
@@ -93,7 +93,7 @@ ul {
 //   }
 // }
 .sdLink {
-  @apply font-medium text-primary hover:text-primary-900;
+  @apply font-medium text-blue-600 hover:text-blue-900;
 }
 .card {
   h3 {

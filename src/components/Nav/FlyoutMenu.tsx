@@ -53,7 +53,7 @@ export default function Example() {
     <Popover className="relative">
       {({ open }) => (
         <>
-          <PopoverButton className="outline-none flex lg:inline-flex w-full lg:w-auto  justify-between items-center pl-3.5 py-2 lg:px-0 lg:py-0 gap-x-2 lg:gap-x-1 text-sm font-medium leading-6 text-gray-600">
+          <PopoverButton className="outline-none flex lg:inline-flex w-full lg:w-auto  justify-between items-center pl-3.5 py-2 lg:px-0 lg:py-0 gap-x-2 lg:gap-x-1 text-[15px] font-medium leading-6 text-gray-700">
             <span>App</span>
 
             <ChevronDownIcon

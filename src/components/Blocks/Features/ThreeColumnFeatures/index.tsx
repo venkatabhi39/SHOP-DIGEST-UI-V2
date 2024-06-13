@@ -61,7 +61,7 @@ const DFeaturesList: React.FC = () => (
       title="Designed for business teams like yours"
       description="Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth."
       services={servicesData}
-      cardClasses="p-6 rounded-lg border border-gray-200 shadow-md"
+      cardClasses="p-6 rounded-lg border border-gray-200"
       iconClasses="rounded-sm"
     />
   </div>

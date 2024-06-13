@@ -7,6 +7,7 @@ import placeholderImgProps from '@/assets/placeholder-image.png';
 import { StyledAnchorWithoutUnderline } from '@/components/StyledLink';
 import { CategoryPagePostList } from '@/services/api.service';
 import classes from './PostsRow.module.scss';
+import { Heading } from '@/components/Heading';
 
 export const PostContext = createContext<CategoryPagePostList[number] | null>(null);
 
@@ -20,14 +21,15 @@ export const PostTitle: FC<{ className?: string; noLink?: boolean }> = ({
 
   return (
     <StyledAnchorWithoutUnderline noLink={noLink} href={`/${post.slug}`}>
-      <h3
+      <Heading as="h3" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+      {/* <h3
         className={classNames(
           'text-[1.25rem] lg:text-[1.25rem] 2xl:text-[1.25rem] leading-[1.3] !font-medium',
           // subHeadingFont.className,
           className,
         )}
         dangerouslySetInnerHTML={{ __html: post.title.rendered }}
-      />
+      /> */}
     </StyledAnchorWithoutUnderline>
   );
 };
@@ -81,7 +83,10 @@ const PostsRow: FC<
     className?: string;
   }
 > = ({ children, className }) => (
-  <section className={classNames(classes.postsCard__container, 'section', className)} style={{marginLeft: '0', marginRight: '0'}}>
+  <section
+    className={classNames(classes.postsCard__container, 'section', className)}
+    style={{ marginLeft: '0', marginRight: '0' }}
+  >
     {children}
   </section>
 );

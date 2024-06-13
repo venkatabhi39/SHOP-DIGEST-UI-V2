@@ -40,7 +40,7 @@ const ListWithContent: React.FC<ListWithContentProps> = ({
           </div>
         ) : null}
         <div className="lg:mt-0 lg:col-span-5 lg:block lg:pl-12 m-0 lg:ml-auto">
-          <ul role="list" className="sm:!pt-0 lg:mt-0 pt-2 my-7 space-y-5 ">
+          <ul role="list" className="sm:!pt-0 lg:mt-0 pt-2 my-7 space-y-4 ">
             {features.map((feature, index) => (
               <FeatureItem key={index} {...feature} />
             ))}

@@ -11,7 +11,7 @@ export const Heading: React.FC<PropsWithChildren<IHeadingProps>> = ({ as = 'h2',
 
   const headingClassName = classNames(props.className, {
     'text-3.5xl font-bold dark:text-white': as === 'h2',
-    'text-0.25xl font-bold dark:text-white': as === 'h3',
+    'font-bold dark:text-white': as === 'h3',
   });
 
   return <HeadingComp {...props} className={headingClassName} />;

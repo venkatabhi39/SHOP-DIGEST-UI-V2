@@ -30,7 +30,7 @@ const CustomerCard: React.FC<CustomerCardProps> = ({ customer }) => {
         <AnchorLink
           href={customer.website || '#'}
           variant="default"
-          className="text-primary-600 text-sm font-semibold inline-flex items-center hover:underline"
+          classProp="text-sm font-semibold inline-flex items-center hover:underline"
           icon={LineDownRight}
         >
           Visit Website

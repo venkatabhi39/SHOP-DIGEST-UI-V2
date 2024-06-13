@@ -21,7 +21,7 @@ const sectionProps = {
           'Unlimited requests for email reviews with pictures and videos, and within the email for review.',
         icon: (
           <svg
-            className="flex-shrink-0 w-5 h-5 text-primary dark:text-primary-500"
+            className="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-primary-500"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@ const sectionProps = {
           'Show star ratings, product and store feedback, trust badges, and a display of reviews.',
         icon: (
           <svg
-            className="flex-shrink-0 w-5 h-5 text-primary dark:text-primary-500"
+            className="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-primary-500"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +57,7 @@ const sectionProps = {
           'Unlimited requests for email reviews with pictures and videos, and within the email for review.',
         icon: (
           <svg
-            className="flex-shrink-0 w-5 h-5 text-primary dark:text-primary-500"
+            className="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-primary-500"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +75,7 @@ const sectionProps = {
           'Show star ratings, product and store feedback, trust badges, and a display of reviews.',
         icon: (
           <svg
-            className="flex-shrink-0 w-5 h-5 text-primary dark:text-primary-500"
+            className="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-primary-500"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,7 @@ const Highlights: React.FC<ListWithContentProps> = () => (
             {sectionProps.list1?.title}
           </Heading>
         )}
-        <ul role="list" className="sm:!pt-0 lg:mt-0 pt-2 my-7 space-y-5 ">
+        <ul role="list" className="sm:!pt-0 lg:mt-0 pt-2 my-7 space-y-4 ">
           {sectionProps.list1?.data?.map((feature, index) => (
             <FeatureItem key={index} {...feature} />
           ))}

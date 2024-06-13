@@ -73,7 +73,7 @@ const RatingComponent: React.FC<RatingComponentProps> = ({
               </div>
               <a
                 href="#"
-                className="shrink-0 text-sm font-medium leading-none text-primary-700 hover:underline dark:text-primary-500"
+                className="shrink-0 text-sm font-medium leading-none text-blue-600 hover:underline dark:text-primary-500"
               >
                 {' '}
                 {count} reviews{' '}

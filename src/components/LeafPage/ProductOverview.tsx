@@ -55,7 +55,7 @@ const ProductOverview: React.FC<ProductInfoProps> = ({ appDetails }) => {
               <AnchorLink
                 href="#"
                 variant="default"
-                className="underline text-primary-600 ml-3 text-sm font-semibold"
+                classProp="underline ml-3 text-sm font-semibold"
               >
                 View seller information
               </AnchorLink>

@@ -109,8 +109,8 @@ const RightIcon = ({ bgcolor }) => {
 const ComparisionTable = () => {
   const [monthprice, setMonthPrice] = useState(true);
   return (
-    <div className="border shadow-lg rounded-lg min-h-[100vh] flex items-center justify-center">
-      <div className="mx-5 pb-10">
+    <div className="border rounded-lg min-h-[100vh] flex items-center justify-center">
+      <div className="w-full pb-10">
         <div className="py-8 lg:py-14 flex flex-col items-center">
           <Heading as="h2" className="mt-2 text-center">
             Compare our plans
@@ -138,8 +138,8 @@ const ComparisionTable = () => {
             </button>
           </div> */}
         </div>
-        <div className="max-w-xs xs:max-w-xl sm:max-w-xl md:max-w-xl lg:max-w-4xl xl:max-w-none bg-white rounded-xl overflow-x-auto">
-          <table className="compare-tbl w-full text-start  flex flex-row p-5 lg:p-0">
+        <div className="max-w-xs xs:max-w-xl sm:max-w-xl md:max-w-xl lg:max-w-5xl xl:max-w-none bg-white rounded-xl overflow-x-auto">
+          <table className="compare-tbl w-full text-start justify-between  flex flex-row p-5 lg:p-0">
             {pricingData.map((data, index) => (
               <tbody
                 key={index}
@@ -152,7 +152,7 @@ const ComparisionTable = () => {
               >
                 <tr>
                   {index === 0 ? (
-                    <td className="h-[170px]">
+                    <td className="h-[170px] w-[380px]">
                       <div className="opacity-0 flex justify-center font-semibold text-xl text-[#101828] h-[150px] min-w-60 text-center">
                         {data.imgUrl && <img src={data.imgUrl} className="w-36" />}
                       </div>
@@ -161,7 +161,7 @@ const ComparisionTable = () => {
                       </Heading>
                     </td>
                   ) : (
-                    <td className="h-[170px]" align="center">
+                    <td className="h-[170px] w-[380px]" align="center">
                       <div className="flex justify-center font-semibold text-xl text-[#101828] h-[150px] min-w-60 text-center">
                         {data.imgUrl && <img src={data.imgUrl} className="w-36" />}
                       </div>
@@ -204,14 +204,14 @@ const ComparisionTable = () => {
                 </tr> */}
                 {/* portion after first title */}
                 <tr>
-                  <td className="text-sm font-semibold text-primary bg-gray-100" colSpan={2}>
+                  <td className="text-sm font-semibold  bg-gray-100" colSpan={2}>
                     {data.titleRow1 || <span className="opacity-0">Heading</span>}
                     <span className="lg:hidden">{pricingData[0]['titleRow1']}</span>
                   </td>
                 </tr>
                 <tr>
                   <td className={index === 0 ? '' : 'text-center '}>
-                    <span className="text-sm font-semibold text-primary">
+                    <span className="text-sm font-semibold ">
                       {data['Basic Feature'] === true ? (
                         <>
                           <RightIcon bgcolor={`#365CCE`} />
@@ -252,7 +252,7 @@ const ComparisionTable = () => {
 
                 {/* portion after second title */}
                 <tr>
-                  <td className="text-sm font-semibold text-[#365CCE] whitespace-nowrap bg-gray-100">
+                  <td className="text-sm font-semibold whitespace-nowrap bg-gray-100">
                     {data.titleRow5 || <span className="opacity-0">Heading</span>}
                     <span className="lg:hidden">{pricingData[0]['titleRow5']}</span>
                   </td>

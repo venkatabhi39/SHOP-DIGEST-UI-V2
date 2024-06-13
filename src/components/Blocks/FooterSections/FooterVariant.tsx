@@ -61,11 +61,11 @@ const Footer: React.FC = () => {
 
   return (
     <footer className=" ">
-      <div className="py-6 mx-auto lg:-10">
+      <div className="pt-6 mx-auto lg:-10">
         <div className="grid grid-cols-2 gap-8 lg:grid-cols-6">
           <div className="col-span-2">
             <SiteLogo />
-            <p className="my-4 font-light text-gray-500 dark:text-gray-400">
+            <p className="my-4 text-gray-500 dark:text-gray-400">
               Flowbite is an open-source library of over 400+ web components and interactive
               elements built with the utility classes from Tailwind CSS.
             </p>

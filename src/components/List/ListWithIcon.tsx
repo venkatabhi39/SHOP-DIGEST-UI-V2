@@ -45,25 +45,25 @@ const ListWithContent: React.FC<ListWithContentProps> = ({
     ) : null}
     <div className="mx-auto">
       <div className="grid lg:grid-cols-2 gap-4">
-        <div className="border rounded-lg p-5 px-5">
+        <div className="border rounded-lg p-6 px-6">
           {list1?.title && (
             <Heading as="h3" className="mb-4 text-gray-500">
               {list1?.title}
             </Heading>
           )}
-          <ul role="list" className="sm:!pt-0 lg:mt-0 pt-2 my-7 space-y-5 ">
+          <ul role="list" className="sm:!pt-0 lg:mt-0 pt-2 my-7 space-y-4 mb-0">
             {list1?.data?.map((feature, index) => (
               <FeatureItem key={index} {...feature} />
             ))}
           </ul>
         </div>
-        <div className="border rounded-lg p-5 px-6">
+        <div className="border rounded-lg p-6 px-6">
           {list2?.title && (
             <Heading as="h3" className="mb-4 text-gray-500">
               {list2?.title}
             </Heading>
           )}
-          <ul role="list" className="sm:!pt-0 lg:mt-0 pt-2 my-7 space-y-5 ">
+          <ul role="list" className="sm:!pt-0 lg:mt-0 pt-2 my-7 space-y-4 mb-0">
             {list2?.data?.map((feature, index) => (
               <FeatureItem key={index} {...feature} />
             ))}

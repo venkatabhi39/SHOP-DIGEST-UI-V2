@@ -20,7 +20,7 @@ const sectionProps1 = {
         title: 'Unlimited requests for email',
         icon: (
           <svg
-            className="h-5 w-5 shrink-0 text-primary-700 dark:text-primary-500"
+            className="h-5 w-5 shrink-0 text-blue-600 dark:text-primary-500"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -42,7 +42,7 @@ const sectionProps1 = {
         title: 'Show star ratings',
         icon: (
           <svg
-            className="h-5 w-5 shrink-0 text-primary-700 dark:text-primary-500"
+            className="h-5 w-5 shrink-0 text-blue-600 dark:text-primary-500"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -64,7 +64,7 @@ const sectionProps1 = {
         title: 'Unlimited requests for email',
         icon: (
           <svg
-            className="h-5 w-5 shrink-0 text-primary-700 dark:text-primary-500"
+            className="h-5 w-5 shrink-0 text-blue-600 dark:text-primary-500"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -86,7 +86,7 @@ const sectionProps1 = {
         title: 'display of reviews.',
         icon: (
           <svg
-            className="h-5 w-5 shrink-0 text-primary-700 dark:text-primary-500"
+            className="h-5 w-5 shrink-0 text-blue-600 dark:text-primary-500"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -213,7 +213,7 @@ const ReviewsInfoOne: React.FC<ListWithContentProps> = () => (
             {sectionProps1.list1?.title}
           </Heading>
         )}
-        <ul role="list" className="sm:!pt-0 lg:mt-0 pt-2 my-7 space-y-5 ">
+        <ul role="list" className="sm:!pt-0 lg:mt-0 pt-2 my-7 space-y-4 ">
           {sectionProps1.list1?.data?.map((feature, index) => (
             <FeatureItem key={index} {...feature} />
           ))}
@@ -232,7 +232,7 @@ const ReviewsInfoTwo: React.FC<ListWithContentProps> = () => (
             {sectionProps2.list1?.title}
           </Heading>
         )}
-        <ul role="list" className="sm:!pt-0 lg:mt-0 pt-2 my-7 space-y-5 ">
+        <ul role="list" className="sm:!pt-0 lg:mt-0 pt-2 my-7 space-y-4 ">
           {sectionProps2.list1?.data?.map((feature, index) => (
             <FeatureItem key={index} {...feature} />
           ))}

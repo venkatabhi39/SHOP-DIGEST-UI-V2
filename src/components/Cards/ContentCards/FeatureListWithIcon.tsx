@@ -52,7 +52,7 @@ const FeatureListWithIcon: React.FC<FeatureItem> = ({
         <AnchorLink
           href={linkUrl || '#'}
           variant="default"
-          className="text-primary-600 text-sm font-semibold inline-flex items-center hover:underline"
+          classProp="text-sm font-semibold inline-flex items-center hover:underline"
           icon={LineDownRight}
         >
           {linkText}

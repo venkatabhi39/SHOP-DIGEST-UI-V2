@@ -1,5 +1,6 @@
 import React, { PropsWithChildren } from 'react';
 import { Card, Button } from 'flowbite-react';
+import { Heading } from '@/components/Heading';
 
 interface ISectionProps {}
 
@@ -13,9 +14,10 @@ export const Section: React.FC<PropsWithChildren<ISectionProps>> = ({ children }
             <span className="me-2 text-base">Join the community</span>
           </h3>
           <div className="flex flex-col p-6">
-            <h3 className="text-2xl font-semibold mb-2 text-gray-700 text-center">
+            <Heading as="h3">To know everything about Shopify</Heading>
+            {/* <h3 className="text-2xl font-semibold mb-2 text-gray-700 text-center">
               To know everything about Shopify
-            </h3>
+            </h3> */}
 
             <p className="text-gray-700 mb-4">
               Connect, share, and engage with community and build relationships.
@@ -31,9 +33,7 @@ export const Section: React.FC<PropsWithChildren<ISectionProps>> = ({ children }
             <span className="me-2 text-base">Join the community</span>
           </h3>
           <div className="flex flex-col p-6">
-            <h3 className="text-2xl font-semibold mb-2 text-gray-700 text-center">
-              To know everything about Shopify
-            </h3>
+            <Heading as="h3">To know everything about Shopify</Heading>
 
             <p className="text-gray-700 mb-4">
               Connect, share, and engage with community and build relationships.

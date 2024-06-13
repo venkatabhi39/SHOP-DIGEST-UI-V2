@@ -60,7 +60,7 @@ const AppCards: React.FC = () => {
         <AnchorLink
           href={'#'}
           variant="default"
-          className="text-primary-600 text-sm font-semibold inline-flex items-center hover:underline"
+          classProp="text-sm font-semibold inline-flex items-center hover:underline"
         >
           View all
         </AnchorLink>

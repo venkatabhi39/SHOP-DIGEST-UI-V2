@@ -19,7 +19,7 @@ const PlainSections: React.FC = () => {
             <div>
               <svg
                 viewBox="0 0 20 20"
-                className="mx-auto mb-4 w-12 h-12 text-primary-600 dark:text-primary-500"
+                className="mx-auto mb-4 w-12 h-12 text-blue-600 dark:text-blue-500"
                 fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -45,7 +45,7 @@ const PlainSections: React.FC = () => {
               </p>
               <a
                 href="#"
-                className="inline-flex items-center text-sm font-medium text-primary-600 hover:text-primary-700 dark:text-primary-500 dark:hover:text-primary-400"
+                className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 dark:text-primary-500 dark:hover:text-blue-400"
               >
                 Learn how to keep your funds safe{' '}
                 <svg
@@ -65,7 +65,7 @@ const PlainSections: React.FC = () => {
             <div>
               <svg
                 viewBox="0 0 20 20"
-                className="mx-auto mb-4 w-12 h-12 text-primary-600 dark:text-primary-500"
+                className="mx-auto mb-4 w-12 h-12 text-blue-600 dark:text-primary-500"
                 fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -82,7 +82,7 @@ const PlainSections: React.FC = () => {
               </p>
               <a
                 href="#"
-                className="inline-flex items-center text-sm font-medium text-primary-600 hover:text-primary-700 dark:text-primary-500 dark:hover:text-primary-400"
+                className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 dark:text-primary-500 dark:hover:text-primary-400"
               >
                 Learn how your crypto is covered{' '}
                 <svg
@@ -102,7 +102,7 @@ const PlainSections: React.FC = () => {
             <div>
               <svg
                 viewBox="0 0 20 20"
-                className="mx-auto mb-4 w-12 h-12 text-primary-600 dark:text-primary-500"
+                className="mx-auto mb-4 w-12 h-12 text-blue-600 dark:text-primary-500"
                 fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -118,7 +118,7 @@ const PlainSections: React.FC = () => {
               </p>
               <a
                 href="#"
-                className="inline-flex items-center text-sm font-medium text-primary-600 hover:text-primary-700 dark:text-primary-500 dark:hover:text-primary-400"
+                className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-primary-700 dark:text-primary-500 dark:hover:text-primary-400"
               >
                 How to implement best practices{' '}
                 <svg
@@ -1395,7 +1395,7 @@ const PlainSections: React.FC = () => {
                     <ul className="mt-2 space-y-2 text-sm font-normal text-gray-500 dark:text-gray-400">
                       <li className="flex items-center gap-1.5">
                         <svg
-                          className="h-5 w-5 shrink-0 text-primary-700 dark:text-primary-500"
+                          className="h-5 w-5 shrink-0 text-blue-600 dark:text-primary-500"
                           aria-hidden="true"
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
@@ -1949,10 +1949,10 @@ const PlainSections: React.FC = () => {
       <section className="bg-white dark:bg-gray-900">
         <div className="items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-4 lg:gap-16 xl:gap-24 lg:py-16 lg:px-6">
           <div className="col-span-2 mb-8">
-            <p className="text-lg font-medium text-primary-600 dark:text-primary-500">
+            <p className="text-lg font-medium text-blue-600 dark:text-primary-500">
               Trusted Worldwide
             </p>
-            <h2 className="mt-3 mb-4 text-3xl tracking-tight font-extrabold tracking-tight text-gray-900 md:text-4xl dark:text-white">
+            <h2 className="mt-3 mb-4 text-3xl tracking-tight font-extrabold text-gray-900 md:text-4xl dark:text-white">
               Trusted by over 600 million users and 10,000 teams
             </h2>
             <p className="font-light text-gray-500 sm:text-xl dark:text-gray-400">
@@ -1963,7 +1963,7 @@ const PlainSections: React.FC = () => {
               <div>
                 <a
                   href="#"
-                  className="inline-flex items-center text-base font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700"
+                  className="inline-flex items-center text-base font-medium text-blue-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700"
                 >
                   Explore Legality Guide
                   <svg
@@ -1983,7 +1983,7 @@ const PlainSections: React.FC = () => {
               <div>
                 <a
                   href="#"
-                  className="inline-flex items-center text-base font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700"
+                  className="inline-flex items-center text-base font-medium text-blue-600 hover:text-blue-800 dark:text-primary-500 dark:hover:text-primary-700"
                 >
                   Visit the Trust Center
                   <svg
@@ -2005,7 +2005,7 @@ const PlainSections: React.FC = () => {
           <div className="col-span-2 space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0">
             <div>
               <svg
-                className="mb-2 w-10 h-10 text-primary-600 md:w-12 md:h-12 dark:text-primary-500"
+                className="mb-2 w-10 h-10 text-blue-600 md:w-12 md:h-12 dark:text-primary-500"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -2023,7 +2023,7 @@ const PlainSections: React.FC = () => {
             </div>
             <div>
               <svg
-                className="mb-2 w-10 h-10 text-primary-600 md:w-12 md:h-12 dark:text-primary-500"
+                className="mb-2 w-10 h-10 text-blue-600 md:w-12 md:h-12 dark:text-primary-500"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -2037,7 +2037,7 @@ const PlainSections: React.FC = () => {
             </div>
             <div>
               <svg
-                className="mb-2 w-10 h-10 text-primary-600 md:w-12 md:h-12 dark:text-primary-500"
+                className="mb-2 w-10 h-10 text-blue-600 md:w-12 md:h-12 dark:text-primary-500"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -2055,7 +2055,7 @@ const PlainSections: React.FC = () => {
             </div>
             <div>
               <svg
-                className="mb-2 w-10 h-10 text-primary-600 md:w-12 md:h-12 dark:text-primary-500"
+                className="mb-2 w-10 h-10 text-blue-600 md:w-12 md:h-12 dark:text-primary-500"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -2240,7 +2240,7 @@ const PlainSections: React.FC = () => {
                         <input
                           id="checkbox-all"
                           type="checkbox"
-                          className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                          className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-blue-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                         />
                         <label for="checkbox-all" className="sr-only">
                           checkbox
@@ -2303,7 +2303,7 @@ const PlainSections: React.FC = () => {
                       Apple iMac 27&#34;
                     </th>
                     <td className="px-4 py-2">
-                      <span className="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
+                      <span className="bg-primary-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
                         Desktop PC
                       </span>
                     </td>
@@ -2414,7 +2414,7 @@ const PlainSections: React.FC = () => {
                       Apple iMac 20&#34;
                     </th>
                     <td className="px-4 py-2">
-                      <span className="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
+                      <span className="bg-primary-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
                         Desktop PC
                       </span>
                     </td>
@@ -2506,7 +2506,7 @@ const PlainSections: React.FC = () => {
                           id="checkbox-table-search-1"
                           type="checkbox"
                           onclick="event.stopPropagation()"
-                          className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                          className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-blue-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                         />
                         <label for="checkbox-table-search-1" className="sr-only">
                           checkbox
@@ -2617,7 +2617,7 @@ const PlainSections: React.FC = () => {
                           id="checkbox-table-search-1"
                           type="checkbox"
                           onclick="event.stopPropagation()"
-                          className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                          className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-blue-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                         />
                         <label for="checkbox-table-search-1" className="sr-only">
                           checkbox
@@ -2636,7 +2636,7 @@ const PlainSections: React.FC = () => {
                       Apple iPad Air
                     </th>
                     <td className="px-4 py-2">
-                      <span className="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
+                      <span className="bg-primary-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
                         Tablet
                       </span>
                     </td>
@@ -2728,7 +2728,7 @@ const PlainSections: React.FC = () => {
                           id="checkbox-table-search-1"
                           type="checkbox"
                           onclick="event.stopPropagation()"
-                          className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                          className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-blue-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                         />
                         <label for="checkbox-table-search-1" className="sr-only">
                           checkbox
@@ -2747,7 +2747,7 @@ const PlainSections: React.FC = () => {
                       Xbox Series S
                     </th>
                     <td className="px-4 py-2">
-                      <span className="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
+                      <span className="bg-primary-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
                         Console
                       </span>
                     </td>
@@ -2839,7 +2839,7 @@ const PlainSections: React.FC = () => {
                           id="checkbox-table-search-1"
                           type="checkbox"
                           onclick="event.stopPropagation()"
-                          className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                          className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-blue-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                         />
                         <label for="checkbox-table-search-1" className="sr-only">
                           checkbox
@@ -2858,7 +2858,7 @@ const PlainSections: React.FC = () => {
                       PlayStation 5
                     </th>
                     <td className="px-4 py-2">
-                      <span className="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
+                      <span className="bg-primary-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
                         Console
                       </span>
                     </td>
@@ -2950,7 +2950,7 @@ const PlainSections: React.FC = () => {
                           id="checkbox-table-search-1"
                           type="checkbox"
                           onclick="event.stopPropagation()"
-                          className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                          className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-blue-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                         />
                         <label for="checkbox-table-search-1" className="sr-only">
                           checkbox
@@ -2969,7 +2969,7 @@ const PlainSections: React.FC = () => {
                       Xbox Series X
                     </th>
                     <td className="px-4 py-2">
-                      <span className="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
+                      <span className="bg-primary-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
                         Gaming/Console
                       </span>
                     </td>
@@ -3061,7 +3061,7 @@ const PlainSections: React.FC = () => {
                           id="checkbox-table-search-1"
                           type="checkbox"
                           onclick="event.stopPropagation()"
-                          className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                          className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-blue-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                         />
                         <label for="checkbox-table-search-1" className="sr-only">
                           checkbox
@@ -3080,7 +3080,7 @@ const PlainSections: React.FC = () => {
                       Apple Watch SE
                     </th>
                     <td className="px-4 py-2">
-                      <span className="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
+                      <span className="bg-primary-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
                         Watch
                       </span>
                     </td>
@@ -3172,7 +3172,7 @@ const PlainSections: React.FC = () => {
                           id="checkbox-table-search-1"
                           type="checkbox"
                           onClick="event.stopPropagation()"
-                          className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                          className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-blue-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                         />
                         <label for="checkbox-table-search-1" className="sr-only">
                           checkbox
@@ -3191,7 +3191,7 @@ const PlainSections: React.FC = () => {
                       NIKON D850
                     </th>
                     <td className="px-4 py-2">
-                      <span className="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
+                      <span className="bg-primary-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
                         Photo/Video
                       </span>
                     </td>
@@ -3283,7 +3283,7 @@ const PlainSections: React.FC = () => {
                           id="checkbox-table-search-1"
                           type="checkbox"
                           onclick="event.stopPropagation()"
-                          className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                          className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-blue-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                         />
                         <label for="checkbox-table-search-1" className="sr-only">
                           checkbox
@@ -3302,7 +3302,7 @@ const PlainSections: React.FC = () => {
                       Monitor BenQ EX2710Q
                     </th>
                     <td className="px-4 py-2">
-                      <span className="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
+                      <span className="bg-primary-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
                         TV/Monitor
                       </span>
                     </td>
@@ -3442,7 +3442,7 @@ const PlainSections: React.FC = () => {
                   <a
                     href="#"
                     aria-current="page"
-                    className="z-10 flex items-center justify-center px-3 py-2 text-sm leading-tight border text-primary-600 bg-primary-50 border-primary-300 hover:bg-primary-100 hover:text-primary-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
+                    className="z-10 flex items-center justify-center px-3 py-2 text-sm leading-tight border text-blue-600 bg-primary-50 border-primary-300 hover:bg-primary-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
                   >
                     3
                   </a>
@@ -3503,7 +3503,7 @@ const PlainSections: React.FC = () => {
               </p>
               <a
                 href="#"
-                className="inline-flex items-center font-medium sm:text-lg text-primary-600 hover:text-primary-700 dark:text-primary-500 dark:hover:text-primary-400"
+                className="inline-flex items-center font-medium sm:text-lg text-blue-600 hover:text-primary-700 dark:text-primary-500 dark:hover:text-primary-400"
               >
                 Learn what makes Flowbite different{' '}
                 <svg
@@ -3529,12 +3529,12 @@ const PlainSections: React.FC = () => {
                   <span className="block mb-1 text-xs font-medium text-gray-500 uppercase dark:text-gray-400">
                     Simplicity and Affordability
                   </span>
-                  <span className="text-xl font-semibold text-primary-600 dark:text-primary-500">
+                  <span className="text-xl font-semibold text-blue-600 dark:text-blue-500">
                     Flowbite vs Google
                   </span>
                 </div>
                 <svg
-                  className="w-6 h-6 text-primary-600 dark:text-primary-500"
+                  className="w-6 h-6 text-blue-600 dark:text-blue-500"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"

@@ -56,7 +56,7 @@ const MainSection: FC<SectionProps> = ({ title, description, linkText, linkHref 
           <AnchorLink
             href={linkHref || '#'}
             variant="default"
-            className="text-primary-600 text-md font-semibold inline-flex items-center hover:underline"
+            classProp="text-md font-semibold inline-flex items-center hover:underline"
             icon={LineDownRight}
           >
             {linkText}

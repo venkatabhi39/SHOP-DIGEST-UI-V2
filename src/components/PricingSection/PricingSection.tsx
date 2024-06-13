@@ -87,7 +87,7 @@ const PricingSection: React.FC<{ plans: PricingPlan[]; headerData: headerDataDet
           </ul>
         </div>
       )}
-      <div className="max-w-full lg:max-w-[85%] m-auto lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-5 lg:space-y-0">
+      <div className="max-w-full lg:max-w-[90%] m-auto lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-7 lg:space-y-0">
         {plans.map(plan => (
           <div key={plan.title} className="mb-8">
             <div
@@ -118,7 +118,7 @@ const PricingSection: React.FC<{ plans: PricingPlan[]; headerData: headerDataDet
               <div>
                 <a
                   href="#"
-                  className="sdLink text-primary inline-flex justify-center items-center  text-base lg:text-sm xl:text-base"
+                  className="sdLink text-blue-600 inline-flex justify-center items-center  text-base lg:text-sm xl:text-base"
                 >
                   Go to annual plan
                   <svg
