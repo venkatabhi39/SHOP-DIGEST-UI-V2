@@ -1,6 +1,7 @@
 // components/ProductTable.tsx
 import React from 'react';
 import type { NextPage } from 'next';
+import { Heading } from '@/components/Heading';
 
 interface ProductDetail {
   id: number;
@@ -95,9 +96,10 @@ const ProductTableList: NextPage = () => {
 
   return (
     <div>
-      <h2 className="mb-6 text-xl font-semibold text-gray-900 dark:text-white sm:mb-8 sm:text-2xl lg:mb-8">
+      <Heading as="h2" className="mb-6 text-center">
         Technical details
-      </h2>
+      </Heading>
+
       <ProductTable details={productDetails} />
     </div>
   );

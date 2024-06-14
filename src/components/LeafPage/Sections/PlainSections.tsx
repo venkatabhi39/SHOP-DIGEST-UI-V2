@@ -3704,14 +3704,18 @@ const PlainSections: React.FC = () => {
       <div className="border-gray-100 border mt-10 mb-10"></div>
 
       <div>
-        <h3 className="mb-0 mt-0">More By this developer</h3>
+        <Heading as="h2" className="mb-0 mt-0 text-center">
+          More By This Developer
+        </Heading>
         <AppCards />
       </div>
 
       <div className="border-gray-100 border mt-5 mb-10"></div>
 
       <div>
-        <h3 className="mb-0 mt-0">You might also like</h3>
+        <Heading as="h2" className="mb-0 mt-0 text-center">
+          You might also like
+        </Heading>
         <AppCards />
       </div>
     </div>

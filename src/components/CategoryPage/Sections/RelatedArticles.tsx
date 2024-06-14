@@ -9,7 +9,7 @@ const RelatedArticles: NextPage = () => {
         Related Articles
       </Heading>
       <CardWithReview2 />
-
+      <div className="border-gray-100 border mb-10"></div>
       <Heading as="h2" className="mt-4">
         Related Articles
       </Heading>

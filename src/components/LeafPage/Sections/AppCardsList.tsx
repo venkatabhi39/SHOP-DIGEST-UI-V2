@@ -54,7 +54,7 @@ const AppCards: React.FC = () => {
   return (
     <div>
       <div className="flex justify-between items-center">
-        <Heading as="h3" className="mt-2 text-center">
+        <Heading as="h2" className="mt-2 text-center">
           More By This Developer
         </Heading>
         <AnchorLink

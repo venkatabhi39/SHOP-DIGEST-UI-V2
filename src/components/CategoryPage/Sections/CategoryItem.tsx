@@ -310,7 +310,7 @@ const CategoryItem: React.FC<ProductInfoProps> = () => {
                   >
                     <span className="ml-2">Open Gallery</span>
                   </AnchorLink>
-                  <ShareIcon classProp="ml-2 text-green-500" />
+                  <ShareIcon classProp="ml-2 text-gray-400" />
                 </div>
               </div>
               {expandedStates[index] && (

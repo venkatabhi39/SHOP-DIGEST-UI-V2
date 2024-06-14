@@ -93,9 +93,9 @@ const Cards: React.FC = () => {
 
         <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
           <div className="border-b border-stroke px-4 py-4 dark:border-strokedark sm:px-6 xl:px-9">
-            <h2 className="mb-0 text-2xl font-bold text-gray-900 dark:text-white">
+            <Heading as="h2" className="text-center">
               Related articles
-            </h2>
+            </Heading>
           </div>
 
           <div className="p-4 sm:p-6 xl:p-9 2xl:p-15">

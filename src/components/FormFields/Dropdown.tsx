@@ -24,8 +24,10 @@ const Dropdown = ({
   <div className={classNames('max-lg:grow', classes)}>
     <FbDropdown
       label={
-        <div className="flex items-center justify-center w-full">
-          <span className="[&>*]:w-5 [&>*]:h-5 inline-block mr-4 text-primary">{icon}</span>
+        <div className="flex items-center justify-center w-full pl-2.5 pr-1.5">
+          {icon && (
+            <span className="[&>*]:w-5 [&>*]:h-5 inline-block mr-4 text-primary">{icon}</span>
+          )}
           <span className="mr-auto text-gray-500">
             {value == null ? label : items.find(item => item.value === value)!.label}
           </span>

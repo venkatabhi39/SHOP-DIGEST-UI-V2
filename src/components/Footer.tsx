@@ -23,7 +23,7 @@ export default function Footer({
   return (
     <footer className={classNames('', className)}>
       {/* {footerTopApps && <TopAppsHomePageFooter topApps={footerTopApps} />} */}
-      <div className={classNames('border-t-300')}>
+      <div className={classNames('border-t')}>
         <div className="max-w-[85rem] px-4 pb-10 sm:px-6 lg:px-10 lg:pb-14 mx-auto">
           <PricingPlan />
           <ListWithContent />
