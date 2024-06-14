@@ -2,6 +2,7 @@ import React from 'react';
 
 import TeamOne from '@/components/Cards/ImageCards/TeamOne';
 import TeamTwo from '@/components/Cards/ImageCards/TeamTwo';
+import { Heading } from '@/components/Heading';
 import { CardWithReview, CardWithReview2 } from '@/components/Cards/ImageCards/CardWithReview';
 import ExpertCardList from '@/components/Cards/ImageCards/ExpertCard';
 import ArticleCards from '@/components/Cards/ImageCards/ArticleCards';
