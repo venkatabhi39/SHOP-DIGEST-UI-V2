@@ -17,8 +17,8 @@ interface CardsRowProps {
 
 const TechnologyCard: FC<CardData> = ({ title, icon, description, buttonText, buttonLink }) => (
   <Card className="max-w-sm">
-    <h5 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white flex items-center">
-      {icon && <img src={icon} className="w-8 rounded-lg mr-3" />}
+    <h5 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white flex items-center whitespace-nowrap overflow-hidden text-ellipsis">
+      {icon && <img src={icon} className="w-8 rounded-lg mr-2" />}
       {title}
     </h5>
     <p className="font-normal text-gray-700 dark:text-gray-400">{description}</p>

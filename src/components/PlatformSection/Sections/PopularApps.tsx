@@ -4,7 +4,7 @@ import AnchorLink from '@/components/Links/AcnhorLink';
 import CardWithButton from '@/components/Cards/CardWithButton';
 
 const CardsRow: FC<CardsRowProps> = ({ cards }) => (
-  <div className="flex justify-between flex-col sm:flex-row gap-5">
+  <div className="flex justify-between flex-col sm:flex-row  gap-2 lg:gap-5 flex-wrap  lg:flex-nowrap">
     {cards.map((card, index) => (
       <div className="mb-5">
         <CardWithButton key={index} {...card} />

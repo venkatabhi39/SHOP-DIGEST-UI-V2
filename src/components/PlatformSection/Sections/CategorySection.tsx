@@ -4,7 +4,7 @@ import AnchorLink from '@/components/Links/AcnhorLink';
 import CardWithButton from '@/components/Cards/CardWithButton';
 
 const CardsRow: FC<CardsRowProps> = ({ cards }) => (
-  <div className="flex justify-between flex-col sm:flex-row gap-5">
+  <div className="flex lg:justify-between flex-col sm:flex-row gap-2 lg:gap-5 flex-wrap  lg:flex-nowrap">
     {cards.map((card, index) => (
       <div className="mb-5">
         <CardWithButton key={index} {...card} />
@@ -56,6 +56,13 @@ const CardsList = () => (
       and often.
     </p>
     <CardsRow cards={sampleCards} />
+    <div className="flex justify-center items-center h-screen">
+      <div className="relative inline-flex">
+        <div className="w-8 h-8 bg-blue-500 rounded-full"></div>
+        <div className="w-8 h-8 bg-blue-500 rounded-full absolute top-0 left-0 animate-ping"></div>
+        <div className="w-8 h-8 bg-blue-500 rounded-full absolute top-0 left-0 animate-pulse"></div>
+      </div>
+    </div>
   </div>
 );
 

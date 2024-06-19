@@ -46,24 +46,26 @@ const BlockList: React.FC = () => {
         <Heading as="h2" className="mt-2 text-center">
           Today's stocks
         </Heading>
-        <div className="border border-gray-300 inline-flex rounded-full whitespace-nowrap">
-          <Dropdown
-            //icon={<ImCalendar />}
-            classes={classNames(styles.smDropdownContainer)}
-            value={'orderby'}
-            //onChange={newCategory => setCategory(newCategory)}
-            label="Order By"
-            items={[
-              {
-                label: 'Order By',
-                value: 'orderby',
-              },
-              {
-                label: 'Sort',
-                value: 'sort',
-              },
-            ]}
-          />
+        <div>
+          <div className="border border-gray-300 inline-flex rounded-full whitespace-nowrap">
+            <Dropdown
+              //icon={<ImCalendar />}
+              classes={classNames(styles.smDropdownContainer)}
+              value={'orderby'}
+              //onChange={newCategory => setCategory(newCategory)}
+              label="Order By"
+              items={[
+                {
+                  label: 'Order By',
+                  value: 'orderby',
+                },
+                {
+                  label: 'Sort',
+                  value: 'sort',
+                },
+              ]}
+            />
+          </div>
         </div>
       </div>
       <div className="flex gap-3 mb-4">
