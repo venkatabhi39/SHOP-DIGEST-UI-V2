@@ -3,6 +3,7 @@ import type { FC } from 'react';
 import { StyledAnchor, StyledAnchorProps } from '@/components/StyledLink';
 import { PropsWithClassName } from '@/types/common.types';
 import { FooterTopAppsList } from '@/services/appPages.service';
+import { Heading } from '@/components/Heading';
 import TopAppsHomePageFooter from './TopAppsHomePageFooter';
 import PricingPlan from '@/components/Blocks/PricingPlan/PricingPlan';
 import ListWithContent from '@/components/Blocks/Features/ListWithContent/index';
@@ -46,6 +47,9 @@ export default function Footer({
         </div>
         <NewsletterSubscription />
         <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-10 lg:py-10 mx-auto">
+          <Heading as="h2" className="">
+            Today's Featured Shopify apps
+          </Heading>
           <TabsComponent />
           <div className="border-b mb-2"></div>
           <FooterSection />

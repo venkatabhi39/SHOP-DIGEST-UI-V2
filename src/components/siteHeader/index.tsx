@@ -1,15 +1,29 @@
 import { SiteHeader } from '@/components/site-header';
+import { useRouter } from 'next/router';
 import { HeroFilter } from '@/components/Blocks/HeroFilter/HeroFilter';
 import HeroForm from '@/components/Blocks/HeroFilter/HeroForm';
 import { PopularLinks } from '@/components/Blocks/HeroFilter/PopularLinks';
-
+import Alert from '@/components/Alert/Alert';
 import { SecondaryHeader } from '@/components/site-header/SecondaryHeader';
 
 export default function HeroHeader({ isSecondaryHeader }) {
+  const isOnlySlashes = (path: any) => {
+    return /^\/+$/.test(path);
+  };
+  const router = useRouter();
+
   return (
     <>
       <SecondaryHeader />
+
       <SiteHeader secondaryHeader={isSecondaryHeader} />
+      {isOnlySlashes(router.pathname) && (
+        <Alert
+          type="info"
+          message="<span class='p-0.5 bg-blue-100 px-2 mr-1 rounded-sm text-blue-800'>New</span>
+        We have launched Flowbite Blocks featuring over 360+ website sections! <a href='#' class='underline'>Check it out</a> "
+        />
+      )}
       {!isSecondaryHeader && (
         <header className="max-w-full">
           {/* <NeedHelpSection /> */}

@@ -18,9 +18,9 @@ const Tabs: React.FC<TabsProps> = ({ tabs }) => {
 
   return (
     <div className="py-6">
-      <Heading as="h2" className="mb-2">
+      {/* <Heading as="h2" className="mb-2">
         Today's Featured Shopify apps
-      </Heading>
+      </Heading> */}
 
       <div className="border-b border-gray-200 dark:border-gray-700">
         <ul className="flex flex-wrap -mb-px text-sm font-medium text-center">
@@ -29,7 +29,7 @@ const Tabs: React.FC<TabsProps> = ({ tabs }) => {
               <button
                 className={`inline-block py-4 mr-6 rounded-t-lg ${
                   activeTab === tab.id
-                    ? 'border-b-2 border-primary-500 text-primary-600'
+                    ? 'border-b-2 border-blue-500 text-blue-600'
                     : 'hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300'
                 }`}
                 onClick={() => setActiveTab(tab.id)}
@@ -50,12 +50,12 @@ const Tabs: React.FC<TabsProps> = ({ tabs }) => {
             id={tab.id}
           >
             {tab.content}
-            <p>
+            <p className="text-center">
               <IconLink
                 url="#"
                 targetAtt="_blank"
                 label="See More"
-                className="text-primary font-medium hover:!text-primary-900 mr-0"
+                className="!text-blue-500 font-medium hover:!text-blue-800 mr-0"
                 svg={LineDownRight}
                 iconPlacement="right"
               />

@@ -8,6 +8,7 @@ export interface Customer {
   logo: string;
   description: string;
   website: string;
+  isWrapperLink: boolean;
 }
 
 interface CustomerCardProps {
@@ -18,7 +19,9 @@ const CustomerCard: React.FC<CustomerCardProps> = ({ customer }) => {
   return (
     <div
       //href={customer.website}
-      className="block py-12 px-8 text-center bg-gray-50 rounded dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700"
+      className={`block py-12 px-8 text-center ${
+        !customer.isWrapperLink ? 'bg-gray-50 ' : ''
+      }rounded dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700`}
     >
       <img
         src={customer.logo}
@@ -26,7 +29,7 @@ const CustomerCard: React.FC<CustomerCardProps> = ({ customer }) => {
         className="mx-auto h-10 text-gray-600 dark:text-gray-400"
       />
       <p className="font-light text-gray-500 mt-3.5 mb-4">customers since {customer.since}</p>
-      {customer.website && (
+      {customer.website && !customer.isWrapperLink && (
         <AnchorLink
           href={customer.website || '#'}
           variant="default"

@@ -5,6 +5,7 @@ import { LineDownRight } from '@/components/SvgIcons/IconList';
 
 interface CardData {
   title: string;
+  icon: string;
   description: string;
   buttonText: string;
   buttonLink: string;
@@ -14,9 +15,12 @@ interface CardsRowProps {
   cards: CardData[];
 }
 
-const TechnologyCard: FC<CardData> = ({ title, description, buttonText, buttonLink }) => (
+const TechnologyCard: FC<CardData> = ({ title, icon, description, buttonText, buttonLink }) => (
   <Card className="max-w-sm">
-    <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
+    <h5 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white flex items-center">
+      {icon && <img src={icon} className="w-8 rounded-lg mr-3" />}
+      {title}
+    </h5>
     <p className="font-normal text-gray-700 dark:text-gray-400">{description}</p>
 
     <AnchorLink
