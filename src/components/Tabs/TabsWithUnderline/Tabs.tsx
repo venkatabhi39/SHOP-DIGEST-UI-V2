@@ -7,20 +7,32 @@ interface Tab {
   id: string;
   title: string;
   content: JSX.Element;
+  heading: string;
+  mainHeading: Boolean;
 }
 
 interface TabsProps {
   tabs: Tab[];
+  linkHide: Boolean;
 }
 
-const Tabs: React.FC<TabsProps> = ({ tabs }) => {
+const Tabs: React.FC<TabsProps> = ({ tabs, linkHide }) => {
   const [activeTab, setActiveTab] = useState(tabs[0].id);
+  const [heading, setHeading] = useState('');
+
+  React.useEffect(() => {
+    let indexVal = tabs?.findIndex(tab => tab.id == activeTab);
+    let hTitle = tabs[indexVal].heading;
+    setHeading(hTitle);
+  }, [activeTab]);
 
   return (
-    <div className="py-6">
-      {/* <Heading as="h2" className="mb-2">
-        Today's Featured Shopify apps
-      </Heading> */}
+    <div className="pt-2 pb-4">
+      {tabs[0]?.mainHeading && heading && (
+        <Heading as="h4" className="mb-2">
+          {heading}
+        </Heading>
+      )}
 
       <div className="border-b border-gray-200 dark:border-gray-700">
         <ul className="flex flex-wrap -mb-px text-sm font-medium text-center">
@@ -49,17 +61,24 @@ const Tabs: React.FC<TabsProps> = ({ tabs }) => {
             }`}
             id={tab.id}
           >
+            {tab.heading && (
+              <Heading as="h4" className="mb-2">
+                {tab.heading}
+              </Heading>
+            )}
             {tab.content}
-            <p className="text-center">
-              <IconLink
-                url="#"
-                targetAtt="_blank"
-                label="See More"
-                className="!text-blue-500 font-medium hover:!text-blue-800 mr-0"
-                svg={LineDownRight}
-                iconPlacement="right"
-              />
-            </p>
+            {!linkHide && (
+              <p className="text-center">
+                <IconLink
+                  url="#"
+                  targetAtt="_blank"
+                  label="See More"
+                  className="!text-blue-500 font-medium hover:!text-blue-800 mr-0"
+                  svg={LineDownRight}
+                  iconPlacement="right"
+                />
+              </p>
+            )}
           </div>
         ))}
       </div>
