@@ -17,7 +17,7 @@ interface DataListProps {
 
 const DataList: React.FC<DataListProps> = ({ items }) => {
   return (
-    <div className="grid grid-cols-6 gap-2 pt-3 pb-4">
+    <div className="grid grid-cols-6 gap-5 pt-3 pb-4">
       {items.map((item, index) => (
         <HeroCard key={index} item={item} />
       ))}

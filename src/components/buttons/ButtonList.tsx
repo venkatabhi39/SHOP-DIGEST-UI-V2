@@ -23,7 +23,7 @@ export const ButtonList: React.FC<CategoryProps> = ({ buttonProps }) => {
       if (button) {
         setHighlightStyle({
           left: button.offsetLeft + 'px', // Ensure 'px' is added for consistency
-          width: button.offsetWidth + 'px', // Ensure 'px' is added for consistency
+          width: button.offsetWidth + 1 + 'px', // Ensure 'px' is added for consistency
           opacity: 1,
           height: '29px', // Assuming this is the desired height for your highlight
         });
@@ -70,7 +70,7 @@ export const ButtonList: React.FC<CategoryProps> = ({ buttonProps }) => {
           size="xs"
           pill
           color="light"
-          className="text-gray-800 me-2 rounded-full focus:ring-0 z-10 px-2 text-sm font-semibold border-gray-300 hover:border-blue-300 enabled:hover:bg-blue-100  hover:text-blue-800 bg-transparent"
+          className="text-gray-800 me-2 rounded-full focus:ring-0 z-0 px-2 text-sm font-semibold border-gray-300 hover:border-blue-300 enabled:hover:bg-blue-100  hover:text-blue-800 bg-transparent"
           key={i}
         >
           {btn.name}

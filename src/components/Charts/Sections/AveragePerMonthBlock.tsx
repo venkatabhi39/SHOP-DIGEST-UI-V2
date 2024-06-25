@@ -30,7 +30,7 @@ const AveragePerMonthBlock = () => {
   ];
 
   return (
-    <div className="flex flex-wrap justify-between">
+    <div className="grid grid-cols-3 gap-5">
       {charts.map((chart, index) => (
         <ColumnChart key={index} title={chart.title} series={chart.series} yTitle={chart.yTitle} />
       ))}

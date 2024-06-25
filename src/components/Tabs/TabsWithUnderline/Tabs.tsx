@@ -27,7 +27,7 @@ const Tabs: React.FC<TabsProps> = ({ tabs, linkHide }) => {
   }, [activeTab]);
 
   return (
-    <div className="pt-2 pb-4">
+    <div className="pb-4">
       {tabs[0]?.mainHeading && heading && (
         <Heading as="h4" className="mb-2">
           {heading}
@@ -39,7 +39,7 @@ const Tabs: React.FC<TabsProps> = ({ tabs, linkHide }) => {
           {tabs.map(tab => (
             <li key={tab.id} className="mr-2">
               <button
-                className={`inline-block py-4 mr-6 rounded-t-lg ${
+                className={`text-base inline-block py-4 mr-6 rounded-t-lg ${
                   activeTab === tab.id
                     ? 'border-b-2 border-blue-500 text-blue-600'
                     : 'hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300'
@@ -56,9 +56,7 @@ const Tabs: React.FC<TabsProps> = ({ tabs, linkHide }) => {
         {tabs.map(tab => (
           <div
             key={tab.id}
-            className={`py-4 rounded-lg  dark:bg-gray-800 ${
-              activeTab === tab.id ? 'block' : 'hidden'
-            }`}
+            className={`rounded-lg  dark:bg-gray-800 ${activeTab === tab.id ? 'block' : 'hidden'}`}
             id={tab.id}
           >
             {tab.heading && (

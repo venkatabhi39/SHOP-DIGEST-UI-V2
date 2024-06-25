@@ -150,7 +150,7 @@ const BarChartContainer = () => {
       {/* <FilterBlock /> */}
       <div className="flex mb-6 justify-between">
         <Heading as="h3" className="mt-2">
-          Toal Reviews
+          Toal Reviewss
         </Heading>
         <GroupedDropdown filters={filterConfig} />
       </div>

@@ -1,12 +1,14 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import { ApexOptions } from 'apexcharts';
 import { Heading } from '@/components/Heading';
 import GroupedDropdown from '@/components/FormFields/GroupedDropdown';
 import { ButtonList } from '@/components/buttons/ButtonList';
 
-// Dynamically import ReactApexChart with SSR disabled
-const ReactApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
+import ApexChart from '@/components/Charts/chart';
+import { formatNumber, formatToUSD } from '@/helpers/format-number';
+import Image from 'next/image';
+import Link from 'next/link';
+import dashboard from '@/data/dashboard.json';
 
 type ButtonProps = {
   name: string;
@@ -21,111 +23,137 @@ interface ApexAreaChartProps {
   categories: string[];
 }
 
-const ApexAreaChart: React.FC<ApexAreaChartProps> = ({ series, categories }) => {
-  const options: ApexOptions = {
-    chart: {
-      height: 350,
-      type: 'area',
-      zoom: {
-        enabled: false,
-      },
-      toolbar: {
-        show: true,
-      },
-      stacked: true, // Enable stacking for the area chart
-    },
-    dataLabels: {
-      enabled: false,
-    },
+const ApexAreaChart: React.FC<ApexAreaChartProps> = () => {
+  const borderColor = '#F3F4F6';
+  const labelColor = '#6B7280';
+  const opacityFrom = 0.45;
+  const opacityTo = 0;
+
+  const options: ApexCharts.ApexOptions = {
     stroke: {
-      curve: 'monotoneCubic',
+      curve: 'smooth',
+    },
+    chart: {
+      type: 'area',
+      fontFamily: 'Inter, sans-serif',
+      foreColor: labelColor,
+      toolbar: {
+        show: false,
+      },
     },
     fill: {
       type: 'gradient',
       gradient: {
-        opacityFrom: 0.6,
-        opacityTo: 0.8,
+        opacityFrom,
+        opacityTo,
+        type: 'vertical',
       },
     },
-    title: {
-      text: 'Price Trend',
-      align: 'left',
+    dataLabels: {
+      enabled: false,
+    },
+    tooltip: {
+      style: {
+        fontSize: '14px',
+        fontFamily: 'Inter, sans-serif',
+      },
     },
     grid: {
-      borderColor: '#e7e7e7',
-      row: {
-        colors: ['transparent'],
-        opacity: 0.5,
+      show: true,
+      borderColor: borderColor,
+      strokeDashArray: 1,
+      padding: {
+        left: 35,
+        bottom: 15,
       },
     },
     markers: {
       size: 5,
+      strokeColors: '#ffffff',
       hover: {
-        sizeOffset: 5,
+        size: undefined,
+        sizeOffset: 3,
       },
     },
     xaxis: {
-      categories: categories,
-      title: {
-        text: 'Date',
+      categories: dashboard.salesThisWeek.categories,
+      labels: {
+        style: {
+          colors: [labelColor],
+          fontSize: '14px',
+          fontWeight: 500,
+        },
+      },
+      axisBorder: {
+        color: borderColor,
+      },
+      axisTicks: {
+        color: borderColor,
+      },
+      crosshairs: {
+        show: true,
+        position: 'back',
+        stroke: {
+          color: borderColor,
+          width: 1,
+          dashArray: 10,
+        },
       },
     },
     yaxis: {
-      title: {
-        text: 'Price',
+      labels: {
+        style: {
+          colors: [labelColor],
+          fontSize: '14px',
+          fontWeight: 500,
+        },
+        formatter: function (value) {
+          return '$' + value;
+        },
       },
-      min: 0,
-      max: 100,
     },
     legend: {
-      position: 'top',
-      horizontalAlign: 'right',
-      floating: true,
-      offsetY: -25,
-      offsetX: -5,
-    },
-    tooltip: {
-      shared: true,
-      intersect: false,
-    },
-    plotOptions: {
-      bar: {
-        horizontal: false,
+      fontSize: '14px',
+      fontWeight: 500,
+      fontFamily: 'Inter, sans-serif',
+      labels: {
+        colors: [labelColor],
+      },
+      itemMargin: {
+        horizontal: 10,
       },
     },
+    responsive: [
+      {
+        breakpoint: 1024,
+        options: {
+          xaxis: {
+            labels: {
+              show: false,
+            },
+          },
+        },
+      },
+    ],
   };
+  const series = dashboard.salesThisWeek.series;
 
-  return (
-    <div className="p-4 bg-white border border-gray-200 rounded-lg shadow">
-      <ReactApexChart options={options} series={series} type="area" height={350} />
-    </div>
-  );
+  return <ApexChart height={420} options={options} series={series} type="area" />;
 };
 
-// const series = [
-//   {
-//     name: 'Series 1',
-//     data: [31, 40, 28, 51, 42, 109, 100],
-//   },
-//   {
-//     name: 'Series 2',
-//     data: [11, 32, 45, 32, 34, 52, 41],
-//   },
-// ];
+const AreaChart: React.FC<ApexAreaChartProps> = () => {
+  const handleWeeklyClick = (data: any) => {};
+  const handleMonthlyClick = (data: any) => {};
+  const handleQuarterlyClick = (data: any) => {};
+  const handleYearlyClick = (data: any) => {};
 
-const categories = ['11 Feb', '13 Feb', '15 Feb', '17 Feb', '19 Feb', '21 Feb', '23 Feb'];
+  const buttons: ButtonProps[] = [
+    { name: 'Weekly', onClick: handleWeeklyClick },
+    { name: 'Monthly', onClick: handleMonthlyClick },
+    { name: 'Quarterly', onClick: handleQuarterlyClick },
+    { name: 'Yearly', onClick: handleYearlyClick },
+  ];
 
-const AreaChart = () => {
-  const [series, setSeries] = React.useState([
-    {
-      name: 'Series 1',
-      data: [31, 40, 28, 51, 42, 109, 100],
-    },
-    {
-      name: 'Series 2',
-      data: [11, 32, 45, 32, 34, 52, 41],
-    },
-  ]);
   const filterConfig = [
     {
       id: 'apps',
@@ -159,66 +187,9 @@ const AreaChart = () => {
     },
   ];
 
-  const handleWeeklyClick = (data: any) => {
-    setSeries([
-      {
-        name: 'Series 1',
-        data: [11, 32, 45, 32, 34, 52, 41],
-      },
-      {
-        name: 'Series 2',
-        data: [31, 40, 28, 51, 42, 109, 100],
-      },
-    ]);
-  };
-
-  const handleMonthlyClick = (data: any) => {
-    setSeries([
-      {
-        name: 'Series 1',
-        data: [31, 40, 28, 51, 42, 109, 100],
-      },
-      {
-        name: 'Series 2',
-        data: [11, 32, 45, 32, 34, 52, 41],
-      },
-    ]);
-  };
-  const handleQuarterlyClick = (data: any) => {
-    setSeries([
-      {
-        name: 'Series 1',
-        data: [1, 32, 45, 32, 34, 52, 41],
-      },
-      {
-        name: 'Series 2',
-        data: [31, 40, 28, 51, 42, 109, 100],
-      },
-    ]);
-  };
-  const handleYearlyClick = (data: any) => {
-    setSeries([
-      {
-        name: 'Series 1',
-        data: [31, 40, 28, 51, 42, 109, 100],
-      },
-      {
-        name: 'Series 2',
-        data: [11, 32, 45, 32, 34, 52, 41],
-      },
-    ]);
-  };
-
-  const buttons: ButtonProps[] = [
-    { name: 'Weekly', onClick: handleWeeklyClick },
-    { name: 'Monthly', onClick: handleMonthlyClick },
-    { name: 'Quarterly', onClick: handleQuarterlyClick },
-    { name: 'Yearly', onClick: handleYearlyClick },
-  ];
-
   return (
-    <div className="container mx-auto">
-      <div className="flex mb-6 justify-between">
+    <div className="rounded-lg bg-white p-4 border dark:bg-gray-800 sm:p-6 xl:p-8">
+      <div className="mb-4 flex items-center justify-between">
         <Heading as="h3" className="mt-2">
           Toal Reviews
         </Heading>
@@ -229,7 +200,7 @@ const AreaChart = () => {
           <ButtonList buttonProps={buttons} />
         </div>
       </div>
-      <ApexAreaChart series={series} categories={categories} />
+      <ApexAreaChart dashboard={dashboard} />
     </div>
   );
 };

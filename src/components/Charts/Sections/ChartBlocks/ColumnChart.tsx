@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import { Heading } from '@/components/Heading';
 import styles from '@/components/FormFields/Dropdown.module.scss';
 import dynamic from 'next/dynamic';
 import Dropdown from '@/components/FormFields/Dropdown';
@@ -11,7 +12,9 @@ const ColumnChart = () => {
   const options = {
     chart: {
       type: 'bar',
+      fontFamily: 'Inter, sans-serif',
       height: 250,
+      width: '100%',
       toolbar: {
         show: false, // Hides the toolbar
       },
@@ -19,7 +22,7 @@ const ColumnChart = () => {
     plotOptions: {
       bar: {
         horizontal: false,
-        columnWidth: '75%',
+        columnWidth: '60%',
         endingShape: 'rounded',
         borderRadius: 5, // Sets the border radius for bars
       },
@@ -36,9 +39,9 @@ const ColumnChart = () => {
       categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
     },
     yaxis: {
-      title: {
-        text: 'Average per month',
-      },
+      // title: {
+      //   text: 'Average per month',
+      // },
     },
     fill: {
       opacity: 1,
@@ -79,7 +82,10 @@ const ColumnChart = () => {
   ];
 
   return (
-    <div className="p-4 bg-white border border-gray-200 rounded-lg shadow">
+    <div className="p-4 bg-white border border-gray-200 rounded-lg">
+      <Heading as="h3" className="mt-0 text-center text-base">
+        Average per month
+      </Heading>
       <ReactApexChart options={options} series={series} type="bar" height={260} />
       <div className="flex justify-between items-center">
         <div>
@@ -106,7 +112,7 @@ const ColumnChart = () => {
           href="#"
           variant="default"
           size="small"
-          classProp="mt-0 text-xs uppercase font-semibold"
+          classProp="mt-0 text-sm uppercase font-semibold"
         >
           Leads Report
         </AnchorLink>

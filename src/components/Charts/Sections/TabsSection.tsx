@@ -6,7 +6,7 @@ import { Heading } from '@/components/Heading';
 
 const TabsContent = () => {
   return (
-    <div className="">
+    <div className=" px-5 pb-5 pt-3 border border-t-0">
       <CategoryContent />
     </div>
   );
@@ -18,56 +18,56 @@ const TabsWithOutline = () => {
       id: 'reviews',
       title: 'Reviews',
       content: <TabsContent />,
-      heading: 'Top Category apps by total reviews',
+      //heading: 'Top Category apps by total reviews',
       mainHeading: false,
     },
     {
       id: 'rating',
       title: 'Rating',
-      content: <div>two</div>,
-      heading: 'Top Category apps by Rating',
+      content: <div>Ratings</div>,
+      //heading: 'Top Category apps by Rating',
       mainHeading: false,
     },
     {
       id: 'recommendation',
       title: 'Recommendation',
-      content: <div>three</div>,
-      heading: 'Top Category apps by Recommendation',
+      content: <div>Recommendation</div>,
+      //heading: 'Top Category apps by Recommendation',
       mainHeading: false,
     },
     {
       id: 'score',
       title: 'Score',
-      content: <div>one</div>,
-      heading: 'Top Category apps by Score',
+      content: <div>Score</div>,
+      //heading: 'Top Category apps by Score',
       mainHeading: false,
     },
     {
       id: 'market-share',
       title: 'Market Share',
-      content: <div>two</div>,
-      heading: 'Top Category apps by Market Share',
+      content: <div>Market Share</div>,
+      //heading: 'Top Category apps by Market Share',
       mainHeading: false,
     },
     {
       id: 'positions',
       title: 'Positions',
-      content: <div>three</div>,
-      heading: 'Top Category apps by Positions',
+      content: <div>Positions</div>,
+      //heading: 'Top Category apps by Positions',
       mainHeading: false,
     },
     {
       id: 'launch-date',
       title: 'Launch Date',
-      content: <div>three</div>,
-      heading: 'Top Category apps by Launch Date',
+      content: <div>Launch Date</div>,
+      //heading: 'Top Category apps by Launch Date',
       mainHeading: false,
     },
   ];
 
   return (
     <div>
-      <Heading as="h2" className="mb-2">
+      <Heading as="h2" className="mb-0">
         Analysis
       </Heading>
       <Tabs tabs={tabs} linkHide={true} />

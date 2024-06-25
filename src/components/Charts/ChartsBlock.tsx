@@ -17,7 +17,7 @@ const ChartsBlock: React.FC = () => {
         <TabsSection />
       </div>
 
-      <div className="mt-6">
+      <div className="mt-8">
         <TopDownloads />
       </div>
     </>

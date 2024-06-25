@@ -55,6 +55,7 @@
     "sharp": "^0.32.4",
     "slick-carousel": "^1.8.1",
     "ssh2": "^1.13.0",
+    "svgmap": "^2.10.1",
     "swr": "^2.1.2",
     "tailwind-merge": "^2.3.0",
     "tunnel-ssh": "^5.0.5",

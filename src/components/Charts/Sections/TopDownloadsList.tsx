@@ -1,5 +1,6 @@
 import React from 'react';
 import { Heading } from '@/components/Heading';
+import GroupedDropdown from '@/components/FormFields/GroupedDropdown';
 
 interface Props {
   data: AppRank[];
@@ -19,17 +20,55 @@ interface RankingData {
 }
 
 const Ranking: React.FC<Props> = ({ data, title }) => {
+  const filterConfig = [
+    {
+      id: 'apps',
+      default: 'today',
+      label: 'Today',
+      items: [
+        {
+          label: 'Today',
+          value: 'today',
+        },
+        {
+          label: 'Last Week',
+          value: 'last-week',
+        },
+      ],
+    },
+    {
+      id: 'location',
+      default: 'country',
+      label: 'Country',
+      items: [
+        {
+          label: 'Country',
+          value: 'country',
+        },
+        {
+          label: 'India',
+          value: 'india',
+        },
+      ],
+    },
+  ];
   return (
     <div>
-      <Heading as="h3" className="mt-2 text-center border p-4 mb-0">
-        {title}
-      </Heading>
+      <div className="mt-2 text-center border p-4 ">
+        <Heading as="h4" className="mb-0 text-lg font-bold">
+          {title}
+          <div className="mt-2">
+            <GroupedDropdown filters={filterConfig} />
+          </div>
+        </Heading>
+      </div>
+
       <ul className="list-none border p-4 min-h-96">
         {data.map((app, index) => (
           <li key={index} className="flex list-none items-center mb-2">
             <b className="mr-2 min-w-6">{app.rank}</b>
             <img src={app.icon} alt={app.name} style={{ width: 34, height: 34 }} className="mr-2" />
-            <div>{app.name}</div>
+            <div className="text-sm font-medium">{app.name}</div>
           </li>
         ))}
       </ul>
@@ -39,7 +78,7 @@ const Ranking: React.FC<Props> = ({ data, title }) => {
 
 const AppRankings: React.FC<{ data: RankingData }> = ({ data }) => {
   return (
-    <div style={{ display: 'flex', justifyContent: '' }}>
+    <div className="flex max-w-screen-xl overflow-x-auto">
       <Ranking data={data.totalReviews} title="Total Reviews" />
       <Ranking data={data.reviewChanges} title="Review Changes" />
       <Ranking data={data.averageRating} title="Avg Rating" />
@@ -117,7 +156,7 @@ const sampleData: RankingData = {
   reviewChanges: [
     {
       name: 'YouTube',
-      rank: 2,
+      rank: 1,
       icon: 'https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/youtube-64.png',
     },
 
