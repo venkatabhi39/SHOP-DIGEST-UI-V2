@@ -30,6 +30,20 @@
   }
 }
 
+.smallDropdown {
+  & > button {
+    @apply rounded-full text-inherit bg-transparent w-full focus:outline-none focus:shadow-none border-none font-medium text-xs px-1 py-1.5 #{!important};
+
+    & > span {
+      @apply p-0 w-full font-semibold text-sm #{!important};
+
+      & svg {
+        @apply text-gray-700 ml-1;
+      }
+    }
+  }
+}
+
 .dropdownActive {
   & > button {
     @apply bg-primary-800  #{!important};

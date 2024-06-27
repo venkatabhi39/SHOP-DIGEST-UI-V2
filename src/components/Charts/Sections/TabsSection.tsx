@@ -6,7 +6,7 @@ import { Heading } from '@/components/Heading';
 
 const TabsContent = () => {
   return (
-    <div className=" px-5 pb-5 pt-3 border border-t-0">
+    <div className="pb-5 pt-5">
       <CategoryContent />
     </div>
   );

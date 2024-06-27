@@ -1,4 +1,5 @@
 import React from 'react';
+import { Heading } from '@/components/Heading';
 import ColumnChart from './ChartBlocks/ColumnChart';
 
 const AveragePerMonthBlock = () => {
@@ -30,7 +31,7 @@ const AveragePerMonthBlock = () => {
   ];
 
   return (
-    <div className="grid grid-cols-3 gap-5">
+    <div className="grid grid-cols-3 gap-6">
       {charts.map((chart, index) => (
         <ColumnChart key={index} title={chart.title} series={chart.series} yTitle={chart.yTitle} />
       ))}

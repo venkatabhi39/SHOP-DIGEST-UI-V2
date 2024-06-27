@@ -188,7 +188,7 @@ const AreaChart: React.FC<ApexAreaChartProps> = () => {
   ];
 
   return (
-    <div className="rounded-lg bg-white p-4 border dark:bg-gray-800 sm:p-6 xl:p-8">
+    <div className="rounded-lg bg-white dark:bg-gray-800">
       <div className="mb-4 flex items-center justify-between">
         <Heading as="h3" className="mt-2">
           Toal Reviews

@@ -37,7 +37,7 @@ const AppBarChart: React.FC = () => {
     },
   ];
   return (
-    <div className="mb-4 rounded-lg bg-white p-4 border dark:bg-gray-800 sm:p-6 xl:mb-0 xl:p-8 2xl:col-span-2">
+    <div className="mb-4 rounded-lg bg-white">
       <div className="flex mb-6 justify-between">
         <Heading as="h3" className="mt-2">
           Toal Reviews

@@ -16,14 +16,17 @@ const CategoryContent: React.FC = () => {
         <TabCards />
       </div>
       <div className="">
-        <div className="mt-2 mb-6">
+        <div className="mt-10 mb-6">
           <AppBarChart />
         </div>
-        <div className="mt-2 mb-6">
+        <div className="mt-12 mb-6">
           <LineChart />
         </div>
 
-        <div className="mt-2">
+        <div className="mt-10 mb-2">
+          <Heading as="h3" className="mt-2 mb-6">
+            Toal Review changes
+          </Heading>
           <AveragePerMonthBlock />
         </div>
       </div>
