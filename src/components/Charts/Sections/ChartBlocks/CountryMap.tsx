@@ -1,8 +1,9 @@
 // components/SessionsByCountryMap.tsx
 import React, { FC, useEffect } from 'react';
+
 import { Heading } from '@/components/Heading';
 import 'svgmap/dist/svgMap.min.css';
-import SVGMap from 'svgmap';
+
 import LegendList from '@/components/LegendList';
 import AnchorLink from '@/components/Links/AcnhorLink';
 
@@ -12,6 +13,8 @@ interface SessionsByCountryMapProps {
 
 const SessionsByCountryMap: FC<SessionsByCountryMapProps> = ({ dashboard }) => {
   useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const SVGMap = require('svgmap');
     const previousMap = document.getElementsByClassName('svgMap-map-wrapper')[0];
     previousMap?.parentElement?.removeChild(previousMap);
 
@@ -45,7 +48,6 @@ const SessionsByCountryMap: FC<SessionsByCountryMapProps> = ({ dashboard }) => {
   return <div id="map" className="my-6" />;
 };
 
-// types/index.ts
 export interface DashboardPageData {
   sessionsByCountryMap: {
     [countryCode: string]: {
