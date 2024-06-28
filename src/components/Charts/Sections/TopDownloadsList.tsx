@@ -1,6 +1,7 @@
 import React from 'react';
 import { Heading } from '@/components/Heading';
 import GroupedDropdown from '@/components/FormFields/GroupedDropdown';
+import AnchorLink from '@/components/Links/AcnhorLink';
 
 interface Props {
   data: AppRank[];
@@ -82,6 +83,16 @@ const Ranking: React.FC<Props> = ({ data, title }) => {
           </li>
         ))}
       </ul>
+      <div className="border-t py-4 px-7 mt-2">
+        <AnchorLink
+          href="#"
+          variant="default"
+          size="small"
+          classProp="mt-0 text-sm uppercase font-semibold"
+        >
+          Leads Report
+        </AnchorLink>
+      </div>
     </div>
   );
 };
@@ -94,6 +105,7 @@ const AppRankings: React.FC<{ data: RankingData }> = ({ data }) => {
       <Ranking data={data.averageRating} title="Avg Rating" />
       <Ranking data={data.averageRating} title="Avg Rating Changes" />
       <Ranking data={data.averageRating} title="Recommendations" />
+      <Ranking data={data.reviewChanges} title="Review Changes" />
     </div>
   );
 };

@@ -8,10 +8,12 @@ const GroupedDropdown = ({ filters, isSmall }) => {
   return (
     <div className="">
       <div className="flex items-center">
-        {filters.map(filter => (
+        {filters.map((filter, index) => (
           <div
             key={filter.id}
-            className="border border-gray-300 inline-flex rounded-full whitespace-nowrap ml-3"
+            className={`border border-gray-300 inline-flex rounded-full whitespace-nowrap ${
+              index === 0 ? '' : 'ml-3'
+            }`}
           >
             <Dropdown
               classes={classNames(styles.smDropdownContainer, isSmall ? styles.smallDropdown : '')}

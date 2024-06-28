@@ -159,6 +159,9 @@ ul {
   background-size: 500% auto;
   animation: textShine 2s ease-in-out infinite alternate;
 }
+.svgMap-map-wrapper {
+  background: #fff !important;
+}
 @keyframes textShine {
   0% {
     background-position: 0% 50%;
