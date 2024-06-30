@@ -6,6 +6,11 @@ import TabsSection from '@/components/Charts/Sections/TabsSection';
 import TopDownloads from '@/components/Charts/Sections/TopDownloadsList';
 import ImageGrid from '@/components/Charts/Sections/ImageGrid';
 import CountryMap from '@/components/Charts/Sections/ChartBlocks/CountryMap';
+import TopAppsTable from '@/components/Charts/Sections/TopAppsTable';
+import ReviewLineChart from '@/components/Charts/Sections/ChartBlocks/ReviewLineChart';
+import TimeLineTable from '@/components/Charts/Sections/ChartBlocks/TimeLineTable';
+import AwardsListWrapper from '@/components/Charts/Sections/AwardsList';
+import AccordionList from '@/components/Charts/Sections/AccordionList';
 
 const ChartsBlock: React.FC = () => {
   return (
@@ -33,6 +38,26 @@ const ChartsBlock: React.FC = () => {
 
       <div className="mt-12">
         <CountryMap />
+      </div>
+
+      <div className="mt-12">
+        <TopAppsTable />
+      </div>
+
+      <div className="mt-12">
+        <ReviewLineChart />
+      </div>
+
+      <div className="mt-12">
+        <TimeLineTable />
+      </div>
+
+      <div className="mt-12">
+        <AwardsListWrapper />
+      </div>
+
+      <div className="mt-12">
+        <AccordionList />
       </div>
     </>
   );

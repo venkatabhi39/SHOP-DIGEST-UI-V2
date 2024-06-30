@@ -67,8 +67,8 @@ const sampleData: DashboardPageData = {
 
 const CountryMap: React.FC = () => {
   return (
-    <div className="my-4 grid grid-cols-1 xl:gap-4  2xl:grid-cols-3">
-      <div className="mb-4 rounded-lg bg-white p-4 border  dark:bg-gray-800 sm:p-6 xl:mb-0 xl:p-8 2xl:col-span-2">
+    <div className="my-4 grid grid-cols-1 xl:gap-4  sm:grid-cols-3">
+      <div className="mb-4 rounded-lg bg-white p-4 border  dark:bg-gray-800 sm:p-6 xl:mb-0 xl:p-8 col-span-2">
         <div className="container mx-auto">
           <Heading as="h3" className="mb-0">
             Sessions by Country
@@ -76,7 +76,7 @@ const CountryMap: React.FC = () => {
           <SessionsByCountryMap dashboard={sampleData} />
         </div>
       </div>
-      <div className="grid gap-4 sm:grid-cols-2 2xl:grid-cols-1">
+      <div className="grid gap-4 sm:grid-cols-1 2xl:grid-cols-1">
         <div className="flex flex-col justify-between  mb-4 h-full border rounded-lg bg-white p-4  dark:bg-gray-800 sm:p-6">
           <LegendList />
           <div className="border-t pt-4 pb-0  mt-2">

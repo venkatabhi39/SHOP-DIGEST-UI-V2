@@ -98,17 +98,110 @@ const Ranking: React.FC<Props> = ({ data, title }) => {
 };
 
 const AppRankings: React.FC<{ data: RankingData }> = ({ data }) => {
+  const containerRef = React.useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = React.useState(false);
+  const [canScrollRight, setCanScrollRight] = React.useState(false);
+
+  const updateScrollButtons = () => {
+    if (containerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = containerRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft + clientWidth < scrollWidth);
+    }
+  };
+
+  React.useEffect(() => {
+    updateScrollButtons();
+    window.addEventListener('resize', updateScrollButtons);
+    return () => window.removeEventListener('resize', updateScrollButtons);
+  }, []);
+
+  const scrollLeft = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollBy({
+        left: -300, // Adjust the scroll amount as needed
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  const scrollRight = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollBy({
+        left: 300, // Adjust the scroll amount as needed
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
-    <div className="flex max-w-screen-xl overflow-x-auto gap-5">
-      <Ranking data={data.totalReviews} title="Total Reviews" />
-      <Ranking data={data.reviewChanges} title="Review Changes" />
-      <Ranking data={data.averageRating} title="Avg Rating" />
-      <Ranking data={data.averageRating} title="Avg Rating Changes" />
-      <Ranking data={data.averageRating} title="Recommendations" />
-      <Ranking data={data.reviewChanges} title="Review Changes" />
+    <div className="relative">
+      {canScrollLeft && (
+        <button
+          onClick={scrollLeft}
+          className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-200 p-2 rounded-full"
+          aria-label="Scroll left"
+        >
+          <svg
+            className="w-6 h-6 text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m15 19-7-7 7-7"
+            />
+          </svg>
+        </button>
+      )}
+      <div
+        ref={containerRef}
+        onScroll={updateScrollButtons}
+        className="flex max-w-screen-xl  gap-5 overflow-auto no-scrollbar"
+      >
+        <Ranking data={data.totalReviews} title="Total Reviews" />
+        <Ranking data={data.reviewChanges} title="Review Changes" />
+        <Ranking data={data.averageRating} title="Avg Rating" />
+        <Ranking data={data.averageRating} title="Avg Rating Changes" />
+        <Ranking data={data.averageRating} title="Recommendations" />
+        <Ranking data={data.reviewChanges} title="Review Changes" />
+      </div>
+      {canScrollRight && (
+        <button
+          onClick={scrollRight}
+          className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-200 p-2 rounded-full"
+          aria-label="Scroll right"
+        >
+          <svg
+            className="w-6 h-6 text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m9 5 7 7-7 7"
+            />
+          </svg>
+        </button>
+      )}
     </div>
   );
 };
+
 const icons = {
   WhatsApp: 'https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/whatsapp-64.png',
   Messenger: 'https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/skype-64.png',
