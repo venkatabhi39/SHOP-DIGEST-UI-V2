@@ -79,8 +79,8 @@ export const sampleAccordionData: AccordionItem[] = [
 
 const AccordionList: NextPage = () => {
   return (
-    <div className="border rounded-lg">
-      <Heading as="h3" className="mb-0 px-6 pt-4 pb-4">
+    <div className="rounded-lg">
+      <Heading as="h3" className="mb-0 px-5 pt-4 pb-4">
         Key Insights
       </Heading>
       <AccordionComponent items={sampleAccordionData} />

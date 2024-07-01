@@ -38,7 +38,7 @@ export function SiteHeader({ secondaryHeader }) {
       <MainNavigation />
       {/* <SearchAndBookSection /> */}
 
-      {isSticky && (
+      {isSticky && !secondaryHeader && (
         <div className="bg-white border border-t-0 border-x-0 shadow-md">
           <HeroForm isStickyState={isSticky} />
         </div>

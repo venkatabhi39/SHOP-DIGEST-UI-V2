@@ -15,7 +15,7 @@ const ListWithContentBlock = () => {
         title: 'Dynamic Reports and Dashboard',
         icon: (
           <svg
-            className="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-primary-500"
+            className="flex-shrink-0 w-5 h-5 text-primary-600 dark:text-primary-500"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,7 @@ const ListWithContentBlock = () => {
         title: 'Real-time Data Processing',
         icon: (
           <svg
-            className="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-primary-500"
+            className="flex-shrink-0 w-5 h-5 text-primary-600 dark:text-primary-500"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@ const ListWithContentBlock = () => {
         title: 'Scalable Infrastructure',
         icon: (
           <svg
-            className="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-primary-500"
+            className="flex-shrink-0 w-5 h-5 text-primary-600 dark:text-primary-500"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@ const ListWithContentBlock = () => {
         title: 'Limitless Business Automation',
         icon: (
           <svg
-            className="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-primary-500"
+            className="flex-shrink-0 w-5 h-5 text-primary-600 dark:text-primary-500"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +84,7 @@ const ListWithContentBlock = () => {
         title: 'Knowledge Management',
         icon: (
           <svg
-            className="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-primary-500"
+            className="flex-shrink-0 w-5 h-5 text-primary-600 dark:text-primary-500"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"

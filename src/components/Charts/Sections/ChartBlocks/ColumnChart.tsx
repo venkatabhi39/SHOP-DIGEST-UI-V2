@@ -22,9 +22,9 @@ const ColumnChart = () => {
     plotOptions: {
       bar: {
         horizontal: false,
-        columnWidth: '60%',
+        columnWidth: '40%',
         endingShape: 'rounded',
-        borderRadius: 5, // Sets the border radius for bars
+        borderRadius: 3, // Sets the border radius for bars
       },
     },
     dataLabels: {

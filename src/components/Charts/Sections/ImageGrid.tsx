@@ -16,10 +16,10 @@ const CountryAppRankings: React.FC<{ data: RankingsData }> = ({ data }) => {
   return (
     <div className="container mx-auto">
       <div className="overflow-x-auto relative border sm:rounded-lg">
-        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 table-fixed">
+        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-              <th scope="col" className="py-3 px-6">
+              <th scope="col" className="py-3 px-6 max-w-6">
                 #
               </th>
               {data.countries.map((country, index) => (
@@ -31,11 +31,14 @@ const CountryAppRankings: React.FC<{ data: RankingsData }> = ({ data }) => {
           </thead>
           <tbody>
             {data.apps.map((app, idx) => (
-              <tr key={idx} className="bg-white border-0 dark:bg-gray-800 dark:border-gray-700">
+              <tr key={idx} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                 <td className="py-4 px-6 flex items-center">{idx + 1}</td>
                 {data.countries.map((country, index) => (
-                  <td key={index} className="py-4 px-6 text-center">
-                    <img src={app.iconUrl} alt={app.name} className="w-8 h-8 inline" />
+                  <td key={index} className="py-4 px-6 text-left">
+                    <div className="flex">
+                      <img src={app.iconUrl} alt={app.name} className="w-5 h-5 inline" />
+                      <span className="ml-2 text-base font-medium">{app.name}</span>
+                    </div>
                   </td>
                 ))}
               </tr>
@@ -48,16 +51,7 @@ const CountryAppRankings: React.FC<{ data: RankingsData }> = ({ data }) => {
 };
 
 const sampleData: RankingsData = {
-  countries: [
-    'Worldwide',
-    'United States',
-    'United Kingdom',
-    'China',
-    'India',
-    'France',
-    'Russia',
-    'Germany',
-  ],
+  countries: ['Worldwide', 'United States', 'China', 'India', 'France', 'Russia', 'Germany'],
   apps: [
     {
       name: 'TikTok',
@@ -79,22 +73,6 @@ const sampleData: RankingsData = {
       name: 'TikTok',
       iconUrl:
         'https://cdn3.iconfinder.com/data/icons/logos-brands-3/24/logo_brand_brands_logos_firefox-64.png',
-    },
-    {
-      name: 'Instagram',
-      iconUrl: 'https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/pinterest-256.png',
-    },
-    {
-      name: 'TikTok',
-      iconUrl: 'https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-256.png',
-    },
-    {
-      name: 'Instagram',
-      iconUrl: 'https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/pinterest-256.png',
-    },
-    {
-      name: 'TikTok',
-      iconUrl: 'https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-256.png',
     },
     {
       name: 'Instagram',

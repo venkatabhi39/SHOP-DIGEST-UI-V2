@@ -12,7 +12,7 @@ const TabSelector = ({ options }) => {
           className={classNames(
             'py-2 px-4 text-sm  text-center border font-semibold',
             index === 0 ? 'rounded-tl-full rounded-bl-full' : '',
-            index === 2 ? 'rounded-tr-full rounded-br-full' : '',
+            index === options?.length - 1 ? 'rounded-tr-full rounded-br-full' : '',
             activeTab === option ? 'border bg-primary-800 text-white' : 'text-gray-600',
           )}
           onClick={() => setActiveTab(option)}

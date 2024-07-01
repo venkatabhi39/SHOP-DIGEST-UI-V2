@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import { Heading } from '@/components/Heading';
 import GroupedDropdown from '@/components/FormFields/GroupedDropdown';
 import { ButtonList } from '@/components/buttons/ButtonList';
-
+import GroupedButton from '@/components/buttons/GroupedButton';
 import ApexChart from '@/components/Charts/chart';
 import { formatNumber, formatToUSD } from '@/helpers/format-number';
 import Image from 'next/image';
@@ -32,6 +32,7 @@ const ApexAreaChart: React.FC<ApexAreaChartProps> = () => {
   const options: ApexCharts.ApexOptions = {
     stroke: {
       curve: 'smooth',
+      width: 2, // Set the line thickness here
     },
     chart: {
       type: 'area',
@@ -195,10 +196,11 @@ const AreaChart: React.FC<ApexAreaChartProps> = () => {
         </Heading>
         <GroupedDropdown filters={filterConfig} />
       </div>
-      <div>
-        <div className="flex flex-wrap gap-2 my-5">
+      <div className="my-5">
+        {/* <div className="flex flex-wrap gap-2 my-5">
           <ButtonList buttonProps={buttons} />
-        </div>
+        </div> */}
+        <GroupedButton options={['Weekly', 'Monthly', 'Quarterly', 'Yearly']} />
       </div>
       <ApexAreaChart dashboard={dashboard} />
     </div>

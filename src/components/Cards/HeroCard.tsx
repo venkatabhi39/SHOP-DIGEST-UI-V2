@@ -25,14 +25,14 @@ const HeroCard: React.FC<DataCardProps> = ({ item }) => {
       {name === 'First app launch on' ? (
         <>
           <p className="text-xl font-bold">{`${mainValue}`}</p>
-          <p className={`text-sm ${isPositive ? 'text-green-500 ' : 'text-red-500'}`}>
+          <p className={`text-sm font-medium ${isPositive ? 'text-green-500 ' : 'text-red-500'}`}>
             <span className="">{changeValue}</span>
           </p>
         </>
       ) : (
         <>
           <p className="text-xl font-bold">{`₹${mainValue.toFixed(2)}`}</p>
-          <p className={`text-sm ${isPositive ? 'text-green-500' : 'text-red-500'}`}>
+          <p className={`text-sm font-medium ${isPositive ? 'text-green-500' : 'text-red-500'}`}>
             {isPositive ? '+' : ''}
             {changeValue.toFixed(2)} ({changePercentage.toFixed(2)}%)
           </p>

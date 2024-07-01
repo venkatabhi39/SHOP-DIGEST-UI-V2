@@ -24,7 +24,7 @@ const ChartsBlock: React.FC = () => {
       <div className="mt-12">
         <TabsSection />
       </div>
-
+      <div className="border-gray-100 border mt-8 mb-14"></div>
       <div className="mt-12">
         <Heading as="h3" className="mt-2 mb-6">
           Toal Review changes
@@ -47,7 +47,7 @@ const ChartsBlock: React.FC = () => {
       <div className="mt-12">
         <ReviewLineChart />
       </div>
-
+      <div className="border-gray-100 border mt-14 mb-6"></div>
       <div className="mt-12">
         <TimeLineTable />
       </div>
@@ -55,7 +55,7 @@ const ChartsBlock: React.FC = () => {
       <div className="mt-12">
         <AwardsListWrapper />
       </div>
-
+      <div className="border-gray-100 border mt-14 mb-10"></div>
       <div className="mt-12">
         <AccordionList />
       </div>

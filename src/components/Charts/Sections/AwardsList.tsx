@@ -155,7 +155,7 @@ const sampleData: CardData[] = [
 
 const AwardsListWrapper: React.FC = () => {
   return (
-    <div className="border pt-8 pb-12 px-4 rounded-lg">
+    <div className="pt-0 pb-0 px-4 rounded-lg">
       <Heading as="h3" className="mb-8 text-center">
         Awards
       </Heading>

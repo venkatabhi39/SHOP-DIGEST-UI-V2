@@ -37,6 +37,7 @@ const LineChart: React.FC<LineChartProps> = ({ title, data, categories }) => {
     },
     stroke: {
       curve: 'smooth',
+      width: 2, // Set the line thickness here
     },
     tooltip: {
       style: {

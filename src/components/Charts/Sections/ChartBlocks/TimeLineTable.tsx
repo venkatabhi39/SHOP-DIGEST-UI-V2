@@ -206,7 +206,7 @@ const TimeLineTable: React.FC = () => {
   return (
     <div className="container mx-auto py-8">
       <h1 className="text-xl font-bold mb-4">App Milestone Timeline</h1>
-      <div className="mt-2 mb-5">
+      <div className="mt-2 mb-7">
         <Legend />
       </div>
 

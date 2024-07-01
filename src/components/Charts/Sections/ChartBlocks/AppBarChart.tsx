@@ -75,10 +75,10 @@ const AppBarChart: React.FC = () => {
           </div>
           <div className="h-5 w-full rounded-lg bg-gray-200 dark:bg-gray-700">
             <div
-              className="h-5 rounded-md bg-blue-700 p-1 text-center text-xs font-bold leading-none text-primary-100"
+              className="h-5 relative rounded-md bg-blue-700 p-1 text-center text-xs font-bold leading-none text-blue-600"
               style={{ width: '35%' }}
             >
-              35%
+              <span className="absolute -left-2 -m-6 -mt-[0px]">35%</span>
             </div>
           </div>
         </li>
@@ -106,10 +106,10 @@ const AppBarChart: React.FC = () => {
           </div>
           <div className="h-5 w-full rounded-lg bg-gray-200 dark:bg-gray-700">
             <div
-              className="h-5 rounded-md bg-blue-700 p-1 text-center text-xs font-bold leading-none text-primary-100"
+              className="h-5 relative rounded-md bg-blue-700 p-1 text-center text-xs font-bold leading-none text-blue-600"
               style={{ width: '26%' }}
             >
-              26%
+              <span className="absolute -left-2 -m-6 -mt-[0px]"> 26%</span>
             </div>
           </div>
         </li>
@@ -137,10 +137,10 @@ const AppBarChart: React.FC = () => {
           </div>
           <div className="h-5 w-full rounded-lg bg-gray-200 dark:bg-gray-700">
             <div
-              className="h-5 rounded-md bg-blue-700 p-1 text-center text-xs font-bold leading-none text-primary-100"
+              className="h-5 relative rounded-md bg-blue-700 p-1 text-center text-xs font-bold leading-none text-blue-600"
               style={{ width: '18%' }}
             >
-              18%
+              <span className="absolute -left-2 -m-6 -mt-[0px]"> 18%</span>
             </div>
           </div>
         </li>
@@ -168,10 +168,10 @@ const AppBarChart: React.FC = () => {
           </div>
           <div className="h-5 w-full rounded-lg bg-gray-200 dark:bg-gray-700">
             <div
-              className="h-5 rounded-md bg-blue-700 p-1 text-center text-xs font-bold leading-none text-primary-100"
+              className="h-5 relative rounded-md bg-blue-700 p-1 text-center text-xs font-bold leading-none text-blue-600"
               style={{ width: '14%' }}
             >
-              14%
+              <span className="absolute -left-2 -m-6 -mt-[0px]"> 14%</span>
             </div>
           </div>
         </li>
@@ -199,10 +199,10 @@ const AppBarChart: React.FC = () => {
           </div>
           <div className="h-5 w-full rounded-lg bg-gray-200 dark:bg-gray-700">
             <div
-              className="h-5 rounded-md bg-blue-700 p-1 text-center text-xs font-bold leading-none text-primary-100"
+              className="h-5 relative rounded-md bg-blue-700 p-1 text-center text-xs font-bold leading-none text-blue-600"
               style={{ width: '10%' }}
             >
-              10%
+              <span className="absolute -left-2 -m-6 -mt-[0px]"> 10%</span>
             </div>
           </div>
         </li>
@@ -226,10 +226,10 @@ const AppBarChart: React.FC = () => {
           </div>
           <div className="h-5 w-full rounded-lg bg-gray-200 dark:bg-gray-700">
             <div
-              className="h-5 rounded-md bg-blue-700 p-1 text-center text-xs font-bold leading-none text-primary-100"
+              className="h-5 relative rounded-md bg-blue-700 p-1 text-center text-xs font-bold leading-none text-blue-600"
               style={{ width: '7%' }}
             >
-              7%
+              <span className="absolute -left-2 -m-6 -mt-[0px]"> 7%</span>
             </div>
           </div>
         </li>
